@@ -2,20 +2,21 @@
 
 **Approved release commit (company, 2026-11-13):** use `git rev-parse HEAD` on the commit tagged `v0.1.0` immediately before push (prefer the doc commit that records approval if it is the tip).
 
-**Planned home:** `https://github.com/bloomway-ai/bloomway-world-director` (when the org exists)
+**Company org (2026-11-13):** https://github.com/zhouguojun311-gmail-com/bloomway-world-director  
+Display name on GitHub: **Bloomway AI Inc.**
 
-**Published (2026-11-13):** `https://github.com/josuke0123/bloomway-world-director` — created because `bloomway-ai` was not on GitHub yet. Transfer the repository to the org when ready (Settings → Danger zone → Transfer).
+**Target slug (optional):** `bloomway-ai` — GitHub org login rename did not apply via API (needs org owner in browser). After rename:
 
-| Ref | SHA (at publish) |
-| --- | ---------------- |
-| `main` @ push | `f23f995a6c27beeecbb27cd9a20c68a34d350638` |
-| Tag `v0.1.0` | same commit |
+`https://github.com/bloomway-ai/bloomway-world-director`
 
-## After transfer to `bloomway-ai`
+Org owner: **Settings → Profile** → organization account name → `bloomway-ai` → update repositories.
+
+| Ref | Note |
+| --- | ---- |
+| `main` | Latest on org remote |
+| `v0.1.0` | Carried with repository transfer |
 
 ```bash
-git remote set-url origin https://github.com/bloomway-ai/bloomway-world-director.git
-git push -u origin main --tags
+git remote set-url origin https://github.com/zhouguojun311-gmail-com/bloomway-world-director.git
+git push origin main --tags
 ```
-
-Update media attribution links in `media/README.md` and `media/LICENSE` to the new URL if the repo path changes.
