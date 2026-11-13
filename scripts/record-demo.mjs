@@ -14,7 +14,7 @@ const mediaDir = path.join(root, 'media');
 const demoOut = path.join(mediaDir, 'demo.mp4');
 const posterOut = path.join(mediaDir, 'poster.png');
 const port = 4173;
-const baseUrl = `http://127.0.0.1:${port}/?autoplay=1`;
+const baseUrl = `http://127.0.0.1:${port}/?autoplay=1&demo=1`;
 
 function runPreview() {
   return spawn('npm', ['run', 'preview', '-w', '@bloomway/studio', '--', '--port', String(port), '--host', '127.0.0.1'], {
@@ -61,7 +61,7 @@ try {
   const page = await context.newPage();
   await page.goto(baseUrl, { waitUntil: 'networkidle' });
   await page.waitForSelector('[data-testid="previs-canvas-host"] canvas', { timeout: 30000 });
-  await page.waitForTimeout(14000);
+  await page.waitForTimeout(15500);
 
   const video = page.video();
   await context.close();
@@ -73,11 +73,11 @@ try {
 
   console.log('Encoding demo.mp4…');
   execSync(
-    `ffmpeg -y -i "${path.join(recordDir, 'capture.webm')}" -c:v libx264 -pix_fmt yuv420p -movflags +faststart -t 16 "${demoOut}"`,
+    `ffmpeg -y -i "${path.join(recordDir, 'capture.webm')}" -c:v libx264 -pix_fmt yuv420p -movflags +faststart -t 15.5 "${demoOut}"`,
     { stdio: 'inherit' },
   );
   execSync(
-    `ffmpeg -y -ss 4 -i "${demoOut}" -frames:v 1 "${posterOut}"`,
+    `ffmpeg -y -ss 5 -i "${demoOut}" -frames:v 1 "${posterOut}"`,
     { stdio: 'inherit' },
   );
 

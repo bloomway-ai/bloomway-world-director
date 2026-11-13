@@ -1,14 +1,23 @@
-import { StrictMode, useCallback, useEffect, useState } from 'react';
+import { StrictMode, useCallback, useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { PrevisCanvas } from './PrevisCanvas';
 import { ProjectAttribution } from './components/ProjectAttribution';
 import { normalizePrevisPlan, type PrevisPlan } from '@core/previsPlanCore.ts';
 import { normalizePrevisWorldRef, type PrevisWorldRef } from '@core/previsWorldGen.ts';
+import './studio.css';
+
+function useQueryFlags() {
+  return useMemo(() => {
+    const q = new URLSearchParams(window.location.search);
+    return { autoplay: q.has('autoplay'), demo: q.has('demo') };
+  }, []);
+}
 
 function App() {
+  const { autoplay } = useQueryFlags();
   const [plan, setPlan] = useState<PrevisPlan | null>(null);
   const [worldRef, setWorldRef] = useState<PrevisWorldRef | null>(null);
-  const [playing, setPlaying] = useState(() => new URLSearchParams(window.location.search).has('autoplay'));
+  const [playing, setPlaying] = useState(autoplay);
   const [timeSec, setTimeSec] = useState(0);
   const [err, setErr] = useState<string | null>(null);
 
@@ -29,7 +38,7 @@ function App() {
         const p = normalizePrevisPlan(planJson);
         setPlan(p);
         setWorldRef(normalizePrevisWorldRef(refJson));
-        if (new URLSearchParams(window.location.search).has('autoplay')) {
+        if (autoplay) {
           setPlaying(true);
           setTimeSec(0);
         }
@@ -37,7 +46,7 @@ function App() {
         setErr(String(e));
       }
     })();
-  }, []);
+  }, [autoplay]);
 
   const duration = plan?.durationSec ?? 12;
 
@@ -47,16 +56,17 @@ function App() {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: '#121415', color: '#eee' }}>
-      <header style={{ padding: 12, borderBottom: '1px solid #333' }}>
-        <h1 style={{ margin: 0, fontSize: 18 }}>Bloomway World Director — Studio (preview)</h1>
-        <p style={{ margin: '6px 0 0', fontSize: 13, opacity: 0.8 }}>Example: Edo rainy night — blockout previs</p>
-        <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginTop: 8, flexWrap: 'wrap' }}>
-          <button type="button" data-testid="play-toggle" onClick={togglePlay}>
+    <div className="app">
+      <header className="header">
+        <h1>Bloomway World Director</h1>
+        <p className="subtitle">Studio preview · Edo rainy night (blockout)</p>
+        <span className="badge">Open-source · JSON-driven previs</span>
+        <div className="controls">
+          <button type="button" className="btn-play" data-testid="play-toggle" onClick={togglePlay}>
             {playing ? 'Pause' : 'Play'}
           </button>
-          <label style={{ fontSize: 13, display: 'flex', alignItems: 'center', gap: 6 }}>
-            Time
+          <label className="scrub">
+            Timeline
             <input
               type="range"
               data-testid="time-scrub"
@@ -68,25 +78,28 @@ function App() {
                 setPlaying(false);
                 setTimeSec(Number(e.target.value));
               }}
-              style={{ width: 180 }}
             />
-            <span data-testid="time-label">{timeSec.toFixed(1)}s / {duration}s</span>
+            <span className="time-readout" data-testid="time-label">
+              {timeSec.toFixed(1)}s / {duration}s
+            </span>
           </label>
         </div>
       </header>
-      <main style={{ flex: 1, padding: 8, minHeight: 400 }}>
+      <main className="main-view">
         {err ? <p>{err}</p> : null}
-        {plan && worldRef ? (
-          <PrevisCanvas
-            plan={plan}
-            worldRef={worldRef}
-            playing={playing}
-            timeSec={timeSec}
-            onTimeSecChange={onTimeSecChange}
-          />
-        ) : (
-          <p>Loading example…</p>
-        )}
+        <div className="canvas-frame">
+          {plan && worldRef ? (
+            <PrevisCanvas
+              plan={plan}
+              worldRef={worldRef}
+              playing={playing}
+              timeSec={timeSec}
+              onTimeSecChange={onTimeSecChange}
+            />
+          ) : (
+            <p style={{ padding: 16 }}>Loading example…</p>
+          )}
+        </div>
       </main>
       <ProjectAttribution />
     </div>
