@@ -45,7 +45,7 @@ When sharing or embedding these files, credit:
 
 ```text
 Bloomway World Director — Bloomway AI Inc.
-https://github.com/bloomway-ai/bloomway-world-director
+https://github.com/josuke0123/bloomway-world-director
 ```
 
 ### If you modify a file

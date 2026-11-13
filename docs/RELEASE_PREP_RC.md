@@ -6,7 +6,7 @@
 | ----- | ----- |
 | Candidate SHA | Run `git rev-parse HEAD` on the commit you approve |
 | Date (last update) | 2026-11-13 |
-| Target remote | `https://github.com/bloomway-ai/bloomway-world-director` (not pushed yet) |
+| Target remote | Published: [josuke0123/bloomway-world-director](https://github.com/josuke0123/bloomway-world-director); planned: `bloomway-ai/…` |
 | Public push / visibility | **Company approved (2026-11-13)** — **blocked on GitHub** until `bloomway-ai` org/repo exists ([PUBLIC_PUSH.md](PUBLIC_PUSH.md)) |
 | `v0.1.0` tag / GitHub Release | **Not created on remote** — runbook in [PUBLIC_PUSH.md](PUBLIC_PUSH.md) |
 

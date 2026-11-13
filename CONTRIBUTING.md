@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping improve [Bloomway World Director](https://github.com/bloomway-ai/bloomway-world-director).
+Thank you for helping improve [Bloomway World Director](https://github.com/josuke0123/bloomway-world-director) (may move to `bloomway-ai` org).
 
 ## License of contributions
 

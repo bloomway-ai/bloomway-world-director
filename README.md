@@ -13,7 +13,7 @@ Build 3D worlds and direct camera moves for cinematic **previsualization** (low-
 **Requirements:** Node.js ≥ 20, npm ≥ 10. No Bloomway account or API keys for the bundled example.
 
 ```bash
-git clone <repository-url>   # when public
+git clone https://github.com/josuke0123/bloomway-world-director.git
 cd bloomway-world-director
 npm install
 npm run verify:example       # validates plan + world + camera motion (deterministic)
