@@ -31,9 +31,14 @@ Optional checks: `npm run verify:studio-e2e` (Playwright timeline), `npm run rec
 
 ## See it in action
 
-This clip is recorded from **this repository’s** lightweight Studio (not the full Bloomway app UI).
+These clips are recorded from **this repository’s** lightweight Studio (not the full Bloomway app UI).
 
-[Demo video](media/demo.mp4) · [Poster](media/poster.png) · [Media notes](media/README.md)
+| Demo | One-line prompt | File |
+| ---- | --------------- | ---- |
+| City tour | `Neon cyberpunk city at night in the rain` → explore with WASD | [demo-city-tour.mp4](media/demo-city-tour.mp4) |
+| Street drama | `Rainy night — two rivals meet in the street` → play blocking | [demo-drama.mp4](media/demo-drama.mp4) |
+
+Regenerate: `npm run record:demos`. Legacy: [demo.mp4](media/demo.mp4) · [Media notes](media/README.md)
 
 Full Director Studio on Bloomway: [bloomway.ai](https://bloomway.ai)
 
@@ -44,9 +49,10 @@ Full Director Studio on Bloomway: [bloomway.ai](https://bloomway.ai)
 | Status | Capability |
 | ------ | ---------- |
 | **Verified** | `plan.json` + `world-ref.json`, `validatePrevisPlan`, `generatePrevisWorld`, `samplePrevisCamera` (`npm run verify:example`) |
-| **Verified** | Minimal WebGL Studio: play + timeline scrub + camera motion (`verify:studio-e2e`, `media/demo.mp4`) |
+| **Verified** | V2 Director viewport + product-style timeline (`verify:studio-e2e`); legacy blockout via `?legacy=1` |
 | **Experimental** | Keyword/rule world hints without LLM (not required for the example) |
-| **Planned** | Extra examples, MCP Director tools, full product Director UI port |
+| **In progress** | V2 viewport + timeline + settings + presets (see [docs/product-parity.md](docs/product-parity.md)) |
+| **Planned** | Composer/LLM, record-export UI, camera dock, MCP Director tools, extra examples |
 
 Natural-language “describe any sentence → plan” assistants are **hosted on Bloomway only** (not in this repo).
 
@@ -56,7 +62,7 @@ Natural-language “describe any sentence → plan” assistants are **hosted on
 
 1. Marketing lines describe product vision; the OSS example uses **checked-in JSON**.
 2. Visual fidelity is **blockout** only—not Bloomway final renders.
-3. Studio UI is English-only and a **subset** of the commercial product.
+3. Studio UI is a **subset** of the commercial product (no cloud Composer); see [docs/product-parity.md](docs/product-parity.md).
 4. Only `edo-rainy-night` is fully wired; other demo scenes are **planned**.
 
 Details: [docs/implementation-audit.md](docs/implementation-audit.md) §6.
@@ -91,7 +97,7 @@ See [TRADEMARKS.md](TRADEMARKS.md). Do not imply official endorsement without au
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Copyright holder is listed there (**confirm legal entity before public release**).
+MIT — see [LICENSE](LICENSE). Copyright (c) 2026 Bloomway AI Inc. (legal entity confirmed by company records).
 
 ---
 

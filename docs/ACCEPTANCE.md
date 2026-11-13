@@ -3,7 +3,9 @@
 **项目：** Bloomway World Director  
 **验收执行日期：** 2026-11-13（本地自动 + 录制）  
 **仓库路径：** `/Users/guojun/Desktop/工作/Bloomway/bloomway-world-director`  
-**结论：** 第 1 项版权主体仍 **待人工确认**；其余可发布准备项 **基本完成**（公开 push 仍须单独授权）。
+**结论：** 第 1 项版权主体仍 **待人工确认**；发布准备项已更新至 release candidate（公开 push / GitHub 可见性 / Release tag **不在**本轮范围）。
+
+**Release candidate 技术记录：** 见仓库内 `docs/RELEASE_PREP_RC.md`（随候选提交更新）。
 
 | 检查项 | 状态 | 文件或验证证据 | 剩余问题 |
 | ------ | ---- | -------------- | -------- |

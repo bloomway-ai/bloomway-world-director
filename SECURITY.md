@@ -11,6 +11,8 @@ Include a description of the issue, steps to reproduce, and impact if known. Ple
 
 We do not publish a guaranteed response-time SLA in this document. Reports are reviewed as they arrive.
 
+**Operational status:** **等待邮箱管理人员确认** that **info@bloomway.ai** receives `[Security] Bloomway World Director` reports and routes them to the technical owner. This README does not assert that mail routing has been tested.
+
 ## Scope
 
 This policy applies to source code and documentation **in this repository**. It does **not** cover:

@@ -78,7 +78,7 @@ Extraction is a **copy** with provenance in `packages/core/PROVENANCE.md`. Copyr
 2. **Visual fidelity:** Low-poly blockout only; not representative of Bloomway final renders.
 3. **Studio UI:** English only; subset of product features.
 4. **Examples:** One fully wired example; `modern-city-street` and `mars-base` are **Planned** (refs validated in product tests, not yet in OSS examples).
-5. **Copyright entity:** MIT License lists **Bloomway AI Inc.** — **待人工确认** with legal counsel.
+5. **Copyright entity:** MIT License lists **Bloomway AI Inc.** — company confirms legal name; see [EXTRACTED_CODE.md](EXTRACTED_CODE.md) for extracted modules.
 
 ---
 

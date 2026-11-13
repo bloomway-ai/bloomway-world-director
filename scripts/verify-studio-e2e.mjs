@@ -6,7 +6,7 @@ import { chromium } from 'playwright';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const port = 5175;
-const url = `http://127.0.0.1:${port}/?autoplay=1`;
+const url = `http://127.0.0.1:${port}/?example=1&autoplay=1`;
 
 const dev = spawn('npm', ['run', 'dev', '-w', '@bloomway/studio', '--', '--port', String(port), '--host', '127.0.0.1'], {
   cwd: root,

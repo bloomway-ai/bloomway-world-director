@@ -1,0 +1,29 @@
+name: DCO
+
+on:
+  pull_request:
+
+jobs:
+  signoff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Require Signed-off-by on PR commits
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          missing=0
+          for c in $(git rev-list "$BASE..$HEAD"); do
+            if ! git show -s --format=%B "$c" | grep -qiE '^Signed-off-by:'; then
+              echo "Missing Signed-off-by: $c"
+              git show -s --format='%h %s' "$c"
+              missing=1
+            fi
+          done
+          if [ "$missing" -ne 0 ]; then
+            echo "Add DCO sign-off: git commit -s (see CONTRIBUTING.md and docs/DCO.md)"
+            exit 1
+          fi
