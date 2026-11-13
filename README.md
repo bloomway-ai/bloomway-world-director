@@ -2,80 +2,99 @@
 
 **Your words. Your world. Your camera.**
 
-Build a 3D world from a sentence. Describe the action. Direct the camera.
-
-An open-source toolkit for **cinematic previsualization** by Bloomway AI—not a general-purpose AI video generation model. It focuses on 3D world layout, character blocking, and camera previs; turning previs into final footage is an optional workflow on [Bloomway](https://bloomway.ai).
+Build 3D worlds and direct camera moves for cinematic **previsualization** (low-poly blockout)—not a general-purpose AI video generation model. Turning previs into final footage is an optional workflow on [Bloomway](https://bloomway.ai).
 
 [中文说明](README.zh-CN.md)
 
 ---
 
-## Run locally
+## Quick start
 
-Local previs works **without** a Bloomway account or hosted API. See [docs/implementation-audit.md](docs/implementation-audit.md) (when available) for what runs offline vs on the platform.
+**Requirements:** Node.js ≥ 20, npm ≥ 10. No Bloomway account or API keys for the bundled example.
 
 ```bash
-# Commands will be verified when apps/studio is wired in this repo.
+git clone <repository-url>   # when public
+cd bloomway-world-director
 npm install
-npm run dev --workspace=@bloomway/studio
+npm run verify:example       # validates plan + world + camera motion (deterministic)
+npm run dev                  # Studio preview at http://localhost:5173/
 ```
+
+The default Studio loads [`examples/edo-rainy-night`](examples/edo-rainy-night/) (checked-in JSON, not live natural-language inference).
+
+**Implementation truth source:** [docs/implementation-audit.md](docs/implementation-audit.md)  
+**Last verification run:** [docs/verification-log.md](docs/verification-log.md)
+
+Optional checks: `npm run verify:studio-e2e` (Playwright timeline), `npm run record:demo` (regenerate `media/demo.mp4`).
 
 ---
 
 ## See it in action
 
-Preview media lives under `media/` once examples are recorded. Demos use **real** low-poly blockout (simple buildings, capsule figures, camera paths)—not AI-upscaled marketing stills.
+This clip is recorded from **this repository’s** lightweight Studio (not the full Bloomway app UI).
+
+[Demo video](media/demo.mp4) · [Poster](media/poster.png) · [Media notes](media/README.md)
+
+Full Director Studio on Bloomway: [bloomway.ai](https://bloomway.ai)
 
 ---
 
-### Commercial use
+## What runs locally (summary)
+
+| Status | Capability |
+| ------ | ---------- |
+| **Verified** | `plan.json` + `world-ref.json`, `validatePrevisPlan`, `generatePrevisWorld`, `samplePrevisCamera` (`npm run verify:example`) |
+| **Verified** | Minimal WebGL Studio: play + timeline scrub + camera motion (`verify:studio-e2e`, `media/demo.mp4`) |
+| **Experimental** | Keyword/rule world hints without LLM (not required for the example) |
+| **Planned** | Extra examples, MCP Director tools, full product Director UI port |
+
+Natural-language “describe any sentence → plan” assistants are **hosted on Bloomway only** (not in this repo).
+
+---
+
+## Limitations
+
+1. Marketing lines describe product vision; the OSS example uses **checked-in JSON**.
+2. Visual fidelity is **blockout** only—not Bloomway final renders.
+3. Studio UI is English-only and a **subset** of the commercial product.
+4. Only `edo-rainy-night` is fully wired; other demo scenes are **planned**.
+
+Details: [docs/implementation-audit.md](docs/implementation-audit.md) §6.
+
+---
+
+## Roadmap
+
+- `modern-city-street` and `mars-base` examples (planned)
+- MCP integration docs and tools (planned)
+- Richer Studio (timeline scrub, import) (planned)
+
+---
+
+## Commercial use
 
 Commercial use is welcome under the MIT License. No registration, notification, or separate permission is required.
 
-Building something with Bloomway World Director? We’d love to hear about it. Contact **info@bloomway.ai** to share your project, discuss collaboration, or request deployment support and custom development.
+Optional contact: **info@bloomway.ai** for collaboration, deployment support, or showcase—**not** a license condition.
 
-With your permission, we may feature your project in our community showcase.
-
-Bloomway AI welcomes more developers and filmmaking enthusiasts to build together—reach out at the same email if you want to co-create integrations, shot libraries, or teaching materials.
-
-The MIT License applies to code explicitly covered by it. Third-party components and separately licensed assets remain subject to their respective terms. Access to Bloomway hosted services is governed by separate service terms. Details: [docs/commercial-use.md](docs/commercial-use.md).
+MIT applies to code in this repository. Third-party components and separately licensed assets keep their own terms. Hosted Bloomway services use separate terms. See [docs/commercial-use.md](docs/commercial-use.md).
 
 ### Attribution
 
-Please retain the copyright and license notices required by the MIT License.
-
-If you find this project useful, we’d appreciate a link back to the original repository or a mention of Bloomway AI. This additional acknowledgment is voluntary and is not a condition of use.
+Retain MIT copyright and license notices when redistributing. Linking back to this repo or mentioning Bloomway AI is **voluntary**.
 
 ### Branding
 
-You may accurately describe your use of this project. Do not imply that your product, deployment, training program, or service is operated, endorsed, or certified by Bloomway AI without authorization. See [TRADEMARKS.md](TRADEMARKS.md).
-
----
-
-## What runs locally
-
-| Local (MIT code) | Hosted / optional |
-| ---------------- | ----------------- |
-| World & plan JSON, deterministic low-poly worlds | Full natural-language plan/world assistants (LLM) |
-| 3D blockout previs playback | Sparks billing, team projects |
-| Example scenes | MCP Director tools (planned) |
-
----
-
-## Optional Bloomway integration
-
-Want to turn your previs into finished footage? Explore the connected workflow at [https://bloomway.ai](https://bloomway.ai). MCP is **optional**, not required to run examples.
+See [TRADEMARKS.md](TRADEMARKS.md). Do not imply official endorsement without authorization.
 
 ---
 
 ## License
 
-This repository is distributed under the **MIT License** (see `LICENSE`). Copyright holder is listed there; confirm legal entity before public release if needed.
+MIT — see [LICENSE](LICENSE). Copyright holder is listed there (**confirm legal entity before public release**).
 
 ---
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). We will keep updating this project—watch releases and [CHANGELOG.md](CHANGELOG.md).
-
-If this helps you explore a shot—or you want to follow what we build next—give the project a ⭐.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Public release acceptance checklist: [docs/ACCEPTANCE.md](docs/ACCEPTANCE.md).

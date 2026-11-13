@@ -2,48 +2,80 @@
 
 **Your words. Your world. Your camera.**
 
-用一句话搭建三维世界，描述动作，调度摄影机。
-
-Bloomway AI 出品的**电影预演**开源工具包，主打三维世界构建、人物调度与镜头预演；最终成片生成属于在 [Bloomway](https://bloomway.ai) 上的可选工作流，本项目不以「AI 视频生成模型」自居。
+用一句话搭建三维世界、描述动作、调度摄影机——本仓库聚焦**电影预演**（低模白盒），不是通用 AI 视频生成模型。成片生成属于 [Bloomway](https://bloomway.ai) 上的可选工作流。
 
 [English README](README.md)
 
 ---
 
-## 本地运行
+## 快速开始
 
-本地预演**无需** Bloomway 账号或托管 API。详见 `docs/implementation-audit.md`（补充后）中的本地/云端边界。
+**环境：** Node.js ≥ 20，npm ≥ 10。捆绑示例**无需** Bloomway 账号或 API Key。
+
+```bash
+git clone <repository-url>   # 公开后填写
+cd bloomway-world-director
+npm install
+npm run verify:example       # 校验 plan/世界/摄影机采样
+npm run dev                  # http://localhost:5173/
+```
+
+默认 Studio 加载 [`examples/edo-rainy-night`](examples/edo-rainy-night/)（仓库内 JSON，非在线自然语言推理）。
+
+**实现边界：** [docs/implementation-audit.md](docs/implementation-audit.md)  
+**验证记录：** [docs/verification-log.md](docs/verification-log.md)
+
+可选：`npm run verify:studio-e2e`、`npm run record:demo`。
 
 ---
 
-### 商业使用
+## 观看演示
 
-本项目允许按照 MIT 许可证进行商业使用，**无需**注册、报备或单独申请许可。
+演示视频来自 **本仓库** 轻量 Studio 录屏（非完整 Bloomway 客户端）。
 
-如果你正在使用 Bloomway World Director 开展创作或构建产品，欢迎通过 **info@bloomway.ai** 分享案例、讨论合作，或咨询部署支持与定制开发。
+[演示视频](media/demo.mp4) · [封面](media/poster.png) · [说明](media/README.md)
 
-经你同意，我们可以在社区作品展示中介绍你的项目。
+完整产品能力见 [bloomway.ai](https://bloomway.ai)。
 
-Bloomway AI 欢迎更多开发者与影视爱好者一起共创——如有集成、镜头库或教学素材等想法，也可通过同一邮箱联系我们。
+---
 
-MIT 许可证适用于明确纳入其范围的代码。第三方组件和单独授权的素材仍适用各自条款。Bloomway 托管服务适用独立的服务条款。详见 [docs/commercial-use.md](docs/commercial-use.md)。
+## 本地能力（摘要）
+
+| 状态 | 能力 |
+| ---- | ---- |
+| **已验证** | plan/world JSON、`validatePrevisPlan`、`generatePrevisWorld`、`samplePrevisCamera` |
+| **已验证** | 精简 WebGL Studio 可构建并加载示例 |
+| **实验性** | 无 LLM 的关键词/规则世界提示 |
+| **计划中** | 更多示例、MCP、完整产品导演台 UI 移植 |
+
+任意自然语言「一句话生成 Plan」助手仅在 **Bloomway 托管侧**，不在本仓库。
+
+---
+
+## 限制
+
+见 [docs/implementation-audit.md](docs/implementation-audit.md) 第 6 节（示例为 JSON、白盒画质、Studio 为英文子集等）。
+
+---
+
+## 商业使用
+
+可按 **MIT** 商业使用，**无需**注册、报备或单独许可。联系 **info@bloomway.ai** 为自愿合作渠道，非使用条件。详见 [docs/commercial-use.md](docs/commercial-use.md)。
 
 ### 来源说明
 
-请保留 MIT 许可证要求的版权与许可声明。
+保留 MIT 要求的版权与许可声明；链接仓库或注明 Bloomway AI 为**自愿**。
 
-如果本项目对你有帮助，我们欢迎你链接原始仓库或注明 Bloomway AI。此额外署名属于**自愿支持**，不是使用条件。
+### 品牌
 
-### 品牌使用
-
-你可以如实说明使用了本项目，但未经授权，不得暗示你的产品、部署、课程或服务由 Bloomway AI 官方运营、背书或认证。见 [TRADEMARKS.md](TRADEMARKS.md)。
+见 [TRADEMARKS.md](TRADEMARKS.md)。
 
 ---
 
 ## 许可
 
-本仓库采用 **MIT License**（见根目录 `LICENSE`）。
+MIT，见 [LICENSE](LICENSE)。公开发布前请确认版权主体名称。
 
 ---
 
-若本项目帮助你探索镜头，或你想关注后续迭代，欢迎点亮 ⭐。
+验收清单：[docs/ACCEPTANCE.md](docs/ACCEPTANCE.md)

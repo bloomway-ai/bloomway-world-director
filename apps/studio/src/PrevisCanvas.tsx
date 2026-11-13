@@ -15,20 +15,26 @@ export function PrevisCanvas({
   plan,
   worldRef,
   playing,
+  timeSec,
+  onTimeSecChange,
 }: {
   plan: PrevisPlan;
   worldRef: PrevisWorldRef;
   playing: boolean;
+  timeSec: number;
+  onTimeSecChange?: (t: number) => void;
 }) {
   const hostRef = useRef<HTMLDivElement>(null);
   const playingRef = useRef(playing);
+  const timeRef = useRef(timeSec);
   playingRef.current = playing;
+  timeRef.current = timeSec;
 
   useEffect(() => {
     const host = hostRef.current;
     if (!host) return;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(host.clientWidth, host.clientHeight);
     renderer.setClearColor(0x1a1a1e);
@@ -62,8 +68,9 @@ export function PrevisCanvas({
     }
 
     let raf = 0;
-    let t = 0;
+    let t = timeRef.current;
     const clock = new THREE.Clock();
+    let lastReport = -1;
 
     const resize = () => {
       const w = host.clientWidth;
@@ -78,9 +85,17 @@ export function PrevisCanvas({
       raf = requestAnimationFrame(frame);
       if (playingRef.current) {
         t += clock.getDelta();
-        if (t > plan.durationSec) t = plan.durationSec;
+        if (t >= plan.durationSec) {
+          t = plan.durationSec;
+          if (onTimeSecChange) onTimeSecChange(t);
+        }
+        if (onTimeSecChange && Math.abs(t - lastReport) > 0.05) {
+          lastReport = t;
+          onTimeSecChange(t);
+        }
       } else {
         clock.getDelta();
+        t = timeRef.current;
       }
 
       const cam = samplePrevisCamera(plan, t);
@@ -103,7 +118,13 @@ export function PrevisCanvas({
       renderer.dispose();
       host.removeChild(renderer.domElement);
     };
-  }, [plan, worldRef]);
+  }, [plan, worldRef, onTimeSecChange]);
 
-  return <div ref={hostRef} style={{ width: '100%', height: '100%', minHeight: 360 }} />;
+  return (
+    <div
+      ref={hostRef}
+      data-testid="previs-canvas-host"
+      style={{ width: '100%', height: '100%', minHeight: 360 }}
+    />
+  );
 }

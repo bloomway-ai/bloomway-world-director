@@ -1,25 +1,27 @@
 # Third-party licenses and assets
 
-This file will list **direct dependencies** and **bundled assets** once the monorepo `package-lock.json` / `pnpm-lock.yaml` is generated. Until then, treat it as a living checklist.
+## Runtime dependencies (`@bloomway/studio`, from `package-lock.json`)
 
-## Expected runtime dependencies (to verify on install)
+| Package | Version (lock) | SPDX (typical) |
+| ------- | -------------- | -------------- |
+| react | 19.3.1 | MIT |
+| react-dom | 19.3.1 | MIT |
+| three | 0.175.0 | MIT |
+| vite | 6.4.6 | MIT |
+| @vitejs/plugin-react | 4.7.0 | MIT |
 
-| Component | License (typical) | Notes |
-| --------- | ----------------- | ----- |
-| [three](https://github.com/mrdoob/three.js) | MIT | 3D rendering in `apps/studio` |
-| React / Vite toolchain | MIT | Dev and UI shell |
+Root workspace also uses `tsx` and `typescript` (dev). Re-run license audit before major releases if dependencies change.
 
-Run `npm license-checker` or equivalent after `npm install` and update this file before public release.
+## MIT scope reminder
+
+The root [MIT License](../LICENSE) applies to **this repository’s source**. `node_modules` content is governed by each package’s license. Bloomway hosted APIs/MCP are **not** covered.
 
 ## Example scenes and media
 
-Each folder under `examples/` must include a `README.md` stating:
+- [`examples/edo-rainy-night/README.md`](../examples/edo-rainy-night/README.md) — scene JSON authored for OSS; no third-party raster media bundled.
 
-- Who authored the scene configuration
-- Whether preview images or videos are CC0, self-created, or subject to other terms
-
-Do not commit third-party fonts, trademarked logos, or stock media without a clear redistribution right.
+Do not commit fonts, trademarked logos, or stock media without redistribution rights.
 
 ## Bloomway platform assets
 
-Assets from the commercial Bloomway Studio product are **not** included in this repository unless explicitly listed here with permission.
+Assets from the commercial Bloomway Studio product are **not** included here unless explicitly listed with permission.

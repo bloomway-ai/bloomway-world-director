@@ -1,5 +1,6 @@
 node_modules/
 dist/
+.demo-record-tmp/
 .DS_Store
 *.local
 .env

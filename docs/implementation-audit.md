@@ -1,6 +1,6 @@
 # Implementation audit (Bloomway World Director)
 
-**Audit date:** 2026-03-26  
+**Audit date:** 2026-11-13  
 **Repository path:** `bloomway-world-director` (local working copy; not yet public on GitHub)  
 **Purpose:** Single source of truth for what is **verified**, **experimental**, or **planned**. README Quick start, limitations, and roadmap must match this file.
 
@@ -26,7 +26,7 @@
 | `validatePrevisPlan` | **Verified** | Same script |
 | Deterministic `generatePrevisWorld(ref)` | **Verified** | Same script (edo style) |
 | Camera path sampling over time (`samplePrevisCamera`) | **Verified** | Same script prints position deltas |
-| WebGL blockout playback in browser | **Verified** | `npm run dev` → Studio loads `edo-rainy-night` |
+| WebGL blockout playback in browser | **Verified** | `npm run verify:studio-e2e`; `media/demo.mp4` from `npm run record:demo` ([verification-log.md](verification-log.md)) |
 | Rule/keyword world hints without LLM | **Experimental** | Partial port planned; not required for example |
 | Import full product 3D Director UI | **Planned** | Subset only in `apps/studio` |
 
@@ -88,7 +88,7 @@ Extraction is a **copy** with provenance in `packages/core/PROVENANCE.md`. Copyr
 - **Does not cover:** Bloomway hosted services, third-party APIs you configure, or media files with separate `MEDIA_LICENSE` in example folders.
 - **Does not impose:** commercial registration, mandatory UI attribution, mandatory end-video credits, or anti-competitive terms.
 
-See [docs/commercial-use.md](commercial-use.md), [docs/THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
+See [commercial-use.md](commercial-use.md), [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
 
 ---
 
