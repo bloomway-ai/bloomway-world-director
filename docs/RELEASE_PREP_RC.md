@@ -4,7 +4,7 @@
 
 | Field | Value |
 | ----- | ----- |
-| Candidate SHA | `3601b19` (full: `3601b19…` — see `git rev-parse HEAD` before push) |
+| Candidate SHA | Run `git rev-parse HEAD` on the approved commit before public push |
 | Date | 2026-11-13 |
 | Public push / GitHub visibility | **Out of scope** — awaiting company |
 | `v0.1.0` git tag | **Not created** — draft notes in [RELEASE_NOTES_v0.1.0_DRAFT.md](RELEASE_NOTES_v0.1.0_DRAFT.md) |
