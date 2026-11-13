@@ -35,7 +35,7 @@ These clips are recorded from **this repository’s** lightweight Studio (not th
 
 | Demo | One-line prompt | File |
 | ---- | --------------- | ---- |
-| City tour | `Neon cyberpunk city at night in the rain` → explore with WASD | [demo-city-tour.mp4](media/demo-city-tour.mp4) |
+| City tour | `Snowy daytime Tokyo urban city` → explore with WASD | [demo-city-tour.mp4](media/demo-city-tour.mp4) |
 | Street drama | `Rainy night — two rivals meet in the street` → play blocking | [demo-drama.mp4](media/demo-drama.mp4) |
 
 Regenerate: `npm run record:demos`. Legacy: [demo.mp4](media/demo.mp4) · [Media notes](media/README.md)
@@ -97,7 +97,9 @@ See [TRADEMARKS.md](TRADEMARKS.md). Do not imply official endorsement without au
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Copyright (c) 2026 Bloomway AI Inc. (legal entity confirmed by company records).
+MIT — see [LICENSE](LICENSE). Copyright (c) 2026 Bloomway AI Inc.
+
+Demo videos and posters in [`media/`](media/) are **[CC BY 4.0](media/README.md)** (separate from source MIT). Third-party dependency notices: [docs/THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md).
 
 ---
 

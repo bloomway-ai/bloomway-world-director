@@ -6,6 +6,8 @@
 
 This document **does not** certify full legal compliance. Flagged items need human review before a public release.
 
+**Distribution notices (MPL build tools, bundle inventory):** [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
 ---
 
 ## 1. What we ship to end users
@@ -42,7 +44,7 @@ From `scripts/license-audit.mjs` on this lockfile:
 - **Dominant licenses:** MIT, ISC, Apache-2.0, BSD-3-Clause, BlueOak-1.0.0.
 - **Packages without SPDX in lockfile:** workspace roots (`apps/studio`, `packages/core`, `@bloomway/*`) — **our** packages; covered by root [MIT](../LICENSE).
 - **CC-BY-4.0:** `caniuse-lite` (browser support data for frontend tooling). Typically **not** shipped in production bundle; attribution not usually required for app distribution, but retain in dependency tree notices if counsel advises.
-- **MPL-2.0:** `lightningcss` platform packages (Tailwind CSS 4 pipeline). May participate in **build** output. MPL-2.0 may require making **corresponding source** of MPL-licensed files available when distributing binaries that include them. **Review before release** — if required, add MPL notice file in distribution docs.
+- **MPL-2.0:** `lightningcss@1.33.0` platform packages (Tailwind CSS 4). **Build-time only;** not present in `apps/studio/dist/` JS (2026-11-13). Corresponding source: https://github.com/parcel-bundler/lightningcss `v1.33.0`. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 - **0BSD:** `tslib` under `@tailwindcss/oxide-wasm32-wasi` (platform-specific optional path).
 
 **Unknown / special:** Any future dependency without `license` in lockfile must be resolved before tagging a release.

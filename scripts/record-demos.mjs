@@ -1,6 +1,7 @@
 /**
  * Records two OSS Studio demo videos:
- *  - media/demo-city-tour.mp4 — one-line city + WASD / orbit camera tour
+ *  - media/demo-city-tour.mp4 — snowy daytime Tokyo + WASD / orbit camera tour
+ *  Env DEMO_ONLY=city|drama records a single clip.
  *  - media/demo-drama.mp4 — one-line story + character/camera playback
  */
 import { spawn } from 'node:child_process';
@@ -114,6 +115,8 @@ async function captureScenario(name, setup, recordMs, durationSec, outFile, post
   console.log('Wrote', outFile);
 }
 
+const demoOnly = (process.env.DEMO_ONLY ?? '').trim().toLowerCase();
+
 const preview = runPreview();
 try {
   console.log('Building studio…');
@@ -121,13 +124,16 @@ try {
   await waitForServer();
   await mkdir(mediaDir, { recursive: true });
 
-  await captureScenario(
+  const runCity = !demoOnly || demoOnly === 'city';
+  const runDrama = !demoOnly || demoOnly === 'drama';
+
+  if (runCity) await captureScenario(
     'city',
     async (page) => {
       await page.goto(`${base}/`, { waitUntil: 'networkidle' });
       await page.waitForSelector('[data-testid=ds3d-v2-text]');
       await page.waitForTimeout(1200);
-      await typeAndSend(page, 'Neon cyberpunk city at night in the rain');
+      await typeAndSend(page, 'Snowy daytime Tokyo urban city');
       await waitCanvas(page);
       await page.waitForTimeout(3500);
       await typeAndSend(page, 'new plan');
@@ -138,10 +144,10 @@ try {
     2000,
     28,
     path.join(mediaDir, 'demo-city-tour.mp4'),
-    12,
+    14,
   );
 
-  await captureScenario(
+  if (runDrama) await captureScenario(
     'drama',
     async (page) => {
       await page.goto(`${base}/`, { waitUntil: 'networkidle' });

@@ -4,14 +4,14 @@ Recordings of **this repository’s** OSS Studio (`apps/studio`). Not the commer
 
 ## Files
 
-| File | Description | Audio |
-| ---- | ----------- | ----- |
-| `demo-city-tour.mp4` | ~26s — one-line cyberpunk city, `new plan`, WASD / orbit camera tour | **None** (video only) |
-| `demo-city-tour-poster.png` | Frame export (~12s) from city tour | N/A |
-| `demo-drama.mp4` | ~22s — one-line street drama; dual character blocking + timeline play | **None** |
-| `demo-drama-poster.png` | Frame export (~8s) from drama demo | N/A |
-| `demo.mp4` | ~15.5s legacy — `edo-rainy-night` autoplay blockout | **None** |
-| `poster.png` | Frame from `demo.mp4` (~5s) | N/A |
+| File | Description | Audio | CC BY 4.0 scope |
+| ---- | ----------- | ----- | ---------------- |
+| `demo-city-tour.mp4` | ~20s — snowy daytime Tokyo (`jp_modern`), `new plan`, WASD / orbit tour | None | Company-owned demo — same license as below |
+| `demo-city-tour-poster.png` | Frame ~14s from city tour | — | Derivative of `demo-city-tour.mp4` |
+| `demo-drama.mp4` | ~22.5s — street drama blocking + timeline play | None | Company-owned demo — same license as below |
+| `demo-drama-poster.png` | Frame ~8s from drama demo | — | Derivative |
+| `demo.mp4` | ~15.5s legacy — Edo rainy night autoplay blockout | None | **Named in company CC BY approval** |
+| `poster.png` | Frame from `demo.mp4` (~5s) | — | **Named in company CC BY approval** |
 
 Regenerate:
 
@@ -19,6 +19,7 @@ Regenerate:
 npm install
 npx playwright install chromium
 npm run record:demos   # city + drama (recommended)
+# DEMO_ONLY=city npm run record:demos
 # npm run record:demo  # legacy clip only
 ```
 
@@ -26,57 +27,76 @@ Automation: `scripts/record-demos.mjs`, `scripts/record-demo.mjs`.
 
 ---
 
-## Provenance (source)
+## License — Creative Commons Attribution 4.0 International
+
+**Status:** **Approved** (company, 2026-11-13) for company-owned screen recordings and poster images in this directory, including explicitly **`demo.mp4`** and **`poster.png`**, and the other listings above produced the same way.
+
+| Item | Detail |
+| ---- | ------ |
+| **License** | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| **Legal text** | https://creativecommons.org/licenses/by/4.0/legalcode |
+| **Deed (human-readable)** | https://creativecommons.org/licenses/by/4.0/ |
+| **Directory marker** | [media/LICENSE](LICENSE) |
+| **Copyright** | Copyright (c) 2026 Bloomway AI Inc. |
+
+### Required attribution (copy or adapt)
+
+When sharing or embedding these files, credit:
+
+```text
+Bloomway World Director — Bloomway AI Inc.
+https://github.com/bloomway-ai/bloomway-world-director
+```
+
+### If you modify a file
+
+- State that you changed the work.
+- Retain identification of the original source and the above attribution.
+- Link to the license: https://creativecommons.org/licenses/by/4.0/
+
+### Not covered by CC BY in this folder
+
+| Category | Treatment |
+| -------- | --------- |
+| **Third-party stock** audio/video/UI | Not claimed; none intentionally included |
+| **Trademarks** (Bloomway name, logos in frame) | Display ≠ endorsement; **no** separate trademark license for promoting other products — [TRADEMARKS.md](../TRADEMARKS.md) |
+| **Repository source code** | [MIT](../LICENSE) at repo root — separate from media |
+| **Third-party npm / fonts / models** | Not part of this directory |
+
+---
+
+## Provenance (how assets were made)
 
 | Asset | How produced | Software shown |
 | ----- | ------------- | -------------- |
-| All `.mp4` | Playwright screen capture of local `vite preview` + ffmpeg H.264 (`yuv420p`) | OSS Studio at `localhost` (no login) |
-| All `.png` | ffmpeg single-frame extract from corresponding `.mp4` | same |
+| All `.mp4` | Playwright screen capture of local `vite preview` + ffmpeg H.264 (`yuv420p`) | OSS Studio on `localhost` (no login) |
+| All `.png` | ffmpeg single-frame extract from corresponding `.mp4` (or legacy pipeline for `poster.png`) | same |
 
-**No** third-party stock video, music, or external UI capture is intentionally included.
-
-Visible on-screen content includes: low-poly **program-generated** worlds, capsule **blocking actors**, English OSS chrome, optional Bloomway wordmark image under [apps/studio/public/brand/](../apps/studio/public/brand/) (trademark — see [TRADEMARKS.md](../TRADEMARKS.md)), and footer link to bloomway.ai.
+On-screen content includes: procedural blockout worlds, capsule blocking actors, English OSS chrome, optional Bloomway wordmark under [apps/studio/public/brand/](../apps/studio/public/brand/), and footer link to bloomway.ai.
 
 ---
 
-## License (proposed — pending company confirmation)
+## Technical acceptance log (screen review)
 
-> **Status:** *Proposed for company sign-off.* Do not treat CC BY as final until rights are confirmed.
+**Review date:** 2026-11-13 (re-checked after snowy Tokyo city tour re-record)  
+**Method:** `ffprobe` (duration, audio streams); sample frames at fixed offsets; visual review of captured UI.
 
-| Category | Proposed license | Scope |
-| -------- | ---------------- | ----- |
-| Company-owned screen recordings & posters in this folder (`*.mp4`, `*.png` listed above) | [**CC BY 4.0**](https://creativecommons.org/licenses/by/4.0/) | Redistribute and remix with **attribution** (e.g. “Bloomway World Director — bloomway-ai/bloomway-world-director”) |
-| Repository **source code** | [MIT](../LICENSE) | Separate from media; includes `LICENSE` notice requirements |
-| **Trademarks** (Bloomway name, logos in frame) | Not licensed by MIT or CC | [TRADEMARKS.md](../TRADEMARKS.md) |
-| Third-party assets | Not claimed here | None identified in recordings; brand PNG/SVG files are company marks, not third-party stock |
+| File | Duration | Audio | Sample frame | Technical acceptance |
+| ---- | -------- | ----- | ------------ | ------------------- |
+| `demo.mp4` | ~15.5s | None | ~3s | **Done** — legacy Edo blockout UI only |
+| `demo-city-tour.mp4` | ~20.2s | None | ~5s | **Done** — Tokyo/snow/day composer reply; no secrets observed |
+| `demo-drama.mp4` | ~22.6s | None | ~6s | **Done** — timeline + blocking; no secrets observed |
+| `*.png` posters | — | N/A | from parent `.mp4` | **Done** (not re-pixeled beyond ffmpeg extract) |
 
-Until CC BY is confirmed, redistribute media **only** as part of this repository or with company approval.
+**Observed in samples (all three videos):** OSS-only UI, local rules composer copy, blockout 3D, Bloomway OSS branding; **no** API keys, credentials, internal hostnames, or user PII in sampled frames.
 
----
+**Not covered:** Every frame; audio content (files have no audio track); videos recorded after this date without updating this log.
 
-## Content review log (technical, not legal clearance)
-
-**Review date:** 2026-11-13  
-**Reviewer:** Engineering (agent-assisted)  
-**Method:** `ffprobe` (duration, streams); single-frame grabs at ~3s per `.mp4`; spot-check of visible UI text.
-
-| Check | demo.mp4 | demo-city-tour.mp4 | demo-drama.mp4 |
-| ----- | -------- | ------------------ | -------------- |
-| Duration | ~15.5s | ~26s | ~22.5s |
-| Audio track | None | None | None |
-| API keys / tokens visible | Not observed in sampled frame | Not observed | Not observed |
-| Internal URLs / hostnames | Local dev only implied; no corp hostnames in frame | Composer shows user-typed prompt only | Timeline + composer reply only |
-| User PII | None observed | None observed | None observed |
-| Product UI (non-OSS) | Not observed | Not observed | Not observed |
-| AI-rendered final footage | Not present (blockout only) | Not present | Not present |
-
-**Not covered by this review:** Every frame of each video; audio (files have no audio); future edits after this date; poster frames not individually re-checked beyond their source `.mp4`.
-
-This review **does not** state “zero risk” or complete legal clearance for publication.
+**Media验收（技术）:** **完成** for the files listed above on 2026-11-13. This is **not** a legal “zero risk” clearance.
 
 ---
 
-## Company actions still required
+## Internal items outside this README
 
-1. Confirm company owns screen-recording copyright and approves **CC BY 4.0** (or another license) for this folder.  
-2. Confirm trademark use on-screen is acceptable for public GitHub/README embedding.
+- **Security email routing:** see [SECURITY.md](../SECURITY.md) — **等待邮箱管理人员确认**
+- **Extracted core employment rights:** see [docs/EXTRACTED_CODE.md](../docs/EXTRACTED_CODE.md)
