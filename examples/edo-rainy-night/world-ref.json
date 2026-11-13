@@ -1,0 +1,10 @@
+{
+  "generatorVersion": "styled-v1",
+  "style": "edo",
+  "layout": "street",
+  "density": "medium",
+  "timeOfDay": "night",
+  "weather": "rain",
+  "seed": 42,
+  "extentM": [160, 160]
+}

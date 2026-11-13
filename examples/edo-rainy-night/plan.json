@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "title": "Edo rainy night (OSS example)",
+  "durationSec": 12,
+  "stage": {
+    "width": 14,
+    "depth": 22
+  },
+  "set": {
+    "kind": "outdoor",
+    "description": "A narrow Edo-era street at night in the rain.",
+    "world": {
+      "generatorVersion": "styled-v1",
+      "style": "edo",
+      "layout": "street",
+      "density": "medium",
+      "timeOfDay": "night",
+      "weather": "rain",
+      "seed": 42,
+      "extentM": [
+        160,
+        160
+      ]
+    }
+  },
+  "characters": [
+    {
+      "id": "traveler",
+      "name": "Traveler",
+      "color": "blue",
+      "path": [
+        {
+          "t": 0,
+          "x": -2,
+          "y": -6,
+          "action": "walks along the street"
+        },
+        {
+          "t": 6,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 12,
+          "x": 2,
+          "y": 5
+        }
+      ]
+    },
+    {
+      "id": "vendor",
+      "name": "Vendor",
+      "color": "red",
+      "path": [
+        {
+          "t": 0,
+          "x": 3,
+          "y": -2,
+          "facing": 200
+        },
+        {
+          "t": 12,
+          "x": 3,
+          "y": -2
+        }
+      ]
+    }
+  ],
+  "camera": {
+    "fovDeg": 40,
+    "keys": [
+      {
+        "t": 0,
+        "x": -2,
+        "y": -8,
+        "h": 1.2,
+        "lookAt": "traveler",
+        "move": "low follow behind the traveler"
+      },
+      {
+        "t": 4,
+        "x": -4.5,
+        "y": -5,
+        "h": 1.5,
+        "lookAt": "traveler",
+        "move": "push in from the left flank"
+      },
+      {
+        "t": 8,
+        "x": 5,
+        "y": 0.5,
+        "h": 2.2,
+        "lookAt": "traveler",
+        "move": "arc to the side"
+      },
+      {
+        "t": 12,
+        "x": 6.5,
+        "y": 9,
+        "h": 2.8,
+        "lookAt": "traveler",
+        "move": "pull back to reveal the street"
+      }
+    ]
+  },
+  "beats": [
+    {
+      "t": 0,
+      "text": "Follow the traveler in the rain."
+    },
+    {
+      "t": 4,
+      "text": "Push in as they pass the vendor."
+    },
+    {
+      "t": 12,
+      "text": "Pull back along the street."
+    }
+  ]
+}

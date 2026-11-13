@@ -1,0 +1,17 @@
+{
+  "name": "bloomway-world-director",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "verify:example": "tsx scripts/verify-example.ts",
+    "dev": "npm run dev -w @bloomway/studio",
+    "build": "npm run build -w @bloomway/studio"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
