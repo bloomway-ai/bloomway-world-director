@@ -13,6 +13,6 @@
 | **4. SECURITY + gitleaks** | 已完成 | [`SECURITY.md`](../SECURITY.md)；gitleaks 见下方 | 远程历史 push 前再扫 |
 | **5. 废止许可措辞** | 已完成 | 本仓无强制报备/署名条款 | 其他仓历史另议 |
 
-**gitleaks（本轮）：** 运行 `gitleaks detect --source .` 后更新本节输出。
+**gitleaks（本轮）：** 8.30.1，`2 commits scanned`，~348 KB，**no leaks found**（2026-11-13）。
 
 **测试账号说明：** 本仓库本地验证 **不需要** Bloomway 登录；产品完整导演台在 `bloomway-launch-step1` 需测试账号，不纳入本仓五项验收。
