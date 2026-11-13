@@ -1,14 +1,16 @@
-# Release notes draft — v0.1.0 (do not publish tag yet)
+# v0.1.0
 
-**Target:** First public OSS drop of Bloomway World Director  
-**Code license:** MIT ([LICENSE](../LICENSE)), Copyright (c) 2026 Bloomway AI Inc.
+**Bloomway World Director** — open-source 3D previsualization (blockout worlds, camera paths, local Studio).
+
+**License:** MIT ([LICENSE](../LICENSE)), Copyright (c) 2026 Bloomway AI Inc.  
+**Demo media:** [CC BY 4.0](../media/README.md)
 
 ## Highlights
 
-- Deterministic previs core (`packages/core`) — plan validation, world generation, camera sampling
-- OSS Studio (`apps/studio`) — blockout viewport, timeline, local composer rules, world presets
-- Examples: `edo-rainy-night`, `street-drama`
-- Demo media: `media/demo-city-tour.mp4`, `media/demo-drama.mp4`
+- Core library (`packages/core`) — plan validation, procedural world generation, camera sampling
+- OSS Studio (`apps/studio`) — WebGL viewport, timeline, offline composer rules, world presets
+- Examples: `examples/edo-rainy-night`, `examples/street-drama`
+- Demo recordings: `media/demo-city-tour.mp4` (snowy daytime Tokyo), `media/demo-drama.mp4`, legacy `media/demo.mp4`
 
 ## Verify locally
 
@@ -19,10 +21,10 @@ npm run build
 npm run verify:studio-e2e
 ```
 
-## Not included
+## Not in this repository
 
-Hosted LLM composer, full commercial Director UI, Bloomway account billing, MCP tools.
+Hosted LLM composer, full commercial Director UI, Bloomway cloud accounts/billing, MCP Director tools.
 
----
+## Links
 
-*Create git tag `v0.1.0` only after company approves public push and media/trademark licenses.*
+- [Contributing](../CONTRIBUTING.md) · [Security](../SECURITY.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)

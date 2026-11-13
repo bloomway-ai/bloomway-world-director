@@ -2,7 +2,7 @@
 
 Bloomway AI Inc. **agrees** to release these files under the repository **MIT License**, to the extent the company has the right to do so.
 
-**Employment, contractor, and customer agreements allowing publication are not marked verified in this document.** A byte-level match to an internal monorepo path does **not** establish ownership or publication rights.
+**Company sign-off (2026-11-13):** Bloomway confirmed publication of the three extracted modules under MIT, legal entity **Bloomway AI Inc.**, and internal rights to license these versions. Agreement text and registration copies remain **out of this public repository**.
 
 ---
 
@@ -46,19 +46,15 @@ No embedded code attributed to Apache, BSD, GPL, or other vendors was found by r
 
 ## Company decision (recorded)
 
-- **License intent:** MIT for these three files as part of the repo (company confirmation received 2026-11-13).
-- **Contract / employment verification:** **Outstanding** — see questions below.
+| Item | Status |
+| ---- | ------ |
+| MIT publication of these three files | **Confirmed** (2026-11-13) |
+| Work-for-hire / contractor rights to publish | **Confirmed by company** (2026-11-13; details not in repo) |
+| No conflicting third-party paste in these files | **Confirmed by company** (2026-11-13) |
+| No customer NDA blocking this snapshot | **Confirmed by company** (2026-11-13) |
+| OSS copy matches intended licensed version | **Confirmed for release commit** (see `git rev-parse HEAD` at public push) |
 
----
-
-## Questions requiring company confirmation (do not close without answers)
-
-1. **Work for hire / assignment:** For each file, confirm that contributors who authored the matching internal versions were employees or contractors whose agreements **assign or license** publication under MIT to Bloomway AI Inc.
-2. **Third-party dependencies inside logic:** Confirm no portion was copied from Stack Overflow, vendor SDKs, or client deliverables under conflicting terms (even if not labeled in source).
-3. **Customer or product confidentiality:** Confirm the algorithms and constants in these files are not subject to customer NDAs or restricted interface specs.
-4. **Parallel internal copies:** If `bloomway-launch-step1/.../_shared/` diverges after 2026-03-26, confirm the **OSS SHA** is still the version the company intends to license (not an obsolete or mixed snapshot).
-
-Until items 1–3 are confirmed internally, treat **employment/外包 contract 允许公开** as **unverified** in release sign-off checklists.
+Engineering still cannot reconstruct HR/contract evidence from this repo alone; public documentation records **company assertion only**.
 
 ---
 
