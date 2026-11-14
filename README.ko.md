@@ -55,15 +55,21 @@ npm run dev                  # Studio: http://localhost:5173/
 
 ## 데모
 
-**이 저장소** OSS Studio 녹화(상용 Bloomway 앱 전체 아님). 아래에서 바로 재생(기본 음소거).
+**이 저장소** OSS Studio 녹화. 아래는 루프 미리보기 — **▶ Full MP4** 로 원본.
 
 <table>
   <tr>
     <td width="50%">
-      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4" controls muted playsinline></video>
+      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">
+        <img src="media/demo-city-tour.gif" alt="City tour preview" width="100%">
+      </a>
+      <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">▶ Full MP4</a></sub>
     </td>
     <td width="50%">
-      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4" controls muted playsinline></video>
+      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">
+        <img src="media/demo-drama.gif" alt="Street drama preview" width="100%">
+      </a>
+      <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">▶ Full MP4</a></sub>
     </td>
   </tr>
 </table>

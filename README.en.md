@@ -55,24 +55,24 @@ OSS Studio **v0.1** (English UI only). Home → one-line world → camera timeli
 
 ## See it in action
 
-Recorded from **this repository’s** OSS Studio (not the full commercial Bloomway app). Press play (videos are muted by default).
+Recorded from **this repository’s** OSS Studio (not the full commercial Bloomway app). Previews loop below; click **▶ Full MP4** for the file.
 
 <table>
   <tr>
     <td width="50%">
-      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4" controls muted playsinline>
-        <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">City tour</a>
-      </video>
+      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">
+        <img src="media/demo-city-tour.gif" alt="City tour preview" width="100%">
+      </a>
+      <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">▶ Full MP4</a></sub>
     </td>
     <td width="50%">
-      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4" controls muted playsinline>
-        <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">Street drama</a>
-      </video>
+      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">
+        <img src="media/demo-drama.gif" alt="Street drama preview" width="100%">
+      </a>
+      <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">▶ Full MP4</a></sub>
     </td>
   </tr>
 </table>
-
-Posters: [city](media/demo-city-tour-poster.png) · [drama](media/demo-drama-poster.png)
 
 | Demo | One-line prompt | File |
 | ---- | --------------- | ---- |

@@ -6,24 +6,26 @@ Open-source **3D previsualization** (low-poly blockout): build worlds, block act
 
 **License:** [MIT](LICENSE) · **Commercial use:** free under MIT — see [docs/commercial-use.md](docs/commercial-use.md) · **Updates:** this repository is **actively maintained**; expect ongoing releases and docs.
 
-<p align="center"><strong>City tour</strong> · <strong>Street drama</strong> (OSS Studio, CC BY 4.0 — unmute if needed)</p>
+<p align="center"><strong>City tour</strong> · <strong>Street drama</strong> (looping previews — CC BY 4.0)</p>
 
 <table>
   <tr>
     <td width="50%">
-      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4" controls muted playsinline>
-        <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">City tour demo</a>
-      </video>
+      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">
+        <img src="media/demo-city-tour.gif" alt="City tour demo preview" width="100%">
+      </a>
+      <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">▶ Full MP4</a></sub>
     </td>
     <td width="50%">
-      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4" controls muted playsinline>
-        <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">Street drama demo</a>
-      </video>
+      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">
+        <img src="media/demo-drama.gif" alt="Street drama demo preview" width="100%">
+      </a>
+      <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">▶ Full MP4</a></sub>
     </td>
   </tr>
 </table>
 
-*Source files: [`media/`](media/) · embed URLs: [docs/promo/VIDEO_URLS.md](docs/promo/VIDEO_URLS.md)*
+*Source: [`media/`](media/) · native `<video>` in README needs GitHub drag-and-drop assets — [docs/promo/VIDEO_URLS.md](docs/promo/VIDEO_URLS.md)*
 
 ---
 

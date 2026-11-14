@@ -57,24 +57,24 @@ OSS Studio **v0.1**（界面仅英文）。首页 → 一句话建世界 → 运
 
 ## 观看演示
 
-录屏来自**本仓库** OSS Studio，非完整商业客户端。可直接在下方播放（默认静音，可取消静音）。
+录屏来自**本仓库** OSS Studio，非完整商业客户端。下方为**自动循环预览**，点 **▶ 完整 MP4** 观看原片。
 
 <table>
   <tr>
     <td width="50%">
-      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4" controls muted playsinline>
-        <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">城市巡游</a>
-      </video>
+      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">
+        <img src="media/demo-city-tour.gif" alt="城市巡游预览" width="100%">
+      </a>
+      <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">▶ 完整 MP4</a></sub>
     </td>
     <td width="50%">
-      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4" controls muted playsinline>
-        <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">街头剧情</a>
-      </video>
+      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">
+        <img src="media/demo-drama.gif" alt="街头剧情预览" width="100%">
+      </a>
+      <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">▶ 完整 MP4</a></sub>
     </td>
   </tr>
 </table>
-
-海报备用：[城市](media/demo-city-tour-poster.png) · [剧情](media/demo-drama-poster.png)
 
 | 演示 | 一句话 | 文件 |
 | ---- | ------ | ---- |

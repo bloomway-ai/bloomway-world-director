@@ -55,15 +55,21 @@ Opsional: `npm run verify:studio-e2e`, `npm run record:demos`, `npm run capture:
 
 ## Lihat demo
 
-Direkam dari Studio OSS **repositori ini** (bukan aplikasi komersial Bloomway penuh). Putar langsung di bawah (bisu secara default).
+Direkam dari Studio OSS **repositori ini**. Pratinjau di bawah (gelung) — **▶ Full MP4** untuk kualitas penuh.
 
 <table>
   <tr>
     <td width="50%">
-      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4" controls muted playsinline></video>
+      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">
+        <img src="media/demo-city-tour.gif" alt="City tour preview" width="100%">
+      </a>
+      <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">▶ Full MP4</a></sub>
     </td>
     <td width="50%">
-      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4" controls muted playsinline></video>
+      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">
+        <img src="media/demo-drama.gif" alt="Street drama preview" width="100%">
+      </a>
+      <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">▶ Full MP4</a></sub>
     </td>
   </tr>
 </table>

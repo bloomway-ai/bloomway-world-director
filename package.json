@@ -15,7 +15,8 @@
     "verify:studio-e2e": "node scripts/verify-studio-e2e.mjs",
     "license:audit": "node scripts/license-audit.mjs",
     "i18n-check": "node scripts/i18n-check-readme.mjs",
-    "capture:screenshots": "node scripts/capture-readme-screenshots.mjs"
+    "capture:screenshots": "node scripts/capture-readme-screenshots.mjs",
+    "preview:demos-gif": "bash scripts/preview-demos-gif.sh"
   },
   "devDependencies": {
     "playwright": "^1.52.0",

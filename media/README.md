@@ -10,6 +10,8 @@ Recordings of **this repository’s** OSS Studio (`apps/studio`). Not the commer
 | `demo-city-tour-poster.png` | Frame ~14s from city tour | — | Derivative of `demo-city-tour.mp4` |
 | `demo-drama.mp4` | ~22.5s — street drama blocking + timeline play | None | Company-owned demo — same license as below |
 | `demo-drama-poster.png` | Frame ~8s from drama demo | — | Derivative |
+| `demo-city-tour.gif` | README looping preview (~12s) | None | Derivative of city tour MP4 |
+| `demo-drama.gif` | README looping preview (~12s) | None | Derivative of drama MP4 |
 | `demo.mp4` | ~15.5s legacy — Edo rainy night autoplay blockout | None | **Named in company CC BY approval** |
 | `poster.png` | Frame from `demo.mp4` (~5s) | — | **Named in company CC BY approval** |
 | `screenshots/home.png` | README — Studio home (presets + composer) | None | Static UI capture |
@@ -23,6 +25,7 @@ npm install
 npx playwright install chromium
 npm run record:demos        # city + drama (recommended)
 npm run capture:screenshots # README stills (home / world / timeline)
+npm run preview:demos-gif   # README GIF loops from demo MP4s
 # DEMO_ONLY=city npm run record:demos
 # npm run record:demo  # legacy clip only
 ```
