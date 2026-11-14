@@ -4,48 +4,111 @@
 
 **Your words. Your world. Your camera.**
 
-Bangun dunia 3D dan arahkan gerak kamera untuk **pravisualisasi** sinematik (blockout poli rendah)—bukan model pembuatan video AI umum. Menjadi footage akhir adalah alur opsional di [Bloomway](https://bloomway.ai).
+Bangun dunia 3D dan arahkan gerak kamera untuk **pravisualisasi** sinematik (blockout poli rendah)—bukan model pembuatan video AI umum. Mengubah pravis menjadi footage akhir adalah alur kerja opsional di [Bloomway](https://bloomway.ai).
 
 > **Eksperimen terbuka Bloomway:** bangun dunia dari satu kalimat, blok adegan dalam pravis 3D, lalu bawa ke layar. Toolkit terbuka untuk kreator dan peneliti.  
-> **Pembaruan berkelanjutan:** repositori ini aktif dirawat; perkembangan akan berlanjut.
+> **Pembaruan berkelanjutan:** repositori ini dirawat secara aktif; perkembangan akan berlanjut.
 
-**Penggunaan komersial MIT** tanpa registrasi atau bagi hasil. **info@bloomway.ai** hanya untuk kerja sama sukarela—bukan syarat lisensi. Lihat [docs/commercial-use.md](docs/commercial-use.md).
+**Penggunaan komersial MIT** tidak memerlukan registrasi, pemberitahuan, atau bagi hasil. Hubungi **info@bloomway.ai** hanya jika Anda ingin kolaborasi—**bukan** syarat lisensi. Lihat [docs/commercial-use.md](docs/commercial-use.md).
 
 ---
 
 ## Tiga jalur
 
-| Jalur | Ringkasan |
-| ----- | --------- |
-| **Jalur 1 — Sumber terbuka (lokal)** | Jalankan contoh di mesin Anda; pahami teks → pravis 3D. Untuk belajar, mengajar, riset. |
-| **Jalur 2 — Bloomway MCP (opsional)** | Deskripsi yang sama dapat terhubung ke pravis/generasi terkelola—**opsional**. |
-| **Jalur 3 — Tim & pengiriman** | Kolaborasi dan dukungan di [platform Bloomway](https://bloomway.ai). |
+| Jalur | Apa itu |
+| ----- | ------- |
+| **Jalur 1 — Sumber terbuka (lokal)** | Jalankan contoh secara lokal dan pahami teks → pravis 3D. Cocok untuk belajar, mengajar, dan riset. |
+| **Jalur 2 — Bloomway MCP (opsional)** | Sambungkan deskripsi yang sama ke pravis dan generasi terkelola—**opsional**, tidak wajib untuk repo ini. |
+| **Jalur 3 — Lanjutan & tim** | Kolaborasi, templat komersial, dan dukungan pengiriman di [platform Bloomway](https://bloomway.ai). |
+
+Bagikan contoh shot Anda di Discussions jika tersedia.
 
 ---
 
 ## Mulai cepat
+
+**Persyaratan:** Node.js ≥ 20, npm ≥ 10. Tidak perlu akun Bloomway atau kunci API untuk contoh bundel.
 
 ```bash
 git clone https://github.com/bloomway-ai/bloomway-world-director.git
 cd bloomway-world-director
 npm install
 npm run verify:example
-npm run dev
+npm run dev                  # Studio di http://localhost:5173/
 ```
 
-Contoh: [`examples/edo-rainy-night`](examples/edo-rainy-night/). Lihat [docs/implementation-audit.md](docs/implementation-audit.md).
+Studio default memuat [`examples/edo-rainy-night`](examples/edo-rainy-night/) (JSON di repo, bukan inferensi cloud langsung).
+
+**Sumber kebenaran:** [docs/implementation-audit.md](docs/implementation-audit.md) · [docs/verification-log.md](docs/verification-log.md)
+
+Opsional: `npm run verify:studio-e2e`, `npm run record:demos`.
 
 ---
 
-## Demo
+## Lihat demo
 
-| Demo | Prompt satu baris | File |
-| ---- | ----------------- | ---- |
-| Tur kota | `Snowy daytime Tokyo urban city` | [demo-city-tour.mp4](media/demo-city-tour.mp4) |
-| Drama jalanan | `Rainy night — two rivals meet in the street` | [demo-drama.mp4](media/demo-drama.mp4) |
+Direkam dari Studio OSS **repositori ini** (bukan aplikasi komersial Bloomway penuh).
 
-UI Studio **hanya Inggris** v0.1; batasan NL lokal — audit §6.
+| Demo | Prompt satu baris | Berkas |
+| ---- | ----------------- | ------ |
+| Tur kota | `Snowy daytime Tokyo urban city` → jelajahi dengan WASD | [demo-city-tour.mp4](media/demo-city-tour.mp4) |
+| Drama jalanan | `Rainy night — two rivals meet in the street` → putar blocking | [demo-drama.mp4](media/demo-drama.mp4) |
 
-MIT · [LICENSE](LICENSE) · media [CC BY 4.0](media/README.md)
+Buat ulang: `npm run record:demos`. Legasi: [demo.mp4](media/demo.mp4) · [Catatan media](media/README.md)
 
-*Beri ⭐ jika proyek ini membantu eksplorasi syot Anda.*
+Produk lengkap: [bloomway.ai](https://bloomway.ai)
+
+---
+
+## Apa yang berjalan secara lokal
+
+| Status | Kemampuan |
+| ------ | --------- |
+| **Terverifikasi** | `plan.json` + `world-ref.json`, `validatePrevisPlan`, `generatePrevisWorld`, `samplePrevisCamera` |
+| **Terverifikasi** | Viewport Director V2 + timeline (`verify:studio-e2e`); blockout legasi via `?legacy=1` |
+| **Eksperimental** | Komposer kata kunci/aturan tanpa LLM cloud |
+| **Direncanakan** | Composer cloud penuh, alat MCP Director, lebih banyak contoh |
+
+Asisten bahasa alami «kalimat apa pun → rencana» hanya **dihosting di Bloomway** (tidak ada di repo ini).
+
+---
+
+## Batasan saat ini
+
+1. Narasi pemasaran menjelaskan visi produk; contoh OSS memakai **JSON yang sudah disimpan**.  
+2. Kesetiaan visual hanya **blockout**—bukan render akhir Bloomway.  
+3. **UI Studio bahasa Inggris saja** di v0.1; lihat [docs/product-parity.md](docs/product-parity.md).  
+4. «Satu baris → dunia» lokal memakai **aturan dan preset**, bukan NLU cloud penuh.
+
+Detail: [docs/implementation-audit.md](docs/implementation-audit.md) §6.
+
+---
+
+## Peta jalan
+
+- Contoh tambahan (`modern-city-street`, `mars-base`)
+- Dokumentasi dan alat integrasi MCP
+- Studio lebih kaya (impor, ekspor UI)
+- Terjemahan UI Studio (krom aplikasi; README sudah multibahasa)
+
+---
+
+## Alur kerja Bloomway opsional
+
+*Ingin mengubah pravis menjadi footage? Jelajahi alur terhubung di [Bloomway](https://bloomway.ai).*
+
+---
+
+## Penggunaan komersial & merek
+
+MIT — lihat [LICENSE](LICENSE). Hak cipta (c) 2026 Bloomway AI Inc. Media demo: [CC BY 4.0](media/README.md). Pemberitahuan pihak ketiga: [docs/THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md).
+
+Merek dagang: [TRADEMARKS.md](TRADEMARKS.md). Jangan menyiratkan dukungan resmi.
+
+---
+
+## Berkontribusi
+
+[CONTRIBUTING.md](CONTRIBUTING.md) · [docs/ACCEPTANCE.md](docs/ACCEPTANCE.md)
+
+*Jika ini membantu Anda menjelajahi sebuah shot—atau ingin mengikuti perkembangan kami—beri proyek ini ⭐.*
