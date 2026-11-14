@@ -7,15 +7,10 @@
 [English](README.md) · [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [Español](README.es.md)
 
 <p align="center">
-  <video
-    src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-full-demo-readme.mp4"
-    poster="media/promo-full-demo-poster.png"
-    controls
-    playsinline
-    preload="metadata"
-    width="100%">
-  </video>
-  <br><sub>▶ 63s · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">1080p</a></sub>
+  <a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">
+    <img src="media/promo-full-demo-poster.png" width="100%">
+  </a>
+  <br><sub><a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">▶ Play</a> · 63s · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">1080p</a></sub>
 </p>
 
 *63초 비전 영상은 Bloomway 제품 흐름이며, 아래 OSS 블록아웃 Studio 녹화가 아닙니다.*

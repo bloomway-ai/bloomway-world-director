@@ -7,16 +7,14 @@
 [English](README.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
 
 <p align="center">
-  <video
-    src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-full-demo-readme.mp4"
-    poster="media/promo-full-demo-poster.png"
-    controls
-    playsinline
-    preload="metadata"
-    width="100%">
-    <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-full-demo-readme.mp4">观看完整演示（63 秒）</a>
-  </video>
-  <br><sub>▶ <strong>完整演示</strong> · 63 秒 · 含音频 · README 内为 1280p（约 8MB）· <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">下载 1080p 正本</a></sub>
+  <a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">
+    <img src="media/promo-full-demo-poster.png" alt="播放完整 63 秒演示（含音频）" width="100%">
+  </a>
+  <br><sub>
+    <strong><a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">▶ 浏览器播放</a></strong>
+    · 63 秒 · 含音频 · 1280p（约 8MB）
+    · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">下载 1080p 正本</a>
+  </sub>
 </p>
 
 *63 秒愿景片展示 Bloomway 产品路径，非下方 OSS 白盒 Studio 录屏。*

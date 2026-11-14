@@ -7,15 +7,10 @@ Studio pravis 3D sumber terbuka untuk perencanaan adegan, blocking karakter, dan
 [English](README.md) · [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
 
 <p align="center">
-  <video
-    src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-full-demo-readme.mp4"
-    poster="media/promo-full-demo-poster.png"
-    controls
-    playsinline
-    preload="metadata"
-    width="100%">
-  </video>
-  <br><sub>▶ 63s · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">1080p</a></sub>
+  <a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">
+    <img src="media/promo-full-demo-poster.png" width="100%">
+  </a>
+  <br><sub><a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">▶ Play</a> · 63s · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">1080p</a></sub>
 </p>
 
 *Film visi 63s — alur produk Bloomway; bukan rekaman OSS Studio di bawah.*

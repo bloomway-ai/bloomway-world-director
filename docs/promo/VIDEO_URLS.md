@@ -4,7 +4,8 @@
 
 | Asset | Role |
 | ----- | ---- |
-| `media/promo-full-demo-readme.mp4` | **Above fold** — 63s inline `<video controls>` (~8MB, 1280p; under GitHub size budget) |
+| `media/promo-full-demo-readme.mp4` | 63s encode (~8MB) — **Pages player** + optional `user-attachments` inline (see [README-INLINE-VIDEO.md](../github/README-INLINE-VIDEO.md)) |
+| Pages `watch-full-demo.html` | In-browser player on GitHub Pages |
 | `media/promo-full-demo-poster.png` | Video `poster` image |
 | `media/try-in-browser-cover.png` | **Try in browser** — world + camera/timeline still |
 | `media/hero-previs-loop.gif` | **Studio in action** — street drama / timeline (~10s, ~800KB) |
