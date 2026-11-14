@@ -27,8 +27,9 @@
 | Org profile + repo Pin | **Done** |
 | Repo About + Topics | **Done** |
 | **Social preview image** (Settings → General) | **Todo** — use `docs/promo/social-preview.png` |
-| **Discussions** enabled + welcome + pinned challenge | **Automate via gh after push** |
-| Branch protection + required checks | **Org admin** — enable `Verify` + `DCO` on `main` |
+| **Discussions** enabled + welcome + pinned challenge | **Done** — [#1 Welcome](https://github.com/bloomway-ai/bloomway-world-director/discussions/1) · [#2 Challenge](https://github.com/bloomway-ai/bloomway-world-director/discussions/2) — **pin manually in UI** |
+| Branch protection + required checks | **Done** — `verify` + `signoff` on `main` |
+| Web commit sign-off (DCO) | **Done** — enabled on repo |
 | Release assets (attach mp4) | **Optional** — files in `media/` |
 
 ## Raw demo URLs
