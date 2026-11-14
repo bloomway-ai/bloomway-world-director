@@ -81,4 +81,4 @@ See `docs/ACCEPTANCE.md` — rescanned after new commits.
 | `npm run verify:studio-e2e` | OK — timeline `0.7s → 3.1s / 12s` |
 
 Release URL check: `final_v2_cold_open.mp4` → HTTP 302 (asset exists).  
-GitHub Pages URL: **404** until Pages + Actions deploy enabled (see `docs/deploy/studio-hosting.md`).
+GitHub Pages URL: **live** — https://bloomway-ai.github.io/bloomway-world-director/ (enabled 2026-11-14).

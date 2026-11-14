@@ -80,7 +80,7 @@ Matrix: [examples/STATUS.md](examples/STATUS.md).
 2. **Visual fidelity:** Blockout only; not Bloomway final renders.
 3. **Studio UI:** English chrome in v0.1.
 4. **Examples:** Four validate; two are first-visit friendly without reading docs.
-5. **GitHub Pages:** Workflow present; **404 until** Pages source enabled (see [deploy/studio-hosting.md](deploy/studio-hosting.md)).
+5. **GitHub Pages OSS Studio:** **Live** at https://bloomway-ai.github.io/bloomway-world-director/ (see [deploy/studio-hosting.md](deploy/studio-hosting.md) for forks).
 6. **Copyright entity:** MIT lists **Bloomway AI Inc.** — [EXTRACTED_CODE.md](EXTRACTED_CODE.md).
 
 ---

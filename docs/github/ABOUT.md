@@ -8,14 +8,15 @@ Use when you have **Settings → General → About** access.
 An open-source 3D previs toolkit for building worlds, blocking characters, and rehearsing camera moves. MIT licensed.
 ```
 
-## Website
+## Website (About field)
 
-| Phase | URL |
-| ----- | --- |
-| **Before GitHub Pages is live** | Leave blank or use `https://bloomway.ai` only if you want product site—do **not** imply it is the OSS Studio. |
-| **After Pages deploy** | `https://bloomway-ai.github.io/bloomway-world-director/` |
+Set to the **OSS browser Studio** (not bloomway.ai alone):
 
-Product site (optional second link in README): https://bloomway.ai
+```text
+https://bloomway-ai.github.io/bloomway-world-director/
+```
+
+Product site remains in README body: https://bloomway.ai
 
 ## Topics (only what v0.1 actually ships)
 
