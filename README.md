@@ -58,8 +58,8 @@ Static hosting is configured ([`docs/deploy/studio-hosting.md`](docs/deploy/stud
 
 | Status (2026-11-14) | Note |
 | ------------------- | ---- |
-| Workflow on `main` | `.github/workflows/deploy-studio-pages.yml` |
-| **Live check** | Returns **404** until **Settings → Pages → Source: GitHub Actions** is enabled and a deploy succeeds |
+| **Live** | [Open OSS Studio](https://bloomway-ai.github.io/bloomway-world-director/) — deploy via `.github/workflows/deploy-studio-pages.yml` |
+| Desktop WebGL | Recommended; mobile varies |
 | Vercel (optional) | Root [`vercel.json`](vercel.json) — separate URL, same static build |
 
 **Do not** treat [bloomway.ai](https://bloomway.ai) as the OSS Studio — it is the **optional hosted product** (account / billing may apply).

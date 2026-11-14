@@ -7,15 +7,17 @@ The Studio app is a **static** Vite build (`apps/studio/dist`): WebGL blockout, 
 | **GitHub Pages** (recommended) | https://bloomway-ai.github.io/bloomway-world-director/ | `npm run build:pages` (CI on `main`) |
 | **Vercel** (optional) | Project root after import | `npm run build` (no repo subpath) |
 
-## One-time: enable GitHub Pages
+## GitHub Pages (enabled 2026-11-14)
 
-In the repository on GitHub:
+**Live URL:** https://bloomway-ai.github.io/bloomway-world-director/
 
-1. **Settings → Pages**
-2. **Build and deployment → Source:** **GitHub Actions**
-3. Push to `main` (or run workflow **Deploy Studio (GitHub Pages)** manually)
+Enablement (if a fork needs it): **Settings → Pages → Source: GitHub Actions**, or:
 
-The workflow [`.github/workflows/deploy-studio-pages.yml`](../../.github/workflows/deploy-studio-pages.yml) uploads `apps/studio/dist`.
+```bash
+gh api -X POST repos/OWNER/REPO/pages -f build_type=workflow
+```
+
+Workflow: [`.github/workflows/deploy-studio-pages.yml`](../../.github/workflows/deploy-studio-pages.yml) → `apps/studio/dist`.
 
 ## Vercel
 

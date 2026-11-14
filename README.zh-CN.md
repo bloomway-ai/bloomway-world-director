@@ -44,7 +44,7 @@ npm run dev
 **浏览器试玩（GitHub Pages）**
 
 配置见 [docs/deploy/studio-hosting.md](docs/deploy/studio-hosting.md)。目标地址：`https://bloomway-ai.github.io/bloomway-world-director/`  
-截至 **2026-11-14** 仍为 **404**，需在仓库 **Settings → Pages → GitHub Actions** 启用并成功部署。  
+**已上线：** [打开 OSS Studio](https://bloomway-ai.github.io/bloomway-world-director/)（桌面 WebGL 为佳）。  
 [bloomway.ai](https://bloomway.ai) 为 **可选托管产品**，不是本仓库 OSS Studio。
 
 ---
