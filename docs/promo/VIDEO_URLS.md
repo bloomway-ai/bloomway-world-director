@@ -4,7 +4,8 @@
 
 | Asset | Role |
 | ----- | ---- |
-| `media/promo-full-demo-poster.png` | **Above fold** — static cover → full 63s Release MP4 (no crop, no full GIF) |
+| `media/promo-full-demo-readme.mp4` | **Above fold** — 63s inline `<video controls>` (~8MB, 1280p; under GitHub size budget) |
+| `media/promo-full-demo-poster.png` | Video `poster` image |
 | `media/try-in-browser-cover.png` | **Try in browser** — world + camera/timeline still |
 | `media/hero-previs-loop.gif` | **Studio in action** — street drama / timeline (~10s, ~800KB) |
 | `media/demo-city-tour.gif` / `demo-drama.gif` | City tour + street drama (~1MB each) |
@@ -18,7 +19,8 @@
 
 | Asset | Download URL | Check |
 | ----- | ------------ | ----- |
-| Brand film | `https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4` | HTTP **302** → asset (OK) |
+| Brand film (1080p master) | `.../final_v2_cold_open.mp4` | ~33MB — unchanged master |
+| README inline player | `.../promo-full-demo-readme.mp4` | ~8MB — same 63s timeline, 1280p |
 | City tour | `.../demo-city-tour.mp4` | On Release |
 | Street drama | `.../demo-drama.mp4` | On Release |
 | ~~promo-cold-open.mp4~~ | — | **Invalid** — label only; file is `final_v2_cold_open.mp4` |

@@ -7,10 +7,16 @@ An open-source 3D previs studio for planning scenes, character blocking, and cam
 [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
 
 <p align="center">
-  <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">
-    <img src="media/promo-full-demo-poster.png" alt="Watch the full demo — 63 second product vision film" width="100%">
-  </a>
-  <br><sub>▶ <strong>Watch the full demo</strong> · 63 seconds · opens full video (with audio)</sub>
+  <video
+    src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-full-demo-readme.mp4"
+    poster="media/promo-full-demo-poster.png"
+    controls
+    playsinline
+    preload="metadata"
+    width="100%">
+    <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-full-demo-readme.mp4">Watch the full demo (63s)</a>
+  </video>
+  <br><sub>▶ <strong>Full demo</strong> · 63s · with audio · README player is 1280p (~8&nbsp;MB) · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">1080p download</a></sub>
 </p>
 
 *63s vision film — world → screen on the Bloomway product. Not a recording of the OSS blockout Studio below.*

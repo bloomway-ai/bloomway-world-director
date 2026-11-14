@@ -7,10 +7,15 @@
 [English](README.md) · [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [한국어](README.ko.md) · [Español](README.es.md)
 
 <p align="center">
-  <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">
-    <img src="media/promo-full-demo-poster.png" alt="Watch the full demo — 63s" width="100%">
-  </a>
-  <br><sub>▶ <strong>Watch the full demo</strong> · 63 seconds · フル動画（音声あり）</sub>
+  <video
+    src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-full-demo-readme.mp4"
+    poster="media/promo-full-demo-poster.png"
+    controls
+    playsinline
+    preload="metadata"
+    width="100%">
+  </video>
+  <br><sub>▶ 63s · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">1080p</a></sub>
 </p>
 
 *63 秒のビジョン映像は Bloomway 製品の流れ。下記 OSS ブロックアウト Studio の録画ではありません。*
