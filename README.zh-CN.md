@@ -6,6 +6,8 @@
 
 [English](README.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
 
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![CI](https://github.com/bloomway-ai/bloomway-world-director/actions/workflows/verify.yml/badge.svg)](https://github.com/bloomway-ai/bloomway-world-director/actions/workflows/verify.yml) [![Release](https://img.shields.io/github/v/release/bloomway-ai/bloomway-world-director)](https://github.com/bloomway-ai/bloomway-world-director/releases/tag/v0.1.0)
+
 https://github.com/user-attachments/assets/c9382f04-355c-4c05-ac11-c86aab355fa0
 
 <p align="center">
@@ -137,5 +139,3 @@ Director **MCP** 与 Studio 多语言：**计划中** — [docs/mcp/README.md](d
 ## 许可
 
 [MIT](LICENSE) · 演示 [CC BY 4.0](media/LICENSE) · [TRADEMARKS.md](TRADEMARKS.md)
-
-[![CI](https://github.com/bloomway-ai/bloomway-world-director/actions/workflows/verify.yml/badge.svg)](https://github.com/bloomway-ai/bloomway-world-director/actions/workflows/verify.yml)
