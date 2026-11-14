@@ -8,7 +8,11 @@ An open-source 3D previs studio for planning scenes, character blocking, and cam
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![CI](https://github.com/bloomway-ai/bloomway-world-director/actions/workflows/verify.yml/badge.svg)](https://github.com/bloomway-ai/bloomway-world-director/actions/workflows/verify.yml) [![Release](https://img.shields.io/github/v/release/bloomway-ai/bloomway-world-director)](https://github.com/bloomway-ai/bloomway-world-director/releases/tag/v0.1.0)
 
-https://github.com/user-attachments/assets/c9382f04-355c-4c05-ac11-c86aab355fa0
+
+
+https://github.com/user-attachments/assets/b74c4690-3f9a-44ec-8407-5742011b4f23
+
+
 
 <p align="center">
   <sub>
