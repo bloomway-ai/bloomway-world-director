@@ -11,7 +11,7 @@ An open-source 3D previs studio for planning scenes, character blocking, and cam
     <img src="media/promo-full-demo-poster.png" alt="Play the full 63 second demo (with audio)" width="100%">
   </a>
   <br><sub>
-    <strong><a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">▶ Play in browser</a></strong>
+    <strong><a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html" style="color:#9AE234; text-decoration:none;">▶ PLAY FULL DEMO</a></strong>
     · 63s · with audio · 1280p (~8&nbsp;MB)
     · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">1080p download</a>
   </sub>
@@ -21,7 +21,11 @@ An open-source 3D previs studio for planning scenes, character blocking, and cam
 
 This repository provides the open-source 3D previs tools. Final footage generation is a separate [Bloomway](https://bloomway.ai) workflow.
 
-**[Try in browser](https://bloomway-ai.github.io/bloomway-world-director/)** · [Run locally](#run-locally)
+<p align="center">
+  <a href="https://bloomway-ai.github.io/bloomway-world-director/" style="font-weight:800; font-size:1.2em; color:#9AE234; text-decoration:none; letter-spacing:0.08em;">TRY IN BROWSER</a>
+  &nbsp;·&nbsp;
+  <a href="#run-locally"><strong>Run locally</strong></a>
+</p>
 
 Free to use · MIT licensed · No sign-up required *(OSS Studio only — not cloud render credits).*
 
@@ -31,7 +35,7 @@ Free to use · MIT licensed · No sign-up required *(OSS Studio only — not clo
 
 ### Try in browser
 
-**Live —** [Open the browser Studio](https://bloomway-ai.github.io/bloomway-world-director/)
+<strong style="color:#9AE234;">TRY IN BROWSER</strong> — <a href="https://bloomway-ai.github.io/bloomway-world-director/"><strong>Open the Studio</strong></a>
 
 1. Use the link above, or [`?example=1&autoplay=1`](https://bloomway-ai.github.io/bloomway-world-director/?example=1&autoplay=1) for bundled Edo blocking.
 2. Choose a **preset** or type a **short phrase** (keyword rules — e.g. `rainy night`, `two rivals meet in the street`).
