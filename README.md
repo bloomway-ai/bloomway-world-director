@@ -14,6 +14,13 @@ Free to use · MIT licensed · No sign-up required
 
 No sign-up or API key required. Desktop browser recommended.
 
+<p align="center">
+  <a href="https://bloomway-ai.github.io/bloomway-world-director/">
+    <img src="media/try-in-browser-cover.png" alt="Click to open Bloomway World Director OSS Studio in your browser — presets, 3D blockout, timeline" width="100%">
+  </a>
+  <br><sub><strong>Live Studio</strong> — tap to open · <a href="https://bloomway-ai.github.io/bloomway-world-director/?example=1&autoplay=1">start with Edo example</a></sub>
+</p>
+
 ---
 
 ## Try it

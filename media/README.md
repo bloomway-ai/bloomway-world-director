@@ -2,6 +2,14 @@
 
 Recordings of **this repository’s** OSS Studio (`apps/studio`). Not the commercial Bloomway app UI, Academy tutorials, or AI final renders.
 
+## Try in browser cover
+
+| File | Description |
+| ---- | ----------- |
+| `try-in-browser-cover.png` | README **Try in browser** banner — `screenshots/home` + `world` (UI + 3D), links to GitHub Pages Studio |
+
+Regenerate after UI refresh: `npm run capture:screenshots` then re-run the PIL merge in `scripts/` or README maintainer note in `docs/promo/VIDEO_URLS.md`.
+
 ## README hero (OSS Studio — dual demos)
 
 | File | Description |

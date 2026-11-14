@@ -12,6 +12,13 @@
 
 无需注册或 API Key。建议使用桌面浏览器。
 
+<p align="center">
+  <a href="https://bloomway-ai.github.io/bloomway-world-director/">
+    <img src="media/try-in-browser-cover.png" alt="点击进入浏览器 Studio — 预设、三维白盒、时间轴" width="100%">
+  </a>
+  <br><sub><strong>在线 Studio</strong> — 点击打开 · <a href="https://bloomway-ai.github.io/bloomway-world-director/?example=1&autoplay=1">从 Edo 示例开始</a></sub>
+</p>
+
 ---
 
 ## 体验一下
