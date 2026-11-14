@@ -13,14 +13,12 @@ https://github.com/user-attachments/assets/c9382f04-355c-4c05-ac11-c86aab355fa0
 <p align="center">
   <sub>
     <strong><a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">▶ 播放完整演示</a></strong>
-    · 63 秒 · 含音频 · 1280p（约 8MB）
+    · 63 秒 · 含音频 · 720p（1280×720，约 8MB）
     · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">下载 1080p 正本</a>
   </sub>
 </p>
 
-*63 秒愿景片展示 Bloomway 产品路径，非下方 OSS 白盒 Studio 录屏。*
-
-本仓库提供开源三维预演工具，最终成片生成属于独立的 [Bloomway](https://bloomway.ai) 工作流。
+*本片 63 秒，展示 Bloomway 从预演到成片的产品路径（非下方 OSS Studio 录屏）；本仓库提供开源三维预演工具，最终成片生成属于独立的 [Bloomway](https://bloomway.ai) 工作流。*
 
 <p align="center">
   <a href="https://bloomway-ai.github.io/bloomway-world-director/">

@@ -26,7 +26,7 @@ Hero loop: `ffmpeg` from `demo-drama.mp4` (see `docs/promo/VIDEO_URLS.md`).
 
 | File | Description |
 | ---- | ----------- |
-| `promo-full-demo-readme.mp4` | **README inline player** — 1280p H.264 ~8MB (63s, audio); also on [Release v0.1.0](https://github.com/bloomway-ai/bloomway-world-director/releases/tag/v0.1.0) as `promo-full-demo-readme.mp4` |
+| `promo-full-demo-readme.mp4` | **README inline player** — 720p (1280×720) H.264 ~8MB (63s, audio); also on [Release v0.1.0](https://github.com/bloomway-ai/bloomway-world-director/releases/tag/v0.1.0) as `promo-full-demo-readme.mp4` |
 | `promo-hero-direct-rainy-streets.jpg` | README / Pages hero — 1280×720 JPEG ~180KB (`scripts/optimize-hero-poster.sh`) |
 | `cta-try-in-browser.svg` / `cta-try-in-browser-zh.svg` | Lime primary CTA (GitHub strips inline `style` on links) |
 | `cta-run-locally.svg` / `cta-run-locally-zh.svg` | Secondary outline button |

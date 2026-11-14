@@ -13,14 +13,12 @@ https://github.com/user-attachments/assets/c9382f04-355c-4c05-ac11-c86aab355fa0
 <p align="center">
   <sub>
     <strong><a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">▶ PLAY FULL DEMO</a></strong>
-    · 63s · with audio · 1280p (~8&nbsp;MB)
+    · 63s · with audio · 720p (1280×720, ~8&nbsp;MB)
     · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">1080p download</a>
   </sub>
 </p>
 
-*63s vision film — world → screen on the Bloomway product. Not a recording of the OSS blockout Studio below.*
-
-This repository provides the open-source 3D previs tools. Final footage generation is a separate [Bloomway](https://bloomway.ai) workflow.
+*This 63s film shows Bloomway's previs-to-film workflow; this repo provides the open-source 3D previs tools (not a Studio screen recording), and final footage generation is a separate [Bloomway](https://bloomway.ai) workflow.*
 
 <p align="center">
   <a href="https://bloomway-ai.github.io/bloomway-world-director/">
@@ -77,7 +75,7 @@ Real screen captures from **this repo’s** OSS Studio (low-poly blockout). Sile
   <a href="https://bloomway-ai.github.io/bloomway-world-director/?example=1&autoplay=1">
     <img src="media/hero-previs-loop.gif" alt="Character blocking, camera motion, timeline playback" width="100%">
   </a>
-  <br><sub>Presets/keywords → blockout scene → **Play** on timeline (street drama clip)</sub>
+  <br><sub>Presets/keywords → blockout scene → <strong>Play</strong> on timeline (street drama clip)</sub>
 </p>
 
 <table>

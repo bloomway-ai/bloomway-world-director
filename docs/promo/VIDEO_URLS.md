@@ -21,7 +21,7 @@
 | Asset | Download URL | Check |
 | ----- | ------------ | ----- |
 | Brand film (1080p master) | `.../final_v2_cold_open.mp4` | ~33MB — unchanged master |
-| README inline player | `.../promo-full-demo-readme.mp4` | ~8MB — same 63s timeline, 1280p |
+| README inline player | `.../promo-full-demo-readme.mp4` | ~8MB — same 63s timeline, 720p (1280×720) |
 | City tour | `.../demo-city-tour.mp4` | On Release |
 | Street drama | `.../demo-drama.mp4` | On Release |
 | ~~promo-cold-open.mp4~~ | — | **Invalid** — label only; file is `final_v2_cold_open.mp4` |
