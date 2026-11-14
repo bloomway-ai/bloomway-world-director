@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "title": "Modern city street (OSS example)",
+  "durationSec": 12,
+  "stage": { "width": 18, "depth": 28 },
+  "set": {
+    "kind": "outdoor",
+    "description": "A downtown street canyon at golden hour.",
+    "world": {
+      "generatorVersion": "styled-v1",
+      "style": "modern_city",
+      "layout": "street",
+      "density": "high",
+      "timeOfDay": "day",
+      "weather": "clear",
+      "seed": 55,
+      "extentM": [200, 200]
+    }
+  },
+  "characters": [
+    {
+      "id": "pedestrian",
+      "name": "Pedestrian",
+      "color": "blue",
+      "path": [
+        { "t": 0, "x": -4, "y": -8, "action": "crossing the avenue" },
+        { "t": 6, "x": 0, "y": 0 },
+        { "t": 12, "x": 3, "y": 6 }
+      ]
+    }
+  ],
+  "camera": {
+    "fovDeg": 42,
+    "keys": [
+      { "t": 0, "x": -6, "y": -10, "h": 2.5, "lookAt": "pedestrian", "move": "wide establishing" },
+      { "t": 4, "x": -2, "y": -4, "h": 1.6, "lookAt": "pedestrian", "move": "push in tracking" },
+      { "t": 8, "x": 5, "y": 2, "h": 2.2, "lookAt": "pedestrian", "move": "orbit to the side" },
+      { "t": 12, "x": 8, "y": 12, "h": 3.5, "lookAt": "pedestrian", "move": "crane up pull back" }
+    ]
+  },
+  "beats": [
+    { "t": 0, "text": "Establish the street." },
+    { "t": 4, "text": "Push with the pedestrian." },
+    { "t": 12, "text": "Pull back over the blocks." }
+  ]
+}

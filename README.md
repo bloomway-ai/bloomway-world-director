@@ -6,6 +6,13 @@ Open-source **3D previsualization** (low-poly blockout): build worlds, block act
 
 **License:** [MIT](LICENSE) · **Commercial use:** free under MIT — see [docs/commercial-use.md](docs/commercial-use.md) · **Updates:** this repository is **actively maintained**; expect ongoing releases and docs.
 
+<p align="center">
+  <a href="media/demo-city-tour.mp4"><img src="media/demo-city-tour-poster.png" alt="Demo: city tour" width="49%"></a>
+  <a href="media/demo-drama.mp4"><img src="media/demo-drama-poster.png" alt="Demo: street drama" width="49%"></a>
+</p>
+
+*Demos live in [`media/`](media/) (CC BY 4.0). Posters above link to the `.mp4` files—GitHub does not inline-play video.*
+
 ---
 
 ## Choose your language / 选择语言
@@ -29,6 +36,7 @@ Open-source **3D previsualization** (low-poly blockout): build worlds, block act
 | Repository | https://github.com/bloomway-ai/bloomway-world-director |
 | Release v0.1.0 | [Releases](https://github.com/bloomway-ai/bloomway-world-director/releases/tag/v0.1.0) |
 | Demo media (CC BY 4.0) | [media/README.md](media/README.md) |
+| Discussions / Gallery | [discussions](https://github.com/bloomway-ai/bloomway-world-director/discussions) · [docs/gallery](docs/gallery/README.md) |
 | Optional collaboration | info@bloomway.ai (voluntary, not required for MIT use) |
 | Full product | [bloomway.ai](https://bloomway.ai) |
 

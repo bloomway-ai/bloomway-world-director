@@ -41,13 +41,27 @@ npm run dev                  # Studio: http://localhost:5173/
 
 **実装の参照：** [docs/implementation-audit.md](docs/implementation-audit.md) · [docs/verification-log.md](docs/verification-log.md)
 
-任意：`npm run verify:studio-e2e`、`npm run record:demos`。
+任意：`npm run verify:studio-e2e`、`npm run record:demos`、`npm run capture:screenshots`。
+
+---
+
+## スクリーンショット
+
+| ホーム | 一文で世界 | カメラタイムライン |
+| ------ | ---------- | ------------------ |
+| ![Home](media/screenshots/home.png) | ![World](media/screenshots/world.png) | ![Timeline](media/screenshots/camera-timeline.png) |
 
 ---
 
 ## デモ
 
-**本リポジトリ**の OSS Studio 録画（商用 Bloomway アプリ全体ではありません）。
+**本リポジトリ**の OSS Studio 録画（商用 Bloomway アプリ全体ではありません）。ポスターをクリックして動画を開く。
+
+<p align="center">
+  <a href="media/demo-city-tour.mp4"><img src="media/demo-city-tour-poster.png" alt="City tour demo" width="48%"></a>
+  &nbsp;
+  <a href="media/demo-drama.mp4"><img src="media/demo-drama-poster.png" alt="Street drama demo" width="48%"></a>
+</p>
 
 | デモ | 一文プロンプト | ファイル |
 | ---- | -------------- | -------- |

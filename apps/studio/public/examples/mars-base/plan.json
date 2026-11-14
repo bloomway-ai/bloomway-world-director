@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "title": "Mars research base (OSS example)",
+  "durationSec": 14,
+  "stage": { "width": 20, "depth": 30 },
+  "set": {
+    "kind": "outdoor",
+    "description": "A Mars habitat ring with dusty pads and connecting tubes.",
+    "world": {
+      "generatorVersion": "styled-v1",
+      "style": "custom",
+      "theme": "mars",
+      "layout": "street",
+      "density": "medium",
+      "timeOfDay": "day",
+      "weather": "clear",
+      "seed": 101,
+      "extentM": [160, 160]
+    }
+  },
+  "characters": [
+    {
+      "id": "engineer",
+      "name": "Engineer",
+      "color": "red",
+      "path": [
+        { "t": 0, "x": -3, "y": -6, "action": "walks between domes" },
+        { "t": 7, "x": 1, "y": 1 },
+        { "t": 14, "x": 4, "y": 5 }
+      ]
+    }
+  ],
+  "camera": {
+    "fovDeg": 38,
+    "keys": [
+      { "t": 0, "x": -5, "y": -9, "h": 2.8, "lookAt": "engineer", "move": "wide on rusty plain" },
+      { "t": 5, "x": -1, "y": -3, "h": 1.8, "lookAt": "engineer", "move": "low follow" },
+      { "t": 10, "x": 6, "y": 4, "h": 3.2, "lookAt": "engineer", "move": "orbit habitats" },
+      { "t": 14, "x": 10, "y": 11, "h": 4.5, "lookAt": "engineer", "move": "pull back reveal" }
+    ]
+  },
+  "beats": [
+    { "t": 0, "text": "Show the base layout." },
+    { "t": 5, "text": "Follow the engineer." },
+    { "t": 14, "text": "Pull back over modules." }
+  ]
+}

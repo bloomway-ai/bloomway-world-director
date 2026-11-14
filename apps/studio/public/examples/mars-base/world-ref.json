@@ -1,0 +1,11 @@
+{
+  "generatorVersion": "styled-v1",
+  "style": "custom",
+  "theme": "mars",
+  "layout": "street",
+  "density": "medium",
+  "timeOfDay": "day",
+  "weather": "clear",
+  "seed": 101,
+  "extentM": [160, 160]
+}

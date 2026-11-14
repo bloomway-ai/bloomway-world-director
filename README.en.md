@@ -39,13 +39,30 @@ Default Studio loads [`examples/edo-rainy-night`](examples/edo-rainy-night/) (ch
 
 **Truth sources:** [docs/implementation-audit.md](docs/implementation-audit.md) · [docs/verification-log.md](docs/verification-log.md)
 
-Optional: `npm run verify:studio-e2e`, `npm run record:demos`.
+Optional: `npm run verify:studio-e2e`, `npm run record:demos`, `npm run capture:screenshots`.
+
+---
+
+## Screenshots
+
+OSS Studio **v0.1** (English UI only). Home → one-line world → camera timeline.
+
+| Home (presets & composer) | World from one line | Camera timeline |
+| ------------------------- | ------------------- | ---------------- |
+| ![Home screen](media/screenshots/home.png) | ![Generated world](media/screenshots/world.png) | ![Camera timeline](media/screenshots/camera-timeline.png) |
 
 ---
 
 ## See it in action
 
-Recorded from **this repository’s** OSS Studio (not the full commercial Bloomway app).
+Recorded from **this repository’s** OSS Studio (not the full commercial Bloomway app).  
+GitHub does not autoplay video in the README—**click a poster** to open the file, or use the links below.
+
+<p align="center">
+  <a href="media/demo-city-tour.mp4"><img src="media/demo-city-tour-poster.png" alt="City tour demo (click to open video)" width="48%"></a>
+  &nbsp;
+  <a href="media/demo-drama.mp4"><img src="media/demo-drama-poster.png" alt="Street drama demo (click to open video)" width="48%"></a>
+</p>
 
 | Demo | One-line prompt | File |
 | ---- | --------------- | ---- |
@@ -80,9 +97,18 @@ Details: [docs/implementation-audit.md](docs/implementation-audit.md) §6.
 
 ---
 
-## Roadmap
+## Example scenes
 
-- More examples (`modern-city-street`, `mars-base`)
+| Example | Folder |
+| ------- | ------ |
+| Edo rainy night (default Studio load) | [`examples/edo-rainy-night`](examples/edo-rainy-night/) |
+| Street confrontation | [`examples/street-drama`](examples/street-drama/) |
+| Modern city street | [`examples/modern-city-street`](examples/modern-city-street/) |
+| Mars research base | [`examples/mars-base`](examples/mars-base/) |
+
+Community showcase: [`docs/gallery/README.md`](docs/gallery/README.md) · Discussions (when enabled).
+
+## Roadmap
 - MCP integration docs and tools
 - Richer Studio (import, export UI)
 - Studio UI translations (app chrome; README already multilingual)

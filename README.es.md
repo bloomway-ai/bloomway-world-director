@@ -41,13 +41,27 @@ El Studio carga por defecto [`examples/edo-rainy-night`](examples/edo-rainy-nigh
 
 **Fuentes de verdad:** [docs/implementation-audit.md](docs/implementation-audit.md) · [docs/verification-log.md](docs/verification-log.md)
 
-Opcional: `npm run verify:studio-e2e`, `npm run record:demos`.
+Opcional: `npm run verify:studio-e2e`, `npm run record:demos`, `npm run capture:screenshots`.
+
+---
+
+## Capturas
+
+| Inicio | Mundo en una línea | Línea de tiempo |
+| ------ | ------------------ | --------------- |
+| ![Home](media/screenshots/home.png) | ![World](media/screenshots/world.png) | ![Timeline](media/screenshots/camera-timeline.png) |
 
 ---
 
 ## Ver en acción
 
-Grabado desde el Studio OSS de **este repositorio** (no la app comercial completa de Bloomway).
+Grabado desde el Studio OSS de **este repositorio** (no la app comercial completa de Bloomway). Haz clic en el póster para abrir el vídeo.
+
+<p align="center">
+  <a href="media/demo-city-tour.mp4"><img src="media/demo-city-tour-poster.png" alt="City tour demo" width="48%"></a>
+  &nbsp;
+  <a href="media/demo-drama.mp4"><img src="media/demo-drama-poster.png" alt="Street drama demo" width="48%"></a>
+</p>
 
 | Demo | Frase de una línea | Archivo |
 | ---- | ------------------ | ------- |

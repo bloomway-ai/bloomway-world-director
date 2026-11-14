@@ -9,8 +9,8 @@
 
 - Core library (`packages/core`) — plan validation, procedural world generation, camera sampling
 - OSS Studio (`apps/studio`) — WebGL viewport, timeline, offline composer rules, world presets
-- Examples: `examples/edo-rainy-night`, `examples/street-drama`
-- Demo recordings: `media/demo-city-tour.mp4` (snowy daytime Tokyo), `media/demo-drama.mp4`, legacy `media/demo.mp4`
+- Examples: `edo-rainy-night`, `street-drama`, `modern-city-street`, `mars-base` (`npm run verify:examples`)
+- Demo recordings + README posters: `media/demo-city-tour.mp4`, `media/demo-drama.mp4`, legacy `media/demo.mp4`; UI stills in `media/screenshots/`
 
 ## Verify locally
 

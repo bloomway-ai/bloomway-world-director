@@ -1,0 +1,31 @@
+name: Bug report
+description: Something breaks in OSS Studio, examples, or scripts
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Include `npm run verify:example` output when possible.
+  - type: input
+    id: version
+    attributes:
+      label: Commit or tag
+      placeholder: main @ abc1234 or v0.1.0
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: OS, Node version, browser

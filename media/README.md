@@ -12,13 +12,17 @@ Recordings of **this repository’s** OSS Studio (`apps/studio`). Not the commer
 | `demo-drama-poster.png` | Frame ~8s from drama demo | — | Derivative |
 | `demo.mp4` | ~15.5s legacy — Edo rainy night autoplay blockout | None | **Named in company CC BY approval** |
 | `poster.png` | Frame from `demo.mp4` (~5s) | — | **Named in company CC BY approval** |
+| `screenshots/home.png` | README — Studio home (presets + composer) | None | Static UI capture |
+| `screenshots/world.png` | README — one-line world (e.g. snowy Tokyo) | None | Static UI capture |
+| `screenshots/camera-timeline.png` | README — camera timeline + playback | None | Static UI capture |
 
 Regenerate:
 
 ```bash
 npm install
 npx playwright install chromium
-npm run record:demos   # city + drama (recommended)
+npm run record:demos        # city + drama (recommended)
+npm run capture:screenshots # README stills (home / world / timeline)
 # DEMO_ONLY=city npm run record:demos
 # npm run record:demo  # legacy clip only
 ```

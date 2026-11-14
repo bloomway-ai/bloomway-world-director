@@ -41,13 +41,30 @@ npm run dev                  # http://localhost:5173/
 
 **实现边界：** [docs/implementation-audit.md](docs/implementation-audit.md) · [docs/verification-log.md](docs/verification-log.md)
 
-可选：`npm run verify:studio-e2e`、`npm run record:demos`。
+可选：`npm run verify:studio-e2e`、`npm run record:demos`、`npm run capture:screenshots`。
+
+---
+
+## 界面截图
+
+OSS Studio **v0.1**（界面仅英文）。首页 → 一句话建世界 → 运镜时间轴。
+
+| 首页（预设与输入） | 一句话生成世界 | 运镜与时间轴 |
+| ------------------ | -------------- | ------------ |
+| ![首页](media/screenshots/home.png) | ![世界预览](media/screenshots/world.png) | ![运镜界面](media/screenshots/camera-timeline.png) |
 
 ---
 
 ## 观看演示
 
-录屏来自**本仓库** OSS Studio，非完整商业客户端。
+录屏来自**本仓库** OSS Studio，非完整商业客户端。  
+GitHub 首页**不会自动播放** mp4，请**点击海报**打开视频文件，或使用下表链接。
+
+<p align="center">
+  <a href="media/demo-city-tour.mp4"><img src="media/demo-city-tour-poster.png" alt="城市巡游演示（点击打开视频）" width="48%"></a>
+  &nbsp;
+  <a href="media/demo-drama.mp4"><img src="media/demo-drama-poster.png" alt="街头剧情演示（点击打开视频）" width="48%"></a>
+</p>
 
 | 演示 | 一句话 | 文件 |
 | ---- | ------ | ---- |
@@ -82,9 +99,18 @@ npm run dev                  # http://localhost:5173/
 
 ---
 
-## 路线图
+## 示例场景
 
-- 更多示例（`modern-city-street`、`mars-base`）
+| 示例 | 目录 |
+| ---- | ---- |
+| 江户雨夜（Studio 默认） | [`examples/edo-rainy-night`](examples/edo-rainy-night/) |
+| 街头对峙 | [`examples/street-drama`](examples/street-drama/) |
+| 现代城市街道 | [`examples/modern-city-street`](examples/modern-city-street/) |
+| 火星基地 | [`examples/mars-base`](examples/mars-base/) |
+
+社区陈列：[`docs/gallery/README.md`](docs/gallery/README.md) · Discussions（开启后）。
+
+## 路线图
 - MCP 文档与工具
 - Studio 导入/导出
 - 应用界面多语言（README 已七语）

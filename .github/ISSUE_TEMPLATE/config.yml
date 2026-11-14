@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/bloomway-ai/bloomway-world-director/blob/main/SECURITY.md
+    about: Vulnerability disclosure — see SECURITY.md (info@bloomway.ai)
+  - name: Discussions
+    url: https://github.com/bloomway-ai/bloomway-world-director/discussions
+    about: Questions, shot ideas, and community gallery

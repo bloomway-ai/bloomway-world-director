@@ -41,13 +41,27 @@ Studio lalai memuatkan [`examples/edo-rainy-night`](examples/edo-rainy-night/) (
 
 **Sumber kebenaran:** [docs/implementation-audit.md](docs/implementation-audit.md) · [docs/verification-log.md](docs/verification-log.md)
 
-Pilihan: `npm run verify:studio-e2e`, `npm run record:demos`.
+Pilihan: `npm run verify:studio-e2e`, `npm run record:demos`, `npm run capture:screenshots`.
+
+---
+
+## Tangkapan skrin
+
+| Laman utama | Dunia satu baris | Garis masa kamera |
+| ----------- | ---------------- | ----------------- |
+| ![Home](media/screenshots/home.png) | ![World](media/screenshots/world.png) | ![Timeline](media/screenshots/camera-timeline.png) |
 
 ---
 
 ## Lihat tindakan
 
-Dirakam daripada Studio OSS **repositori ini** (bukan aplikasi komersial Bloomway penuh).
+Dirakam daripada Studio OSS **repositori ini** (bukan aplikasi komersial Bloomway penuh). Klik poster untuk membuka video.
+
+<p align="center">
+  <a href="media/demo-city-tour.mp4"><img src="media/demo-city-tour-poster.png" alt="City tour demo" width="48%"></a>
+  &nbsp;
+  <a href="media/demo-drama.mp4"><img src="media/demo-drama-poster.png" alt="Street drama demo" width="48%"></a>
+</p>
 
 | Demo | Arahan satu baris | Fail |
 | ---- | ----------------- | ---- |

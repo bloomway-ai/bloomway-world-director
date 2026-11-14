@@ -1,0 +1,10 @@
+{
+  "generatorVersion": "styled-v1",
+  "style": "modern_city",
+  "layout": "street",
+  "density": "high",
+  "timeOfDay": "day",
+  "weather": "clear",
+  "seed": 55,
+  "extentM": [200, 200]
+}

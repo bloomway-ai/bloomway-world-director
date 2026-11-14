@@ -17,6 +17,7 @@ jobs:
       - run: npm ci
       - run: npm run i18n-check
       - run: npm run verify:example
+      - run: npm run verify:examples
       - run: npm run build
       - run: npx playwright install chromium --with-deps
       - run: npm run verify:studio-e2e

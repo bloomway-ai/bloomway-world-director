@@ -41,13 +41,27 @@ npm run dev                  # Studio: http://localhost:5173/
 
 **구현 기준 문서:** [docs/implementation-audit.md](docs/implementation-audit.md) · [docs/verification-log.md](docs/verification-log.md)
 
-선택: `npm run verify:studio-e2e`, `npm run record:demos`.
+선택: `npm run verify:studio-e2e`, `npm run record:demos`, `npm run capture:screenshots`.
+
+---
+
+## 스크린샷
+
+| 홈 | 한 줄 세계 | 카메라 타임라인 |
+| -- | ---------- | --------------- |
+| ![Home](media/screenshots/home.png) | ![World](media/screenshots/world.png) | ![Timeline](media/screenshots/camera-timeline.png) |
 
 ---
 
 ## 데모
 
-**이 저장소** OSS Studio 녹화(상용 Bloomway 앱 전체 아님).
+**이 저장소** OSS Studio 녹화(상용 Bloomway 앱 전체 아님). 포스터를 클릭해 동영상 열기.
+
+<p align="center">
+  <a href="media/demo-city-tour.mp4"><img src="media/demo-city-tour-poster.png" alt="City tour demo" width="48%"></a>
+  &nbsp;
+  <a href="media/demo-drama.mp4"><img src="media/demo-drama-poster.png" alt="Street drama demo" width="48%"></a>
+</p>
 
 | 데모 | 한 줄 프롬프트 | 파일 |
 | ---- | -------------- | ---- |

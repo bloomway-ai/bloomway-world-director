@@ -56,11 +56,11 @@
       },
       {
         "t": 5,
-        "x": -2,
-        "y": -2,
-        "h": 1.5,
+        "x": -4.5,
+        "y": -4,
+        "h": 2.2,
         "lookAt": "runner",
-        "move": "push in as rival appears ahead"
+        "move": "push in from the flank as rival appears ahead"
       },
       {
         "t": 9,
