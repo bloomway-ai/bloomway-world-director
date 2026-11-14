@@ -1,13 +1,13 @@
 # Bloomway World Director
 
 <p align="center">
-  <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-cold-open.mp4">
-    <img src="media/promo-cold-open.gif" alt="Bloomway World Director — intro" width="100%">
+  <a href="media/demo.mp4">
+    <img src="media/studio-hero.gif" alt="OSS Studio demo" width="100%">
   </a>
-  <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-cold-open.mp4">▶ Full video (63s)</a></sub>
+  <br><sub><a href="media/demo.mp4">▶ OSS clip</a> · 構成は <a href="README.md">README.md</a>（英語）が正本</sub>
 </p>
 
-[English](README.en.md) · [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [**言語一覧**](README.md)
+[English](README.md) · [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
 
 **Your words. Your world. Your camera.**
 
@@ -20,21 +20,15 @@
 
 ---
 
-## 3 つのパス
-
-| パス | 内容 |
-| ---- | ---- |
-| **パス 1 — オープンソース（ローカル）** | 例をローカルで実行し、テキスト → 3D プレビズを理解します。学習・教育・研究に最適。 |
-| **パス 2 — Bloomway MCP（任意）** | 同じ記述をホスト型プレビズ／生成に接続—**任意**で、本リポジトリの利用に必須ではありません。 |
-| **パス 3 — 上級・チーム** | 協業・商用テンプレート・納品サポートは [Bloomway プラットフォーム](https://bloomway.ai)。 |
-
-ショット例の Discussions 共有を歓迎します。
+> **MCP:** 本リポジトリには未実装（**計画**）— [docs/mcp/README.md](docs/mcp/README.md)。Pages 試玩はデプロイ後 — [docs/deploy/studio-hosting.md](docs/deploy/studio-hosting.md)。
 
 ---
 
 ## クイックスタート
 
-**要件：** Node.js ≥ 20、npm ≥ 10。同梱例に Bloomway アカウント・API キーは不要。
+**ブラウザで試す：** [OSS Studio を開く](https://bloomway-ai.github.io/bloomway-world-director/) — ローポリ＋同梱 JSON；[Vercel ホスティング](docs/deploy/studio-hosting.md)も可。ホスト型 NL／完成映像は含みません（[audit](docs/implementation-audit.md)）。
+
+**要件（ローカル）：** Node.js ≥ 20、npm ≥ 10。同梱例に Bloomway アカウント・API キーは不要。
 
 ```bash
 git clone https://github.com/bloomway-ai/bloomway-world-director.git

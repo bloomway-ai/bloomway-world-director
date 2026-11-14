@@ -6,7 +6,11 @@ import { fileURLToPath } from 'node:url';
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
 
+/** GitHub Pages project site needs a repo subpath; Vercel/local use `/`. */
+const base = process.env.VITE_BASE_PATH ?? '/';
+
 export default defineConfig({
+  base,
   plugins: [react(), tailwindcss()],
   server: { port: 5173 },
   resolve: {

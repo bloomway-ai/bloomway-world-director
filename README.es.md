@@ -1,13 +1,13 @@
 # Bloomway World Director
 
 <p align="center">
-  <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-cold-open.mp4">
-    <img src="media/promo-cold-open.gif" alt="Bloomway World Director — intro" width="100%">
+  <a href="media/demo.mp4">
+    <img src="media/studio-hero.gif" alt="OSS Studio demo" width="100%">
   </a>
-  <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-cold-open.mp4">▶ Full video (63s)</a></sub>
+  <br><sub><a href="media/demo.mp4">▶ OSS clip</a> · estructura canónica: <a href="README.md">README.md</a></sub>
 </p>
 
-[English](README.en.md) · [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [**Todos los idiomas**](README.md)
+[English](README.md) · [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
 
 **Your words. Your world. Your camera.**
 
@@ -20,21 +20,15 @@ Construye mundos 3D y dirige la cámara para **previsualización** cinematográf
 
 ---
 
-## Tres rutas
-
-| Ruta | Qué es |
-| ---- | ------ |
-| **Ruta 1 — Código abierto (local)** | Ejecuta ejemplos en tu máquina y comprende texto → previs 3D. Ideal para aprender, enseñar e investigar. |
-| **Ruta 2 — Bloomway MCP (opcional)** | Conecta las mismas descripciones a previs y generación alojadas—**opcional**, no necesario para usar este repo. |
-| **Ruta 3 — Avanzado y equipos** | Colaboración, plantillas comerciales y soporte de entrega en la [plataforma Bloomway](https://bloomway.ai). |
-
-Comparte ejemplos de planos en Discussions cuando esté disponible.
+> **MCP:** no incluido en el repo (**planificado**) — [docs/mcp/README.md](docs/mcp/README.md). Demo en navegador: [docs/deploy/studio-hosting.md](docs/deploy/studio-hosting.md).
 
 ---
 
 ## Inicio rápido
 
-**Requisitos:** Node.js ≥ 20, npm ≥ 10. Sin cuenta Bloomway ni claves API para el ejemplo incluido.
+**Probar en el navegador:** [Abrir OSS Studio](https://bloomway-ai.github.io/bloomway-world-director/) — blockout de baja poli + JSON del repo; [Vercel opcional](docs/deploy/studio-hosting.md). Sin NL alojado ni video final ([audit](docs/implementation-audit.md)).
+
+**Requisitos (local):** Node.js ≥ 20, npm ≥ 10. Sin cuenta Bloomway ni claves API para el ejemplo incluido.
 
 ```bash
 git clone https://github.com/bloomway-ai/bloomway-world-director.git

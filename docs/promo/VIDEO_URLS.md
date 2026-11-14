@@ -1,16 +1,33 @@
 # README demo display
 
-## What we use in v0.1 README
+## v0.1 README layout (2026-11-14)
 
 | Asset | Role |
 | ----- | ---- |
-| `media/promo-cold-open.gif` | **README top** — brand cold open preview |
-| Release `promo-cold-open.mp4` | Full 63s with audio (not committed to git) |
-| `media/demo-city-tour.gif` / `demo-drama.gif` | **Auto-play loops** in README (GitHub always shows GIFs) |
-| Release `demo-*.mp4` | **Full quality** — link “▶ Full MP4” |
-| `media/demo-*.mp4` in git | Source for recording / CI |
+| `media/studio-hero.gif` | **README top** — real OSS Studio workflow (~15s from `demo.mp4`) |
+| `media/demo.mp4` | Full hero clip in git (~280KB) |
+| `media/promo-cold-open.gif` | **Lower README** — brand/product montage preview |
+| Release **`final_v2_cold_open.mp4`** | Full ~63s brand film (**filename on Release**, not `promo-cold-open.mp4`) |
+| `media/demo-city-tour.gif` / `demo-drama.gif` | Supplementary loops |
+| Release `demo-*.mp4` | Full quality MP4 links |
 
-Regenerate GIF previews after re-recording:
+### Verified Release URLs (v0.1.0)
+
+| Asset | Download URL | Check (2026-11-14) |
+| ----- | ------------ | ------------------ |
+| Brand film | `https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4` | HTTP **302** → asset (OK) |
+| City tour | `.../demo-city-tour.mp4` | OK on Release |
+| Street drama | `.../demo-drama.mp4` | OK on Release |
+| ~~promo-cold-open.mp4~~ | — | **Invalid** — label only; file is `final_v2_cold_open.mp4` |
+
+Regenerate hero GIF after re-recording:
+
+```bash
+npm run record:demo
+ffmpeg -y -i media/demo.mp4 -vf "fps=10,scale=960:-2:flags=lanczos,split[s0][s1];[s0]palettegen=stats_mode=diff[p];[s1][p]paletteuse=dither=bayer" -loop 0 media/studio-hero.gif
+```
+
+Regenerate supplementary GIFs:
 
 ```bash
 npm run record:demos
@@ -19,20 +36,4 @@ npm run preview:demos-gif
 
 ## Native `<video>` player (optional upgrade)
 
-GitHub **removes** most `<video src="releases/download/...">` tags in README. For a real player with controls:
-
-1. On github.com, **Edit** `README.md`.
-2. **Drag & drop** the `.mp4` into the editor (or paste from `media/`).
-3. GitHub inserts a `https://github.com/user-attachments/assets/...` URL — keep it on its own line or in `<video src="...">`.
-4. Replace the GIF block if you prefer one hosted player.
-
-Release URLs (full file download / optional embed tests):
-
-| Demo | URL |
-| ---- | --- |
-| City tour | `https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4` |
-| Street drama | `https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4` |
-
-```bash
-gh release upload v0.1.0 media/demo-city-tour.mp4 media/demo-drama.mp4 --clobber
-```
+GitHub **removes** most `<video src="releases/download/...">` tags in README. For a player with controls, drag-drop upload to GitHub editor → `user-attachments` URL ([GitHub docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/attaching-files)).

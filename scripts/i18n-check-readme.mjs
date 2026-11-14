@@ -8,6 +8,8 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 const LOCALES = ['en', 'zh-CN', 'ms', 'id', 'ja', 'ko', 'es'];
 const files = ['README.md', ...LOCALES.map((l) => `README.${l}.md`)];
+/** README.en.md is a pointer to README.md — skip locale-only structure rules. */
+const pointerOnly = new Set(['README.en.md']);
 
 const mustHave = [
   'Bloomway World Director',
@@ -17,7 +19,7 @@ const mustHave = [
 ];
 
 const pathMarkers = [
-  /Path\s*1|Three paths|三条路径|Laluan\s*1|Tiga laluan|Jalur\s*1|Tiga jalur|パス\s*1|3\s*つのパス|경로\s*1|세 가지 경로|Ruta\s*1|Tres rutas|\*\*\s*1\s*—/i,
+  /Path\s*1|Three paths|三条路径|Try it|试玩|Cuba|Mula|Mulai|クイック|빠른 시작|Inicio rápido|Quick start|快速开始/i,
 ];
 
 let failed = false;
@@ -35,7 +37,7 @@ for (const f of files) {
       failed = true;
     }
   }
-  if (f !== 'README.md') {
+  if (f !== 'README.md' && !pointerOnly.has(f)) {
     const hasPath = pathMarkers.some((rx) => rx.test(text));
     if (!hasPath) {
       console.error(`${f}: missing Path 1 / 路径一 marker`);

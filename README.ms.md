@@ -1,13 +1,13 @@
 # Bloomway World Director
 
 <p align="center">
-  <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-cold-open.mp4">
-    <img src="media/promo-cold-open.gif" alt="Bloomway World Director — intro" width="100%">
+  <a href="media/demo.mp4">
+    <img src="media/studio-hero.gif" alt="OSS Studio demo" width="100%">
   </a>
-  <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-cold-open.mp4">▶ Full video (63s)</a></sub>
+  <br><sub><a href="media/demo.mp4">▶ OSS clip</a> · struktur penuh: <a href="README.md">README.md</a></sub>
 </p>
 
-[English](README.en.md) · [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [**Semua bahasa**](README.md)
+[English](README.md) · [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
 
 **Your words. Your world. Your camera.**
 
@@ -20,21 +20,15 @@ Bina dunia 3D dan arahkan pergerakan kamera untuk **pravisualisasi** sinematik (
 
 ---
 
-## Tiga laluan
-
-| Laluan | Apa itu |
-| ------ | ------- |
-| **Laluan 1 — Sumber terbuka (tempatan)** | Jalankan contoh secara tempatan dan fahami teks → pravis 3D. Sesuai untuk pembelajaran, pengajaran, dan penyelidikan. |
-| **Laluan 2 — Bloomway MCP (pilihan)** | Sambungkan perihalan yang sama kepada pravis dan penjanaan dihos—**pilihan**, tidak diperlukan untuk menggunakan repo ini. |
-| **Laluan 3 — Lanjutan & pasukan** | Kerjasama, templat komersial, dan sokongan penghantaran di [platform Bloomway](https://bloomway.ai). |
-
-Kongsi contoh syot anda dalam Discussions apabila tersedia.
+> **MCP:** tidak dihantar dalam repo ini (**dirancang**) — [docs/mcp/README.md](docs/mcp/README.md). Cubaan pelayar: [docs/deploy/studio-hosting.md](docs/deploy/studio-hosting.md).
 
 ---
 
 ## Mula pantas
 
-**Keperluan:** Node.js ≥ 20, npm ≥ 10. Tiada akaun Bloomway atau kunci API untuk contoh terbundel.
+**Cuba dalam pelayar:** [Buka OSS Studio](https://bloomway-ai.github.io/bloomway-world-director/) — pravis poli rendah, JSON contoh dalam repo; [hos Vercel](docs/deploy/studio-hosting.md) pilihan. Bukan NL / video siap dihos ([audit](docs/implementation-audit.md)).
+
+**Keperluan (tempatan):** Node.js ≥ 20, npm ≥ 10. Tiada akaun Bloomway atau kunci API untuk contoh terbundel.
 
 ```bash
 git clone https://github.com/bloomway-ai/bloomway-world-director.git

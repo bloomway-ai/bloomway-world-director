@@ -1,6 +1,10 @@
 {
   "name": "bloomway-world-director",
   "private": true,
+  "engines": {
+    "node": ">=20",
+    "npm": ">=10"
+  },
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -10,6 +14,7 @@
     "verify:examples": "tsx scripts/verify-examples.ts",
     "dev": "npm run dev -w @bloomway/studio",
     "build": "npm run build -w @bloomway/studio",
+    "build:pages": "VITE_BASE_PATH=/bloomway-world-director/ npm run build -w @bloomway/studio",
     "record:demo": "node scripts/record-demo.mjs",
     "record:demos": "node scripts/record-demos.mjs",
     "verify:studio-e2e": "node scripts/verify-studio-e2e.mjs",

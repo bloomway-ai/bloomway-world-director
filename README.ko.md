@@ -1,13 +1,13 @@
 # Bloomway World Director
 
 <p align="center">
-  <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-cold-open.mp4">
-    <img src="media/promo-cold-open.gif" alt="Bloomway World Director — intro" width="100%">
+  <a href="media/demo.mp4">
+    <img src="media/studio-hero.gif" alt="OSS Studio demo" width="100%">
   </a>
-  <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-cold-open.mp4">▶ Full video (63s)</a></sub>
+  <br><sub><a href="media/demo.mp4">▶ OSS clip</a> · 전체 구성: <a href="README.md">README.md</a></sub>
 </p>
 
-[English](README.en.md) · [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [**모든 언어**](README.md)
+[English](README.md) · [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
 
 **Your words. Your world. Your camera.**
 
@@ -20,21 +20,15 @@
 
 ---
 
-## 세 가지 경로
-
-| 경로 | 설명 |
-| ---- | ---- |
-| **경로 1 — 오픈소스(로컬)** | 예제를 로컬에서 실행하며 텍스트 → 3D 프리비즈를 이해합니다. 학습·교육·연구에 적합합니다. |
-| **경로 2 — Bloomway MCP(선택)** | 같은 설명을 호스팅 프리비즈·생성에 연결—**선택 사항**이며 이 저장소 사용에 필수는 아닙니다. |
-| **경로 3 — 고급·팀** | 협업, 상용 템플릿, 제작 지원은 [Bloomway 플랫폼](https://bloomway.ai). |
-
-샷 예시는 Discussions 공유를 환영합니다.
+> **MCP:** 이 저장소에 미포함(**계획**) — [docs/mcp/README.md](docs/mcp/README.md). 브라우저 체험: [docs/deploy/studio-hosting.md](docs/deploy/studio-hosting.md).
 
 ---
 
 ## 빠른 시작
 
-**요구 사항:** Node.js ≥ 20, npm ≥ 10. 번들 예제에 Bloomway 계정·API 키 불필요.
+**브라우저 체험:** [OSS Studio 열기](https://bloomway-ai.github.io/bloomway-world-director/) — 저폴리 + 번들 JSON; [Vercel 호스팅](docs/deploy/studio-hosting.md) 선택 가능. 호스팅 NL·완성 영상 아님 ([audit](docs/implementation-audit.md)).
+
+**요구 사항(로컬):** Node.js ≥ 20, npm ≥ 10. 번들 예제에 Bloomway 계정·API 키 불필요.
 
 ```bash
 git clone https://github.com/bloomway-ai/bloomway-world-director.git

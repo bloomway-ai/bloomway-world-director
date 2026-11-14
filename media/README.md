@@ -2,15 +2,22 @@
 
 Recordings of **this repository’s** OSS Studio (`apps/studio`). Not the commercial Bloomway app UI, Academy tutorials, or AI final renders.
 
-## Brand promo (README hero)
+## README hero (OSS Studio)
 
 | File | Description |
 | ---- | ----------- |
-| `promo-cold-open.gif` | README top — looping preview (~12s) from `final_v2_cold_open` |
-| `promo-cold-open-poster.png` | Still frame |
-| `promo-cold-open.mp4` | **Not in git** (33MB) — [Release asset](https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-cold-open.mp4) |
+| `studio-hero.gif` | README **top** — loop from `demo.mp4` (~15s Edo autoplay) |
+| `demo.mp4` | Hero clip in git (~15.5s, silent) |
 
-This clip is **brand / product marketing**, not the OSS blockout Studio demos below. License per company approval (same `media/` policy when published).
+## Brand film (lower README)
+
+| File | Description |
+| ---- | ----------- |
+| `promo-cold-open.gif` | Product montage loop (~12s) |
+| `promo-cold-open-poster.png` | Still frame |
+| Release `final_v2_cold_open.mp4` | **Not in git** (~33MB) — [Release download](https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4) (filename is **not** `promo-cold-open.mp4`) |
+
+Brand clip = **product vision**, not a substitute for OSS blockout demos below.
 
 ## Files
 

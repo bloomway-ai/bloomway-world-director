@@ -68,3 +68,17 @@ npm run record:demo
 ## Gitleaks
 
 See `docs/ACCEPTANCE.md` — rescanned after new commits.
+
+---
+
+## Homepage / README pass (2026-11-14)
+
+| Command | Result |
+| ------- | ------ |
+| `npm run i18n-check` | OK (8 README files) |
+| `npm run verify:examples` | OK — all four example dirs |
+| `npm run build:pages` | OK — `apps/studio/dist` |
+| `npm run verify:studio-e2e` | OK — timeline `0.7s → 3.1s / 12s` |
+
+Release URL check: `final_v2_cold_open.mp4` → HTTP 302 (asset exists).  
+GitHub Pages URL: **404** until Pages + Actions deploy enabled (see `docs/deploy/studio-hosting.md`).

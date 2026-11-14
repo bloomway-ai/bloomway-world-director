@@ -1,8 +1,8 @@
 # Implementation audit (Bloomway World Director)
 
-**Audit date:** 2026-11-13  
-**Repository path:** `bloomway-world-director` (local working copy; not yet public on GitHub)  
-**Purpose:** Single source of truth for what is **verified**, **experimental**, or **planned**. README Quick start, limitations, and roadmap must match this file.
+**Audit date:** 2026-11-14 (README/homepage pass)  
+**Applies to:** `v0.1.0` · public repo `bloomway-ai/bloomway-world-director`  
+**Purpose:** Single source of truth for what is **verified**, **experimental**, or **planned**. Root `README.md` must match this file.
 
 > This document contains **no** API keys, internal hostnames, or production credentials.
 
@@ -12,9 +12,10 @@
 
 | Statement | Status |
 | --------- | ------ |
-| 3D world layout + character blocking + camera previs (low-poly blockout) | **Verified** (core library + example) |
+| 3D world layout + character blocking + camera previs (low-poly blockout) | **Verified** (core library + Studio) |
 | General-purpose AI video generation model | **Not in scope** — final footage is optional via Bloomway platform |
 | Full natural-language director assistant (any sentence → plan) | **Not in this repo** — requires Bloomway hosted LLM |
+| Bloomway Director MCP tools | **Planned** — [mcp/README.md](mcp/README.md); nothing to configure in OSS today |
 
 ---
 
@@ -22,15 +23,16 @@
 
 | Capability | Status | Evidence |
 | ---------- | ------ | -------- |
-| Load `plan.json` + `world-ref.json` | **Verified** | `npm run verify:example` |
-| `validatePrevisPlan` | **Verified** | Same script |
-| Deterministic `generatePrevisWorld(ref)` | **Verified** | Same script (edo style) |
-| Camera path sampling over time (`samplePrevisCamera`) | **Verified** | Same script prints position deltas |
-| WebGL blockout playback in browser | **Verified** | `npm run verify:studio-e2e`; `media/demo.mp4` from `npm run record:demo` ([verification-log.md](verification-log.md)) |
-| Rule/keyword world hints without LLM | **Experimental** | Partial port planned; not required for example |
-| Import full product 3D Director UI | **Planned** | Subset only in `apps/studio` |
+| Load `plan.json` + `world-ref.json` | **Verified** | `npm run verify:example` · `npm run verify:examples` |
+| `validatePrevisPlan` | **Verified** | Same |
+| Deterministic `generatePrevisWorld(ref)` | **Verified** | Same |
+| Camera path sampling (`samplePrevisCamera`) | **Verified** | Same + Studio playback |
+| WebGL blockout playback in browser | **Verified** | `npm run verify:studio-e2e`; `media/demo.mp4` |
+| Rule/keyword composer (offline) | **Verified** | `apps/studio/src/director/ossLocalComposer.ts` — presets + patches; **no** network |
+| OSS Studio static build (Pages/Vercel) | **Verified** (build) | `npm run build` / `build:pages` — **live URL** depends on hosting enablement |
+| Import full product 3D Director UI | **Planned** | Subset in `apps/studio` only |
 
-**Local baseline:** Node.js ≥ 20, npm ≥ 10. **No** API keys, **no** network calls required for `verify:example` or default Studio example.
+**Local baseline:** Node.js ≥ 20, npm ≥ 10. **No** API keys, **no** network required for default Studio blockout.
 
 ---
 
@@ -38,11 +40,11 @@
 
 | Capability | Status | Notes |
 | ---------- | ------ | ----- |
-| Story → blocking plan (LLM) | **Hosted only** | `plan-director-previs` Edge function in product repo |
+| Story → blocking plan (LLM) | **Hosted only** | Product Edge stack — not vendored in OSS |
 | World chat assistant (LLM) | **Hosted only** | Not shipped in OSS |
 | Sparks billing, teams, projects | **Hosted only** | |
-| MCP tools for World Director | **Planned** | No Director-specific MCP tool in `cloud-run/mcp-api` today (verified 2026-03-26) |
-| Video / scene image generation from previs | **Hosted optional** | Separate product workflow |
+| MCP tools for World Director | **Planned** | No Director-specific MCP in product API (checked 2026-03-26) |
+| Video / scene image generation from previs | **Hosted optional** | Separate product workflow; may cost Sparks |
 
 ---
 
@@ -50,48 +52,49 @@
 
 | Module | Product path | In OSS? |
 | ------ | ------------ | ------- |
-| Plan core (types, validate, camera sample) | `bloomway-launch-step1/supabase/functions/_shared/previsPlanCore.ts` | **Yes** — `packages/core/src/` (extracted copy) |
-| World generator | `previsWorldGen.ts`, `previsWorldWater.ts` | **Yes** — same |
-| Full `DirectorStudio3dWorkspace` | `components/directorStudio/v2/*` | **No** — minimal Studio only |
-| LLM prompts / Edge functions | `supabase/functions/plan-director-previs/*` | **No** |
+| Plan core | `previsPlanCore.ts` (product) | **Yes** — `packages/core/src/` |
+| World generator | `previsWorldGen.ts`, `previsWorldWater.ts` | **Yes** |
+| Full `DirectorStudio3dWorkspace` | `components/directorStudio/v2/*` | **No** — minimal Studio |
+| LLM prompts / Edge functions | `plan-director-previs/*` | **No** |
 
-Extraction is a **copy** with provenance in `packages/core/PROVENANCE.md`. Copyright under MIT applies to OSS copy; product deployment remains separate.
+Extraction provenance: [packages/core/PROVENANCE.md](../packages/core/PROVENANCE.md).
 
 ---
 
-## 5. Example: `examples/edo-rainy-night`
+## 5. Examples (all four folders)
 
-| Claim | Status |
-| ----- | ------ |
-| Edo-era styled street world (`style: edo`, `timeOfDay: night`) | **Verified** — deterministic from ref |
-| Rain weather on ref | **Verified** — `weather: rain` in ref |
-| Character blocking (capsule paths) | **Verified** — plan JSON |
-| Camera push / follow / pull back | **Verified** — multiple `camera.keys`; motion via `samplePrevisCamera` + Studio playback |
+| Example | Core validate | Bundled in `apps/studio/public` | Studio UX (v0.1) |
+| ------- | ------------- | ------------------------------ | ---------------- |
+| `edo-rainy-night` | **Verified** | **Yes** | Default `?example=1` / Edo preset |
+| `street-drama` | **Verified** | **Yes** | Composer drama phrases → `fetchPlanUrl` |
+| `modern-city-street` | **Verified** | **Yes** | Presets/keywords; **no** dedicated tile |
+| `mars-base` | **Verified** | **Yes** | Mars preset + JSON; **no** dedicated tile |
 
-**Not claimed:** cinematic rain VFX, AI environment art, or LLM from one-sentence prompt in this example.
+Matrix: [examples/STATUS.md](examples/STATUS.md).
 
 ---
 
 ## 6. Known limitations
 
-1. **Natural language:** README marketing lines describe the **product vision**; this repo’s example uses **checked-in JSON** (+ optional keyword rules later), not unconstrained NLU.
-2. **Visual fidelity:** Low-poly blockout only; not representative of Bloomway final renders.
-3. **Studio UI:** English only; subset of product features.
-4. **Examples:** One fully wired example; `modern-city-street` and `mars-base` are **Planned** (refs validated in product tests, not yet in OSS examples).
-5. **Copyright entity:** MIT License lists **Bloomway AI Inc.** — company confirms legal name; see [EXTRACTED_CODE.md](EXTRACTED_CODE.md) for extracted modules.
+1. **Natural language:** OSS composer = **keywords + presets + bundled plan fetch** — not open-ended NLU or cloud LLM.
+2. **Visual fidelity:** Blockout only; not Bloomway final renders.
+3. **Studio UI:** English chrome in v0.1.
+4. **Examples:** Four validate; two are first-visit friendly without reading docs.
+5. **GitHub Pages:** Workflow present; **404 until** Pages source enabled (see [deploy/studio-hosting.md](deploy/studio-hosting.md)).
+6. **Copyright entity:** MIT lists **Bloomway AI Inc.** — [EXTRACTED_CODE.md](EXTRACTED_CODE.md).
 
 ---
 
 ## 7. Licensing scope (MIT)
 
-- **Covers:** Source files in this repository under `LICENSE`, except where another file states a different license.
-- **Does not cover:** Bloomway hosted services, third-party APIs you configure, or media files with separate `MEDIA_LICENSE` in example folders.
-- **Does not impose:** commercial registration, mandatory UI attribution, mandatory end-video credits, or anti-competitive terms.
+- **Covers:** Repository source under `LICENSE` unless otherwise noted.
+- **Does not cover:** Bloomway hosted services or third-party APIs you configure.
+- **Demo media:** CC BY 4.0 in `media/` — see [media/README.md](../media/README.md).
 
-See [commercial-use.md](commercial-use.md), [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
+See [commercial-use.md](commercial-use.md).
 
 ---
 
 ## 8. Verification log
 
-See [docs/verification-log.md](verification-log.md) for commands, environment, and outputs from the acceptance run.
+See [verification-log.md](verification-log.md). Re-run after material README or Studio changes.
