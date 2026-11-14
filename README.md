@@ -17,6 +17,8 @@ An open-source 3D previs studio for planning scenes, character blocking, and cam
   </sub>
 </p>
 
+https://github.com/user-attachments/assets/c9382f04-355c-4c05-ac11-c86aab355fa0
+
 *63s vision film — world → screen on the Bloomway product. Not a recording of the OSS blockout Studio below.*
 
 This repository provides the open-source 3D previs tools. Final footage generation is a separate [Bloomway](https://bloomway.ai) workflow.
@@ -40,15 +42,10 @@ Free to use · MIT licensed · No sign-up required *(OSS Studio only — not clo
 
 ### Try in browser
 
-<p align="center">
-  <a href="https://bloomway-ai.github.io/bloomway-world-director/">
-    <img src="media/cta-try-in-browser.svg" alt="TRY IN BROWSER" width="520" height="80">
-  </a>
-</p>
+Use the green **TRY IN BROWSER** button above, or [`?example=1&autoplay=1`](https://bloomway-ai.github.io/bloomway-world-director/?example=1&autoplay=1) for bundled Edo blocking.
 
-1. Use the link above, or [`?example=1&autoplay=1`](https://bloomway-ai.github.io/bloomway-world-director/?example=1&autoplay=1) for bundled Edo blocking.
-2. Choose a **preset** or type a **short phrase** (keyword rules — e.g. `rainy night`, `two rivals meet in the street`).
-3. Press **Play** on the timeline to rehearse camera paths and blocking.
+1. Choose a **preset** or type a **short phrase** (keyword rules — e.g. `rainy night`, `two rivals meet in the street`).
+2. Press **Play** on the timeline to rehearse camera paths and blocking.
 
 No sign-up or API key · desktop browser recommended · footer **GitHub** returns to this repo.
 

@@ -17,6 +17,8 @@
   </sub>
 </p>
 
+https://github.com/user-attachments/assets/c9382f04-355c-4c05-ac11-c86aab355fa0
+
 *63 秒愿景片展示 Bloomway 产品路径，非下方 OSS 白盒 Studio 录屏。*
 
 本仓库提供开源三维预演工具，最终成片生成属于独立的 [Bloomway](https://bloomway.ai) 工作流。
@@ -40,15 +42,10 @@
 
 ### 浏览器试玩
 
-<p align="center">
-  <a href="https://bloomway-ai.github.io/bloomway-world-director/">
-    <img src="media/cta-try-in-browser-zh.svg" alt="浏览器试玩" width="400" height="80">
-  </a>
-</p>
+点击上方绿色 **浏览器试玩** 按钮，或 [`?example=1&autoplay=1`](https://bloomway-ai.github.io/bloomway-world-director/?example=1&autoplay=1) 加载 Edo 示例。
 
-1. 或 [`?example=1&autoplay=1`](https://bloomway-ai.github.io/bloomway-world-director/?example=1&autoplay=1) 加载 Edo 示例。  
-2. 选 **预设** 或在 **指令输入框** 输入短句（关键词规则，非任意自然语言生成）。  
-3. 时间轴 **播放**，预览摄影机与站位。
+1. 选 **预设** 或在 **指令输入框** 输入短句（关键词规则，非任意自然语言生成）。  
+2. 时间轴 **播放**，预览摄影机与站位。
 
 无需注册或 API Key · 建议桌面浏览器 · 页脚 **GitHub** 返回本仓库。
 
