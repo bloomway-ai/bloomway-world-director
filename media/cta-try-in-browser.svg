@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="80" viewBox="0 0 520 80" role="img" aria-label="TRY IN BROWSER">
+  <rect width="520" height="80" rx="40" fill="#9AE234"/>
+  <text x="260" y="51" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="26" font-weight="800" fill="#0d1117" letter-spacing="2">TRY IN BROWSER</text>
+  <path d="M405 28 L445 40 L405 52 Z" fill="#0d1117"/>
+</svg>

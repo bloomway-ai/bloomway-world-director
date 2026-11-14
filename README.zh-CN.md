@@ -11,7 +11,7 @@
     <img src="media/promo-hero-direct-rainy-streets.jpg" alt="播放完整 63 秒演示（含音频）" width="100%">
   </a>
   <br><sub>
-    <strong><a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html" style="color:#9AE234; text-decoration:none;">▶ 播放完整演示</a></strong>
+    <strong><a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">▶ 播放完整演示</a></strong>
     · 63 秒 · 含音频 · 1280p（约 8MB）
     · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">下载 1080p 正本</a>
   </sub>
@@ -22,9 +22,14 @@
 本仓库提供开源三维预演工具，最终成片生成属于独立的 [Bloomway](https://bloomway.ai) 工作流。
 
 <p align="center">
-  <a href="https://bloomway-ai.github.io/bloomway-world-director/" style="font-weight:800; font-size:1.2em; color:#9AE234; text-decoration:none;"><strong>浏览器试玩</strong></a>
-  &nbsp;·&nbsp;
-  <a href="#本地运行"><strong>本地运行</strong></a>
+  <a href="https://bloomway-ai.github.io/bloomway-world-director/">
+    <img src="media/cta-try-in-browser-zh.svg" alt="浏览器试玩 — 打开 OSS Studio" width="400" height="80">
+  </a>
+</p>
+<p align="center">
+  <a href="#本地运行">
+    <img src="media/cta-run-locally-zh.svg" alt="本地运行" width="220" height="52">
+  </a>
 </p>
 
 免费使用 · MIT 许可 · 无需注册（**仅指 OSS Studio**，不包含云端成片算力）。
@@ -35,7 +40,11 @@
 
 ### 浏览器试玩
 
-<strong style="color:#9AE234;">浏览器试玩</strong> — <a href="https://bloomway-ai.github.io/bloomway-world-director/"><strong>打开在线 Studio</strong></a>
+<p align="center">
+  <a href="https://bloomway-ai.github.io/bloomway-world-director/">
+    <img src="media/cta-try-in-browser-zh.svg" alt="浏览器试玩" width="400" height="80">
+  </a>
+</p>
 
 1. 或 [`?example=1&autoplay=1`](https://bloomway-ai.github.io/bloomway-world-director/?example=1&autoplay=1) 加载 Edo 示例。  
 2. 选 **预设** 或在 **指令输入框** 输入短句（关键词规则，非任意自然语言生成）。  

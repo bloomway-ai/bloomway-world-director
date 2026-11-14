@@ -17,7 +17,8 @@ Studio de previs 3D open source para planificar escenas, blocking y movimiento d
 
 Este repositorio ofrece herramientas OSS de previs 3D. El footage final es un flujo [Bloomway](https://bloomway.ai) aparte.
 
-**[Probar en el navegador](https://bloomway-ai.github.io/bloomway-world-director/)** · [Run locally](#run-locally)
+<p align="center"><a href="https://bloomway-ai.github.io/bloomway-world-director/"><img src="media/cta-try-in-browser.svg" alt="TRY IN BROWSER" width="520" height="80"></a></p>
+<p align="center"><a href="#run-locally"><img src="media/cta-run-locally.svg" alt="Run locally" width="260" height="52"></a></p>
 
 Gratis · MIT · sin registro (**solo Studio OSS**).
 

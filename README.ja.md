@@ -17,7 +17,8 @@
 
 本リポジトリはオープンソースの 3D プレビズツールです。完成映像生成は別の [Bloomway](https://bloomway.ai) ワークフローです。
 
-**[ブラウザで試す](https://bloomway-ai.github.io/bloomway-world-director/)** · [ローカル実行](#run-locally)
+<p align="center"><a href="https://bloomway-ai.github.io/bloomway-world-director/"><img src="media/cta-try-in-browser.svg" alt="TRY IN BROWSER" width="520" height="80"></a></p>
+<p align="center"><a href="#run-locally"><img src="media/cta-run-locally.svg" alt="Run locally" width="260" height="52"></a></p>
 
 無料 · MIT · 登録不要（**OSS Studio のみ** — クラウド渲染クレジットは含みません）。
 

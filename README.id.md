@@ -17,7 +17,8 @@ Studio pravis 3D sumber terbuka untuk perencanaan adegan, blocking karakter, dan
 
 Repositori ini menyediakan alat pravis 3D open source. Generasi footage akhir adalah alur [Bloomway](https://bloomway.ai) terpisah.
 
-**[Coba di browser](https://bloomway-ai.github.io/bloomway-world-director/)** · [Run locally](#run-locally)
+<p align="center"><a href="https://bloomway-ai.github.io/bloomway-world-director/"><img src="media/cta-try-in-browser.svg" alt="TRY IN BROWSER" width="520" height="80"></a></p>
+<p align="center"><a href="#run-locally"><img src="media/cta-run-locally.svg" alt="Run locally" width="260" height="52"></a></p>
 
 Gratis · MIT · tanpa registrasi (**hanya OSS Studio**).
 

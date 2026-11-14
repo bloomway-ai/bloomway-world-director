@@ -17,7 +17,8 @@
 
 이 저장소는 오픈소스 3D 프리비즈 도구입니다. 완성 영상 생성은 별도 [Bloomway](https://bloomway.ai) 워크플로입니다.
 
-**[브라우저에서 체험](https://bloomway-ai.github.io/bloomway-world-director/)** · [Run locally](#run-locally)
+<p align="center"><a href="https://bloomway-ai.github.io/bloomway-world-director/"><img src="media/cta-try-in-browser.svg" alt="TRY IN BROWSER" width="520" height="80"></a></p>
+<p align="center"><a href="#run-locally"><img src="media/cta-run-locally.svg" alt="Run locally" width="260" height="52"></a></p>
 
 무료 · MIT · 가입 불필요(**OSS Studio만** — 클라우드 렌더 크레딧 없음).
 

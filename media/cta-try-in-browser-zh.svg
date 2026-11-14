@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="80" viewBox="0 0 400 80" role="img" aria-label="Browser try">
+  <rect width="400" height="80" rx="40" fill="#9AE234"/>
+  <text x="180" y="51" text-anchor="middle" font-family="system-ui,-apple-system,PingFang SC,Segoe UI,sans-serif" font-size="26" font-weight="800" fill="#0d1117">&#27983;&#35272;&#22120;&#35797;&#29609;</text>
+  <path d="M318 28 L352 40 L318 52 Z" fill="#0d1117"/>
+</svg>
