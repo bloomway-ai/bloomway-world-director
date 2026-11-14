@@ -6,18 +6,15 @@
 
 [English](README.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
 
+https://github.com/user-attachments/assets/c9382f04-355c-4c05-ac11-c86aab355fa0
+
 <p align="center">
-  <a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">
-    <img src="media/promo-hero-direct-rainy-streets.jpg" alt="播放完整 63 秒演示（含音频）" width="100%">
-  </a>
-  <br><sub>
+  <sub>
     <strong><a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">▶ 播放完整演示</a></strong>
     · 63 秒 · 含音频 · 1280p（约 8MB）
     · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">下载 1080p 正本</a>
   </sub>
 </p>
-
-https://github.com/user-attachments/assets/c9382f04-355c-4c05-ac11-c86aab355fa0
 
 *63 秒愿景片展示 Bloomway 产品路径，非下方 OSS 白盒 Studio 录屏。*
 

@@ -48,9 +48,11 @@ GitHub **strips `<video>` tags** from repository READMEs (including `src` pointi
 4. 右上角铅笔 **Edit this file**  
    （直达：[编辑 main 上的 README.md](https://github.com/bloomway-ai/bloomway-world-director/edit/main/README.md)）
 
-### 2. 把光标放在海报下面
+### 2. 把光标放在视频链接那一行
 
-在编辑器里找到海报图那段（`promo-hero-direct-rainy-streets.jpg`），在 **`</p>` 之后、下一段文字之前** 点一下，空一行。
+README 顶部 **没有单独海报图**；播放器封面来自 `promo-full-demo-readme.mp4` 的**首帧**（与 `promo-hero-direct-rainy-streets.jpg` 相同，由 `scripts/compress-promo-readme.sh` 写入）。
+
+在编辑器里找到现有的 `user-attachments` 那一行，**选中并删除该行**，在同一位置空一行准备插入新上传。
 
 ### 3. 拖入 MP4
 
@@ -64,12 +66,14 @@ GitHub **strips `<video>` tags** from repository READMEs (including `src` pointi
 上下各留一个空行，例如：
 
 ```markdown
-</p>
-
 https://github.com/user-attachments/assets/<你的 uuid>
+
+<p align="center"><sub>…链接说明…</sub></p>
 
 *63s vision film...
 ```
+
+更换 MP4 后必须 **重新拖入** 并更新 UUID 行（GitHub 不会用旧链接换掉已上传文件的画面）。
 
 ### 4. 预览并提交
 
