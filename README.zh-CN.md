@@ -14,15 +14,28 @@ MIT 授权的 **三维预演工具包**：程序化世界、人物站位、摄�
 
 ## 介绍与演示
 
-**GIF 内容（真实 OSS Studio v0.1，约 15 秒，静音）：** 加载 **Edo 雨夜** 示例 → 时间轴 **播放** → 摄影机与站位推进。无需云端登录。  
-*实机录屏，未加速。*
+本仓库 **OSS Studio v0.1** 实机录屏（静音循环，各约 12 秒）。无需云端登录，未加速。
 
-<p align="center">
-  <a href="media/demo.mp4">
-    <img src="media/studio-hero.gif" alt="OSS Studio：加载示例、播放时间轴、白盒预演" width="100%">
-  </a>
-  <br><sub>▶ <a href="media/demo.mp4">完整片段（仓库内）</a> · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">城市巡游</a> · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">街头剧情</a></sub>
-</p>
+<p align="center"><strong>城市巡游</strong> · <strong>街头剧情</strong></p>
+
+<table>
+  <tr>
+    <td width="50%">
+      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">
+        <img src="media/demo-city-tour.gif" alt="城市巡游演示" width="100%">
+      </a>
+      <br><sub>输入 <code>Snowy daytime Tokyo urban city</code> · WASD 巡游 · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">▶ 完整 MP4</a></sub>
+    </td>
+    <td width="50%">
+      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">
+        <img src="media/demo-drama.gif" alt="街头剧情演示" width="100%">
+      </a>
+      <br><sub>对峙剧情 + 时间轴播放 · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">▶ 完整 MP4</a></sub>
+    </td>
+  </tr>
+</table>
+
+默认 Edo 示例：[`media/demo.mp4`](media/demo.mp4) · `?example=1`。
 
 若本项目能帮你搭镜头构想，欢迎点 ⭐ 关注后续更新。
 

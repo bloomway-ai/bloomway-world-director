@@ -4,8 +4,9 @@
 
 | Asset | Role |
 | ----- | ---- |
-| `media/studio-hero.gif` | **README top** — real OSS Studio workflow (~15s from `demo.mp4`) |
-| `media/demo.mp4` | Full hero clip in git (~280KB) |
+| `media/demo-city-tour.gif` / `demo-drama.gif` | **README top** — dual OSS Studio demos (loops ~12s) |
+| `media/studio-hero.gif` | Optional — from legacy `demo.mp4` (Edo); not README hero |
+| `media/demo.mp4` | Legacy Edo autoplay clip in git (~15s) |
 | `media/promo-cold-open.gif` | **Lower README** — brand/product montage preview |
 | Release **`final_v2_cold_open.mp4`** | Full ~63s brand film (**filename on Release**, not `promo-cold-open.mp4`) |
 | `media/demo-city-tour.gif` / `demo-drama.gif` | Supplementary loops |

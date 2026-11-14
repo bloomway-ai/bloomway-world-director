@@ -16,24 +16,33 @@ An MIT-licensed **3D previsualization toolkit** with procedural worlds, characte
 
 ## Introduction and demo
 
-**What this GIF shows (real OSS Studio v0.1, ~15s, silent):** load bundled **Edo rainy night** → timeline **Play** → camera + blocking advance. No cloud login.  
-*Recording is real-time screen capture (not sped up).*
+Recorded from **this repo’s OSS Studio** (v0.1, silent loops ~12s each). No cloud login. Real-time capture—not sped up.
 
-<p align="center">
-  <a href="media/demo.mp4">
-    <img src="media/studio-hero.gif" alt="OSS Studio: load example scene, play timeline, blockout previs" width="100%">
-  </a>
-  <br><sub>▶ <a href="media/demo.mp4">Full clip (repo)</a> · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">City tour</a> · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">Street drama</a></sub>
-</p>
+<p align="center"><strong>City tour</strong> · <strong>Street drama</strong></p>
 
-| Step in the UI | What happens |
-| -------------- | ------------- |
-| Open Studio | Home with world **presets** + **composer** (English UI) |
-| `?example=1` or default flow | Loads [`examples/edo-rainy-night`](examples/edo-rainy-night/) `plan.json` |
-| Press **Play** on timeline | Camera samples keys; capsules follow blocking |
-| Type in composer | **Keyword rules** (rain, night, Tokyo, “two rivals…”) — not cloud LLM |
+<table>
+  <tr>
+    <td width="50%">
+      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">
+        <img src="media/demo-city-tour.gif" alt="City tour: composer line → snowy Tokyo → explore with WASD" width="100%">
+      </a>
+      <br><sub>Type <code>Snowy daytime Tokyo urban city</code> → orbit / WASD · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">▶ Full MP4 (~20s)</a></sub>
+    </td>
+    <td width="50%">
+      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">
+        <img src="media/demo-drama.gif" alt="Street drama: rivals on a rainy street → timeline play" width="100%">
+      </a>
+      <br><sub><code>two rivals meet in the street</code> → blocking + timeline · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">▶ Full MP4 (~22s)</a></sub>
+    </td>
+  </tr>
+</table>
 
-More loops (supplementary): [`media/demo-city-tour.gif`](media/demo-city-tour.gif) · [`media/demo-drama.gif`](media/demo-drama.gif).
+| Demo | Input (composer) | What you see |
+| ---- | ---------------- | ------------ |
+| **City tour** | `Snowy daytime Tokyo urban city` (+ explore) | World from **presets/keywords** → walk the blockout |
+| **Street drama** | `Rainy night — two rivals meet in the street` | Loads [`street-drama`](examples/street-drama/) blocking → **Play** on timeline |
+
+Legacy Edo autoplay: [`media/demo.mp4`](media/demo.mp4) · default `?example=1` → [`edo-rainy-night`](examples/edo-rainy-night/).
 
 If this helps you plan a shot—or you want to follow what we ship—give the project a ⭐.
 

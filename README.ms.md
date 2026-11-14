@@ -1,11 +1,12 @@
 # Bloomway World Director
 
-<p align="center">
-  <a href="media/demo.mp4">
-    <img src="media/studio-hero.gif" alt="OSS Studio demo" width="100%">
-  </a>
-  <br><sub><a href="media/demo.mp4">▶ OSS clip</a> · struktur penuh: <a href="README.md">README.md</a></sub>
-</p>
+<table>
+  <tr>
+    <td width="50%"><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4"><img src="media/demo-city-tour.gif" alt="City tour" width="100%"></a></td>
+    <td width="50%"><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4"><img src="media/demo-drama.gif" alt="Street drama" width="100%"></a></td>
+  </tr>
+</table>
+<p align="center"><sub>Struktur penuh: <a href="README.md">README.md</a></sub></p>
 
 [English](README.md) · [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
 

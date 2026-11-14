@@ -2,12 +2,14 @@
 
 Recordings of **this repository’s** OSS Studio (`apps/studio`). Not the commercial Bloomway app UI, Academy tutorials, or AI final renders.
 
-## README hero (OSS Studio)
+## README hero (OSS Studio — dual demos)
 
 | File | Description |
 | ---- | ----------- |
-| `studio-hero.gif` | README **top** — loop from `demo.mp4` (~15s, 720px, ~1.7MB) |
-| `demo.mp4` | Hero clip in git (~15.5s, silent) |
+| `demo-city-tour.gif` | README **top left** — composer → snowy Tokyo → explore |
+| `demo-drama.gif` | README **top right** — street drama → timeline play |
+| `studio-hero.gif` | Optional loop from legacy `demo.mp4` (Edo); not used on README hero |
+| `demo.mp4` | Legacy Edo autoplay in git (~15.5s, silent) |
 
 ## Brand film (lower README)
 
