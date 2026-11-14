@@ -17,6 +17,12 @@ An open-source 3D previs studio for planning scenes, character blocking, and cam
   </sub>
 </p>
 
+
+
+https://github.com/user-attachments/assets/c9382f04-355c-4c05-ac11-c86aab355fa0
+
+
+
 *63s vision film — world → screen on the Bloomway product. Not a recording of the OSS blockout Studio below.*
 
 This repository provides the open-source 3D previs tools. Final footage generation is a separate [Bloomway](https://bloomway.ai) workflow.
