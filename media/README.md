@@ -6,9 +6,12 @@ Recordings of **this repository’s** OSS Studio (`apps/studio`). Not the commer
 
 | File | Description |
 | ---- | ----------- |
-| `try-in-browser-cover.png` | README **Try in browser** banner — `screenshots/home` + `world` (UI + 3D), links to GitHub Pages Studio |
+| `try-in-browser-cover.png` | **1/3** `world` panorama + **2/3** `camera-timeline` (shot rehearsal); tagline on image |
+| `hero-previs-loop.gif` | README **above fold** — ~10s from `demo-drama.mp4` (~800KB) |
 
-Regenerate after UI refresh: `npm run capture:screenshots` then re-run the PIL merge in `scripts/` or README maintainer note in `docs/promo/VIDEO_URLS.md`.
+Regenerate cover: `python3 scripts/build-try-cover.py` after `npm run capture:screenshots`.
+
+Hero loop: `ffmpeg` from `demo-drama.mp4` (see `docs/promo/VIDEO_URLS.md`).
 
 ## README hero (OSS Studio — dual demos)
 

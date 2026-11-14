@@ -16,6 +16,14 @@ export function ProjectAttribution() {
       <a href="https://bloomway.ai" style={{ color: '#8ce132' }}>
         Bloomway AI
       </a>
+      {' · '}
+      <a
+        href="https://github.com/bloomway-ai/bloomway-world-director"
+        style={{ color: '#8ce132' }}
+        rel="noreferrer"
+      >
+        GitHub
+      </a>
     </footer>
   );
 }

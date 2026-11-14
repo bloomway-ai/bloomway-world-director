@@ -21,7 +21,8 @@
     "license:audit": "node scripts/license-audit.mjs",
     "i18n-check": "node scripts/i18n-check-readme.mjs",
     "capture:screenshots": "node scripts/capture-readme-screenshots.mjs",
-    "preview:demos-gif": "bash scripts/preview-demos-gif.sh"
+    "preview:demos-gif": "bash scripts/preview-demos-gif.sh",
+    "build:try-cover": "python3 scripts/build-try-cover.py"
   },
   "devDependencies": {
     "playwright": "^1.52.0",

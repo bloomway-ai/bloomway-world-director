@@ -4,7 +4,10 @@
 
 | Asset | Role |
 | ----- | ---- |
-| `media/demo-city-tour.gif` / `demo-drama.gif` | **README top** — dual OSS Studio demos (loops ~12s) |
+| `media/hero-previs-loop.gif` | **Above fold** — street drama / timeline (~10s, ~800KB) |
+| `media/try-in-browser-cover.png` | **Try in browser** — world + camera/timeline still |
+| `media/demo-city-tour.gif` / `demo-drama.gif` | **Watch demos** section (~9s loops, ~1MB each) |
+| `media/promo-cold-open-poster.png` | Brand film — **static** + MP4 link (no 9MB GIF in README) |
 | `media/studio-hero.gif` | Optional — from legacy `demo.mp4` (Edo); not README hero |
 | `media/demo.mp4` | Legacy Edo autoplay clip in git (~15s) |
 | `media/promo-cold-open.gif` | **Lower README** — brand/product montage preview |
