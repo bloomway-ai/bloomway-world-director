@@ -8,7 +8,7 @@ Studio pravis 3D sumber terbuka untuk perancangan adegan, blok aksara, dan perge
 
 <p align="center">
   <a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">
-    <img src="media/promo-hero-direct-rainy-streets.png" width="100%">
+    <img src="media/promo-hero-direct-rainy-streets.jpg" width="100%">
   </a>
   <br><sub><a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">▶ Play</a> · 63s · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">1080p</a></sub>
 </p>

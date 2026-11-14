@@ -8,7 +8,7 @@ An open-source 3D previs studio for planning scenes, character blocking, and cam
 
 <p align="center">
   <a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">
-    <img src="media/promo-hero-direct-rainy-streets.png" alt="Play the full 63 second demo (with audio)" width="100%">
+    <img src="media/promo-hero-direct-rainy-streets.jpg" alt="Play the full 63 second demo (with audio)" width="100%">
   </a>
   <br><sub>
     <strong><a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html" style="color:#9AE234; text-decoration:none;">▶ PLAY FULL DEMO</a></strong>

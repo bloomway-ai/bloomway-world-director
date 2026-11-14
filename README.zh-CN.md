@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html">
-    <img src="media/promo-hero-direct-rainy-streets.png" alt="播放完整 63 秒演示（含音频）" width="100%">
+    <img src="media/promo-hero-direct-rainy-streets.jpg" alt="播放完整 63 秒演示（含音频）" width="100%">
   </a>
   <br><sub>
     <strong><a href="https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html" style="color:#9AE234; text-decoration:none;">▶ 播放完整演示</a></strong>
