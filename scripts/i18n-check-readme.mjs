@@ -19,7 +19,7 @@ const mustHave = [
 ];
 
 const pathMarkers = [
-  /Path\s*1|Three paths|三条路径|Try it|试玩|Cuba|Mula|Mulai|クイック|빠른 시작|Inicio rápido|Quick start|快速开始/i,
+  /Path\s*1|Three paths|三条路径|Try it|试玩|体验一下|Studio in action|开源 Studio|Cuba|Mula|Mulai|クイック|빠른 시작|Inicio rápido|Quick start|快速开始/i,
 ];
 
 let failed = false;

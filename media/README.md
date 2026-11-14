@@ -22,15 +22,16 @@ Hero loop: `ffmpeg` from `demo-drama.mp4` (see `docs/promo/VIDEO_URLS.md`).
 | `studio-hero.gif` | Optional loop from legacy `demo.mp4` (Edo); not used on README hero |
 | `demo.mp4` | Legacy Edo autoplay in git (~15.5s, silent) |
 
-## Brand film (lower README)
+## Full demo film (README top — click-to-play)
 
 | File | Description |
 | ---- | ----------- |
-| `promo-cold-open.gif` | Product montage loop (~12s) |
-| `promo-cold-open-poster.png` | Still frame |
-| Release `final_v2_cold_open.mp4` | **Not in git** (~33MB) — [Release download](https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4) (filename is **not** `promo-cold-open.mp4`) |
+| `promo-full-demo-poster.png` | **Static** cover with play cue — links to Release MP4 (no autoplay GIF) |
+| `promo-cold-open-poster.png` | Legacy still (optional) |
+| `promo-cold-open.gif` | **Not used in README** (~8MB montage; keep for local use) |
+| Release `final_v2_cold_open.mp4` | Full **63s** vision film (**not in git**, ~33MB) — [Release download](https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4) (filename is **not** `promo-cold-open.mp4`) |
 
-Brand clip = **product vision**, not a substitute for OSS blockout demos below.
+Brand clip = **product vision**; OSS blockout demos live under **See the open-source Studio in action**.
 
 ## Files
 

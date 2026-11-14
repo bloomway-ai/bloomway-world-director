@@ -1,43 +1,37 @@
 # README demo display
 
-## v0.1 README layout (2026-11-14)
+## v0.1 README layout (2026-11-14, final)
 
 | Asset | Role |
 | ----- | ---- |
-| `media/hero-previs-loop.gif` | **Above fold** — street drama / timeline (~10s, ~800KB) |
+| `media/promo-full-demo-poster.png` | **Above fold** — static cover → full 63s Release MP4 (no crop, no full GIF) |
 | `media/try-in-browser-cover.png` | **Try in browser** — world + camera/timeline still |
-| `media/demo-city-tour.gif` / `demo-drama.gif` | **Watch demos** section (~9s loops, ~1MB each) |
-| `media/promo-cold-open-poster.png` | Brand film — **static** + MP4 link (no 9MB GIF in README) |
-| `media/studio-hero.gif` | Optional — from legacy `demo.mp4` (Edo); not README hero |
+| `media/hero-previs-loop.gif` | **Studio in action** — street drama / timeline (~10s, ~800KB) |
+| `media/demo-city-tour.gif` / `demo-drama.gif` | City tour + street drama (~1MB each) |
+| `media/studio-hero.gif` | Optional — legacy Edo loop; not README hero |
 | `media/demo.mp4` | Legacy Edo autoplay clip in git (~15s) |
-| `media/promo-cold-open.gif` | **Lower README** — brand/product montage preview |
+| `media/promo-cold-open.gif` | **Not in README** (large montage) |
 | Release **`final_v2_cold_open.mp4`** | Full ~63s brand film (**filename on Release**, not `promo-cold-open.mp4`) |
-| `media/demo-city-tour.gif` / `demo-drama.gif` | Supplementary loops |
-| Release `demo-*.mp4` | Full quality MP4 links |
+| Release `demo-*.mp4` | Full quality OSS demo MP4 links |
 
 ### Verified Release URLs (v0.1.0)
 
-| Asset | Download URL | Check (2026-11-14) |
-| ----- | ------------ | ------------------ |
+| Asset | Download URL | Check |
+| ----- | ------------ | ----- |
 | Brand film | `https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4` | HTTP **302** → asset (OK) |
-| City tour | `.../demo-city-tour.mp4` | OK on Release |
-| Street drama | `.../demo-drama.mp4` | OK on Release |
+| City tour | `.../demo-city-tour.mp4` | On Release |
+| Street drama | `.../demo-drama.mp4` | On Release |
 | ~~promo-cold-open.mp4~~ | — | **Invalid** — label only; file is `final_v2_cold_open.mp4` |
 
-Regenerate hero GIF after re-recording:
-
-```bash
-npm run record:demo
-ffmpeg -y -i media/demo.mp4 -vf "fps=10,scale=960:-2:flags=lanczos,split[s0][s1];[s0]palettegen=stats_mode=diff[p];[s1][p]paletteuse=dither=bayer" -loop 0 media/studio-hero.gif
-```
-
-Regenerate supplementary GIFs:
+Regenerate hero loop:
 
 ```bash
 npm run record:demos
 npm run preview:demos-gif
 ```
 
+Regenerate try cover: `python3 scripts/build-try-cover.py`
+
 ## Native `<video>` player (optional upgrade)
 
-GitHub **removes** most `<video src="releases/download/...">` tags in README. For a player with controls, drag-drop upload to GitHub editor → `user-attachments` URL ([GitHub docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/attaching-files)).
+GitHub **removes** most `<video src="releases/download/...">` tags in README. Prefer **poster image + link** to Release MP4 (current layout). For inline player with controls, use GitHub `user-attachments` URL ([GitHub docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/attaching-files)).

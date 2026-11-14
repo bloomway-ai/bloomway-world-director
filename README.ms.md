@@ -1,141 +1,51 @@
 # Bloomway World Director
 
-<table>
-  <tr>
-    <td width="50%"><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4"><img src="media/demo-city-tour.gif" alt="City tour" width="100%"></a></td>
-    <td width="50%"><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4"><img src="media/demo-drama.gif" alt="Street drama" width="100%"></a></td>
-  </tr>
-</table>
-<p align="center"><sub>Struktur penuh: <a href="README.md">README.md</a></sub></p>
+**Build a world. Block a scene. Rehearse the camera.**
 
-[English](README.md) · [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
+Studio pravis 3D sumber terbuka untuk perancangan adegan, blok aksara, dan pergerakan kamera.
 
-**Your words. Your world. Your camera.**
+[English](README.md) · [中文](README.zh-CN.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
 
-Bina dunia 3D dan arahkan pergerakan kamera untuk **pravisualisasi** sinematik (blok mesin poli rendah)—bukan model penjana video AI umum. Menukar pravis kepada rakaman siap ialah aliran kerja pilihan di [Bloomway](https://bloomway.ai).
+<p align="center">
+  <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">
+    <img src="media/promo-full-demo-poster.png" alt="Watch the full demo — 63s" width="100%">
+  </a>
+  <br><sub>▶ <strong>Watch the full demo</strong> · 63 seconds</sub>
+</p>
 
-> **Eksperimen terbuka Bloomway:** bina dunia daripada satu ayat, susun syot dalam pravis 3D, kemudian bawa ke skrin. Alat terbuka untuk pencipta dan penyelidik.  
-> **Kemas kini berterusan:** repositori ini diselenggara secara aktif; jangkakan penambahbaikan berterusan.
+*File visi 63s — laluan produk Bloomway; bukan rakaman OSS Studio di bawah.*
 
-**Penggunaan komersial MIT** tidak memerlukan pendaftaran, notifikasi, atau perkongsian hasil. Hubungi **info@bloomway.ai** hanya jika anda mahukan kerjasama—**bukan** syarat lesen. Lihat [docs/commercial-use.md](docs/commercial-use.md).
+Repositori ini menyediakan alat pravis 3D sumber terbuka. Penjanaan rakaman akhir ialah aliran kerja [Bloomway](https://bloomway.ai) yang berasingan.
 
----
+**[Cuba dalam pelayar](https://bloomway-ai.github.io/bloomway-world-director/)** · [Run locally](#run-locally)
 
-> **MCP:** tidak dihantar dalam repo ini (**dirancang**) — [docs/mcp/README.md](docs/mcp/README.md). Cubaan pelayar: [docs/deploy/studio-hosting.md](docs/deploy/studio-hosting.md).
+Percuma · MIT · tanpa pendaftaran (**OSS Studio sahaja**).
 
 ---
 
-## Mula pantas
+## Try it
 
-**Cuba dalam pelayar:** [Buka OSS Studio](https://bloomway-ai.github.io/bloomway-world-director/) — pravis poli rendah, JSON contoh dalam repo; [hos Vercel](docs/deploy/studio-hosting.md) pilihan. Bukan NL / video siap dihos ([audit](docs/implementation-audit.md)).
+**[Buka Studio dalam pelayar](https://bloomway-ai.github.io/bloomway-world-director/)** — praset / kata kunci / main garis masa. Bukan penjanaan NL terbuka.
 
-**Keperluan (tempatan):** Node.js ≥ 20, npm ≥ 10. Tiada akaun Bloomway atau kunci API untuk contoh terbundel.
+### Run locally
 
 ```bash
 git clone https://github.com/bloomway-ai/bloomway-world-director.git
-cd bloomway-world-director
-npm install
-npm run verify:example
-npm run dev                  # Studio di http://localhost:5173/
+cd bloomway-world-director && npm install && npm run dev
 ```
 
-Studio lalai memuatkan [`examples/edo-rainy-night`](examples/edo-rainy-night/) (JSON dalam repo, bukan inferens awan langsung).
-
-**Sumber kebenaran:** [docs/implementation-audit.md](docs/implementation-audit.md) · [docs/verification-log.md](docs/verification-log.md)
-
-Pilihan: `npm run verify:studio-e2e`, `npm run record:demos`, `npm run capture:screenshots`.
-
 ---
 
-## Tangkapan skrin
+## See the open-source Studio in action
 
-| Laman utama | Dunia satu baris | Garis masa kamera |
-| ----------- | ---------------- | ----------------- |
-| ![Home](media/screenshots/home.png) | ![World](media/screenshots/world.png) | ![Timeline](media/screenshots/camera-timeline.png) |
-
----
-
-## Lihat tindakan
-
-Dirakam daripada Studio OSS **repositori ini**. Pratonton gelung di bawah — **▶ Full MP4** untuk fail penuh.
+<p align="center"><a href="https://bloomway-ai.github.io/bloomway-world-director/"><img src="media/try-in-browser-cover.png" width="100%"></a></p>
+<p align="center"><a href="https://bloomway-ai.github.io/bloomway-world-director/?example=1&autoplay=1"><img src="media/hero-previs-loop.gif" width="100%"></a></p>
 
 <table>
   <tr>
-    <td width="50%">
-      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">
-        <img src="media/demo-city-tour.gif" alt="City tour preview" width="100%">
-      </a>
-      <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">▶ Full MP4</a></sub>
-    </td>
-    <td width="50%">
-      <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">
-        <img src="media/demo-drama.gif" alt="Street drama preview" width="100%">
-      </a>
-      <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">▶ Full MP4</a></sub>
-    </td>
+    <td width="50%"><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4"><img src="media/demo-city-tour.gif" width="100%"></a></td>
+    <td width="50%"><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4"><img src="media/demo-drama.gif" width="100%"></a></td>
   </tr>
 </table>
 
-| Demo | Arahan satu baris | Fail |
-| ---- | ----------------- | ---- |
-| Lawatan bandar | `Snowy daytime Tokyo urban city` → teroka dengan WASD | [demo-city-tour.mp4](media/demo-city-tour.mp4) |
-| Drama jalanan | `Rainy night — two rivals meet in the street` → main blok | [demo-drama.mp4](media/demo-drama.mp4) |
-
-Jana semula: `npm run record:demos`. Legasi: [demo.mp4](media/demo.mp4) · [Nota media](media/README.md)
-
-Produk penuh: [bloomway.ai](https://bloomway.ai)
-
----
-
-## Apa yang berjalan secara tempatan
-
-| Status | Keupayaan |
-| ------ | --------- |
-| **Disahkan** | `plan.json` + `world-ref.json`, `validatePrevisPlan`, `generatePrevisWorld`, `samplePrevisCamera` |
-| **Disahkan** | Viewport Pengarah V2 + garis masa (`verify:studio-e2e`); blok legasi melalui `?legacy=1` |
-| **Eksperimental** | Komposer kata kunci/peraturan tanpa LLM awan |
-| **Dirancang** | Komposer awan penuh, alat MCP Director, lebih banyak contoh |
-
-Pembantu bahasa semula jadi «ayat apa pun → pelan» hanya **dihoskan di Bloomway** (tiada dalam repo ini).
-
----
-
-## Had semasa
-
-1. Saluran pemasaran menerangkan visi produk; contoh OSS menggunakan **JSON yang disemak masuk**.  
-2. Kesetiaan visual ialah **blok sahaja**—bukan render akhir Bloomway.  
-3. **UI Studio bahasa Inggeris sahaja** dalam v0.1; lihat [docs/product-parity.md](docs/product-parity.md).  
-4. «Satu baris → dunia» tempatan menggunakan **peraturan dan praset**, bukan NLU awan penuh.
-
-Butiran: [docs/implementation-audit.md](docs/implementation-audit.md) §6.
-
----
-
-## Peta jalan
-
-- Lebih banyak contoh (`modern-city-street`, `mars-base`)
-- Dokumentasi dan alat integrasi MCP
-- Studio lebih kaya (import, eksport UI)
-- Terjemahan UI Studio (krom aplikasi; README sudah berbilang bahasa)
-
----
-
-## Aliran kerja Bloomway pilihan
-
-*Mahu menukar pravis kepada rakaman siap? Terokai aliran kerja bersambung di [Bloomway](https://bloomway.ai).*
-
----
-
-## Penggunaan komersial & penjenamaan
-
-MIT — lihat [LICENSE](LICENSE). Hak cipta (c) 2026 Bloomway AI Inc. Media demo: [CC BY 4.0](media/README.md). Notis pihak ketiga: [docs/THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md).
-
-Tanda dagangan: [TRADEMARKS.md](TRADEMARKS.md). Jangan implikasikan sokongan rasmi.
-
----
-
-## Menyumbang
-
-[CONTRIBUTING.md](CONTRIBUTING.md) · [docs/ACCEPTANCE.md](docs/ACCEPTANCE.md)
-
-*Jika ini membantu anda meneroka satu syot—atau anda ingin mengikuti apa yang kami bina seterusnya—berikan projek ini ⭐.*
+[README.md](README.md) (penuh) · **info@bloomway.ai** · [MIT](LICENSE)

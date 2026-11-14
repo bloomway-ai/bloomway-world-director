@@ -2,24 +2,24 @@
 
 **Build a world. Block a scene. Rehearse the camera.**
 
-An open-source 3D previs studio for exploring scenes, character blocking, and camera movement.
-
-Free to use · MIT licensed · No sign-up required
+An open-source 3D previs studio for planning scenes, character blocking, and camera movement.
 
 [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
 
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![CI](https://github.com/bloomway-ai/bloomway-world-director/actions/workflows/verify.yml/badge.svg)](https://github.com/bloomway-ai/bloomway-world-director/actions/workflows/verify.yml) [![Release](https://img.shields.io/github/v/release/bloomway-ai/bloomway-world-director)](https://github.com/bloomway-ai/bloomway-world-director/releases/tag/v0.1.0)
-
-**[Try in browser](https://bloomway-ai.github.io/bloomway-world-director/)** · [Run locally](#run-locally) · [Watch demos](#watch-demos)
-
-No sign-up or API key required. Desktop browser recommended.
-
 <p align="center">
-  <a href="https://bloomway-ai.github.io/bloomway-world-director/?example=1&autoplay=1">
-    <img src="media/hero-previs-loop.gif" alt="OSS Studio: blocking characters, camera path, timeline play — silent ~10s loop" width="100%">
+  <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">
+    <img src="media/promo-full-demo-poster.png" alt="Watch the full demo — 63 second product vision film" width="100%">
   </a>
-  <br><sub>Input → blockout scene → <strong>Play</strong> on the timeline (street drama demo)</sub>
+  <br><sub>▶ <strong>Watch the full demo</strong> · 63 seconds · opens full video (with audio)</sub>
 </p>
+
+*63s vision film — world → screen on the Bloomway product. Not a recording of the OSS blockout Studio below.*
+
+This repository provides the open-source 3D previs tools. Final footage generation is a separate [Bloomway](https://bloomway.ai) workflow.
+
+**[Try in browser](https://bloomway-ai.github.io/bloomway-world-director/)** · [Run locally](#run-locally)
+
+Free to use · MIT licensed · No sign-up required *(OSS Studio only — not cloud render credits).*
 
 ---
 
@@ -27,23 +27,17 @@ No sign-up or API key required. Desktop browser recommended.
 
 ### Try in browser
 
-<p align="center">
-  <a href="https://bloomway-ai.github.io/bloomway-world-director/">
-    <img src="media/try-in-browser-cover.png" alt="Build the scene. Rehearse the shot. — blockout world and camera timeline" width="100%">
-  </a>
-</p>
-
 **Live —** [Open the browser Studio](https://bloomway-ai.github.io/bloomway-world-director/)
 
-1. Open the link — or [`?example=1&autoplay=1`](https://bloomway-ai.github.io/bloomway-world-director/?example=1&autoplay=1) to start with Edo blocking.
-2. Pick a **preset** or type a short line (e.g. `two rivals meet in the street`).
-3. Press **Play** on the timeline to rehearse camera + blocking.
+1. Use the link above, or [`?example=1&autoplay=1`](https://bloomway-ai.github.io/bloomway-world-director/?example=1&autoplay=1) for bundled Edo blocking.
+2. Choose a **preset** or type a **short phrase** (keyword rules — e.g. `rainy night`, `two rivals meet in the street`).
+3. Press **Play** on the timeline to rehearse camera paths and blocking.
 
-Footer **GitHub** link returns to this repo. Same OSS app — not the full [Bloomway](https://bloomway.ai) product.
+No sign-up or API key · desktop browser recommended · footer **GitHub** returns to this repo.
 
 ### Run locally
 
-| Node.js **≥ 20** · npm **≥ 10** · No Bloomway account or API keys |
+Node.js **≥ 20** · npm **≥ 10** · no Bloomway account or API keys for bundled examples.
 
 ```bash
 git clone https://github.com/bloomway-ai/bloomway-world-director.git
@@ -52,30 +46,45 @@ npm install
 npm run dev
 ```
 
-Open **http://localhost:5173/** — same flow as browser. Default: [`examples/edo-rainy-night`](examples/edo-rainy-night/).
+Open **http://localhost:5173/** — same flow as the browser Studio. Default scene: [`examples/edo-rainy-night`](examples/edo-rainy-night/).
 
 ---
 
-## Watch demos
+## See the open-source Studio in action
 
-Two longer loops (~10s). [▶ Full MP4s on Release](https://github.com/bloomway-ai/bloomway-world-director/releases/tag/v0.1.0).
+Real screen captures from **this repo’s** OSS Studio (low-poly blockout). Silent loops · not final footage.
+
+<p align="center">
+  <a href="https://bloomway-ai.github.io/bloomway-world-director/">
+    <img src="media/try-in-browser-cover.png" alt="Blockout world and camera timeline — Build the scene. Rehearse the shot." width="100%">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://bloomway-ai.github.io/bloomway-world-director/?example=1&autoplay=1">
+    <img src="media/hero-previs-loop.gif" alt="Character blocking, camera motion, timeline playback" width="100%">
+  </a>
+  <br><sub>Presets/keywords → blockout scene → **Play** on timeline (street drama clip)</sub>
+</p>
 
 <table>
   <tr>
     <td width="50%">
       <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">
-        <img src="media/demo-city-tour.gif" alt="City tour" width="100%">
+        <img src="media/demo-city-tour.gif" alt="City tour demo" width="100%">
       </a>
-      <br><sub><code>Snowy daytime Tokyo urban city</code></sub>
+      <br><sub><code>Snowy daytime Tokyo urban city</code> → explore blockout</sub>
     </td>
     <td width="50%">
       <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">
-        <img src="media/demo-drama.gif" alt="Street drama" width="100%">
+        <img src="media/demo-drama.gif" alt="Street drama demo" width="100%">
       </a>
-      <br><sub>Street drama + timeline</sub>
+      <br><sub>Keyword load → blocking + timeline</sub>
     </td>
   </tr>
 </table>
+
+Text input uses **offline rules and presets**, not open-ended natural-language generation. Full MP4s: [Release v0.1.0](https://github.com/bloomway-ai/bloomway-world-director/releases/tag/v0.1.0).
 
 If this helps you plan a shot—or you want to follow what we ship—give the project a ⭐.
 
@@ -83,46 +92,33 @@ If this helps you plan a shot—or you want to follow what we ship—give the pr
 
 ## What you can do
 
-- Build a **street / city / themed** layout from presets and world refs
-- Place **stand-in characters** and blocking paths
-- Preview **camera paths** and timing on a timeline
-- Short **local text rules** only — not cloud LLM or final renders
+- Build **street / city / themed** layouts from presets and `world-ref.json`
+- **Block characters** (stand-in capsules) and preview motion on a timeline
+- **Rehearse camera** paths and shot timing
+- Edit plans as JSON or short local keyword phrases
 
 | In this OSS repo | Not included here |
 | ---------------- | ----------------- |
-| Low-poly **blockout** previs | General **AI video** model / free render credits |
-| Offline presets + keywords | “Any sentence → full storyboard” (hosted product) |
+| Low-poly **blockout** previs | General **AI video** model or free cloud render |
+| Offline presets + keyword text | Hosted LLM “any sentence → plan” |
 
-Commercial use: [MIT](LICENSE) · [docs/commercial-use.md](docs/commercial-use.md) · boundaries: [docs/implementation-audit.md](docs/implementation-audit.md).
+Details: [docs/implementation-audit.md](docs/implementation-audit.md) · commercial use: [docs/commercial-use.md](docs/commercial-use.md) · [MIT](LICENSE).
 
 ---
 
 ## Example scenes
 
-| Example | Good first pick? |
-| ------- | ---------------- |
-| **Edo rainy night** | **Yes** — [`?example=1`](https://bloomway-ai.github.io/bloomway-world-director/?example=1&autoplay=1) |
-| **Street drama** | **Yes** — text input + demo above |
-| **Modern city / Mars** | JSON + presets — [docs/examples/STATUS.md](docs/examples/STATUS.md) |
+| Example | Notes |
+| ------- | ----- |
+| [**Edo rainy night**](examples/edo-rainy-night/) | Default `?example=1` |
+| [**Street drama**](examples/street-drama/) | Pairs with demo above |
+| Modern city / Mars | JSON + presets — [docs/examples/STATUS.md](docs/examples/STATUS.md) |
 
 ---
 
 ## Current limitations
 
-Blockout only · English Studio UI in v0.1 · desktop WebGL recommended · text field = keyword rules, not open-ended LLM.
-
----
-
-## From previs to finished footage
-
-<p align="center">
-  <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">
-    <img src="media/promo-cold-open-poster.png" alt="Brand film — click to watch" width="100%">
-  </a>
-  <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4">▶ Watch full film (~63s, audio)</a> — product vision, not the OSS Studio</sub>
-</p>
-
-Optional finished footage: [Bloomway](https://bloomway.ai) (separate terms; account may apply).
+Blockout fidelity only · English Studio UI in v0.1 · desktop WebGL recommended · text field = keyword rules, not cloud LLM.
 
 ---
 
@@ -141,3 +137,5 @@ Director **MCP** and Studio i18n: **Planned** — [docs/mcp/README.md](docs/mcp/
 ## License
 
 [MIT](LICENSE) · demo media [CC BY 4.0](media/LICENSE) · [TRADEMARKS.md](TRADEMARKS.md)
+
+[![CI](https://github.com/bloomway-ai/bloomway-world-director/actions/workflows/verify.yml/badge.svg)](https://github.com/bloomway-ai/bloomway-world-director/actions/workflows/verify.yml) [![Release](https://img.shields.io/github/v/release/bloomway-ai/bloomway-world-director)](https://github.com/bloomway-ai/bloomway-world-director/releases/tag/v0.1.0)
