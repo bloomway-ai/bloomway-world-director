@@ -57,14 +57,24 @@ OSS Studio **v0.1**（界面仅英文）。首页 → 一句话建世界 → 运
 
 ## 观看演示
 
-录屏来自**本仓库** OSS Studio，非完整商业客户端。  
-GitHub 首页**不会自动播放** mp4，请**点击海报**打开视频文件，或使用下表链接。
+录屏来自**本仓库** OSS Studio，非完整商业客户端。可直接在下方播放（默认静音，可取消静音）。
 
-<p align="center">
-  <a href="media/demo-city-tour.mp4"><img src="media/demo-city-tour-poster.png" alt="城市巡游演示（点击打开视频）" width="48%"></a>
-  &nbsp;
-  <a href="media/demo-drama.mp4"><img src="media/demo-drama-poster.png" alt="街头剧情演示（点击打开视频）" width="48%"></a>
-</p>
+<table>
+  <tr>
+    <td width="50%">
+      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4" controls muted playsinline>
+        <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">城市巡游</a>
+      </video>
+    </td>
+    <td width="50%">
+      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4" controls muted playsinline>
+        <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">街头剧情</a>
+      </video>
+    </td>
+  </tr>
+</table>
+
+海报备用：[城市](media/demo-city-tour-poster.png) · [剧情](media/demo-drama-poster.png)
 
 | 演示 | 一句话 | 文件 |
 | ---- | ------ | ---- |

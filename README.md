@@ -6,12 +6,24 @@ Open-source **3D previsualization** (low-poly blockout): build worlds, block act
 
 **License:** [MIT](LICENSE) · **Commercial use:** free under MIT — see [docs/commercial-use.md](docs/commercial-use.md) · **Updates:** this repository is **actively maintained**; expect ongoing releases and docs.
 
-<p align="center">
-  <a href="media/demo-city-tour.mp4"><img src="media/demo-city-tour-poster.png" alt="Demo: city tour" width="49%"></a>
-  <a href="media/demo-drama.mp4"><img src="media/demo-drama-poster.png" alt="Demo: street drama" width="49%"></a>
-</p>
+<p align="center"><strong>City tour</strong> · <strong>Street drama</strong> (OSS Studio, CC BY 4.0 — unmute if needed)</p>
 
-*Demos live in [`media/`](media/) (CC BY 4.0). Posters above link to the `.mp4` files—GitHub does not inline-play video.*
+<table>
+  <tr>
+    <td width="50%">
+      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4" controls muted playsinline>
+        <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">City tour demo</a>
+      </video>
+    </td>
+    <td width="50%">
+      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4" controls muted playsinline>
+        <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">Street drama demo</a>
+      </video>
+    </td>
+  </tr>
+</table>
+
+*Source files: [`media/`](media/) · embed URLs: [docs/promo/VIDEO_URLS.md](docs/promo/VIDEO_URLS.md)*
 
 ---
 

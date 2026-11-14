@@ -55,13 +55,18 @@ npm run dev                  # Studio: http://localhost:5173/
 
 ## 데모
 
-**이 저장소** OSS Studio 녹화(상용 Bloomway 앱 전체 아님). 포스터를 클릭해 동영상 열기.
+**이 저장소** OSS Studio 녹화(상용 Bloomway 앱 전체 아님). 아래에서 바로 재생(기본 음소거).
 
-<p align="center">
-  <a href="media/demo-city-tour.mp4"><img src="media/demo-city-tour-poster.png" alt="City tour demo" width="48%"></a>
-  &nbsp;
-  <a href="media/demo-drama.mp4"><img src="media/demo-drama-poster.png" alt="Street drama demo" width="48%"></a>
-</p>
+<table>
+  <tr>
+    <td width="50%">
+      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4" controls muted playsinline></video>
+    </td>
+    <td width="50%">
+      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4" controls muted playsinline></video>
+    </td>
+  </tr>
+</table>
 
 | 데모 | 한 줄 프롬프트 | 파일 |
 | ---- | -------------- | ---- |

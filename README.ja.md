@@ -55,13 +55,18 @@ npm run dev                  # Studio: http://localhost:5173/
 
 ## デモ
 
-**本リポジトリ**の OSS Studio 録画（商用 Bloomway アプリ全体ではありません）。ポスターをクリックして動画を開く。
+**本リポジトリ**の OSS Studio 録画（商用 Bloomway アプリ全体ではありません）。下でその場再生（初期はミュート）。
 
-<p align="center">
-  <a href="media/demo-city-tour.mp4"><img src="media/demo-city-tour-poster.png" alt="City tour demo" width="48%"></a>
-  &nbsp;
-  <a href="media/demo-drama.mp4"><img src="media/demo-drama-poster.png" alt="Street drama demo" width="48%"></a>
-</p>
+<table>
+  <tr>
+    <td width="50%">
+      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4" controls muted playsinline></video>
+    </td>
+    <td width="50%">
+      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4" controls muted playsinline></video>
+    </td>
+  </tr>
+</table>
 
 | デモ | 一文プロンプト | ファイル |
 | ---- | -------------- | -------- |

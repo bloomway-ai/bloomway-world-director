@@ -55,14 +55,24 @@ OSS Studio **v0.1** (English UI only). Home → one-line world → camera timeli
 
 ## See it in action
 
-Recorded from **this repository’s** OSS Studio (not the full commercial Bloomway app).  
-GitHub does not autoplay video in the README—**click a poster** to open the file, or use the links below.
+Recorded from **this repository’s** OSS Studio (not the full commercial Bloomway app). Press play (videos are muted by default).
 
-<p align="center">
-  <a href="media/demo-city-tour.mp4"><img src="media/demo-city-tour-poster.png" alt="City tour demo (click to open video)" width="48%"></a>
-  &nbsp;
-  <a href="media/demo-drama.mp4"><img src="media/demo-drama-poster.png" alt="Street drama demo (click to open video)" width="48%"></a>
-</p>
+<table>
+  <tr>
+    <td width="50%">
+      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4" controls muted playsinline>
+        <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4">City tour</a>
+      </video>
+    </td>
+    <td width="50%">
+      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4" controls muted playsinline>
+        <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4">Street drama</a>
+      </video>
+    </td>
+  </tr>
+</table>
+
+Posters: [city](media/demo-city-tour-poster.png) · [drama](media/demo-drama-poster.png)
 
 | Demo | One-line prompt | File |
 | ---- | --------------- | ---- |

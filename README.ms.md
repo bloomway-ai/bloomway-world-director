@@ -55,13 +55,18 @@ Pilihan: `npm run verify:studio-e2e`, `npm run record:demos`, `npm run capture:s
 
 ## Lihat tindakan
 
-Dirakam daripada Studio OSS **repositori ini** (bukan aplikasi komersial Bloomway penuh). Klik poster untuk membuka video.
+Dirakam daripada Studio OSS **repositori ini** (bukan aplikasi komersial Bloomway penuh). Main terus di bawah (bisu secara lalai).
 
-<p align="center">
-  <a href="media/demo-city-tour.mp4"><img src="media/demo-city-tour-poster.png" alt="City tour demo" width="48%"></a>
-  &nbsp;
-  <a href="media/demo-drama.mp4"><img src="media/demo-drama-poster.png" alt="Street drama demo" width="48%"></a>
-</p>
+<table>
+  <tr>
+    <td width="50%">
+      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4" controls muted playsinline></video>
+    </td>
+    <td width="50%">
+      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4" controls muted playsinline></video>
+    </td>
+  </tr>
+</table>
 
 | Demo | Arahan satu baris | Fail |
 | ---- | ----------------- | ---- |

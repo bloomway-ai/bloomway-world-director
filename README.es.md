@@ -55,13 +55,18 @@ Opcional: `npm run verify:studio-e2e`, `npm run record:demos`, `npm run capture:
 
 ## Ver en acción
 
-Grabado desde el Studio OSS de **este repositorio** (no la app comercial completa de Bloomway). Haz clic en el póster para abrir el vídeo.
+Grabado desde el Studio OSS de **este repositorio** (no la app comercial completa de Bloomway). Reproducción aquí (silenciado por defecto).
 
-<p align="center">
-  <a href="media/demo-city-tour.mp4"><img src="media/demo-city-tour-poster.png" alt="City tour demo" width="48%"></a>
-  &nbsp;
-  <a href="media/demo-drama.mp4"><img src="media/demo-drama-poster.png" alt="Street drama demo" width="48%"></a>
-</p>
+<table>
+  <tr>
+    <td width="50%">
+      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-city-tour.mp4" controls muted playsinline></video>
+    </td>
+    <td width="50%">
+      <video src="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/demo-drama.mp4" controls muted playsinline></video>
+    </td>
+  </tr>
+</table>
 
 | Demo | Frase de una línea | Archivo |
 | ---- | ------------------ | ------- |
