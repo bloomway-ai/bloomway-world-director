@@ -6,7 +6,7 @@ Recordings of **this repository’s** OSS Studio (`apps/studio`). Not the commer
 
 | File | Description |
 | ---- | ----------- |
-| `studio-hero.gif` | README **top** — loop from `demo.mp4` (~15s Edo autoplay) |
+| `studio-hero.gif` | README **top** — loop from `demo.mp4` (~15s, 720px, ~1.7MB) |
 | `demo.mp4` | Hero clip in git (~15.5s, silent) |
 
 ## Brand film (lower README)
