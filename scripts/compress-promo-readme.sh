@@ -5,10 +5,10 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SRC="${1:-}"
 OUT="$ROOT/media/promo-full-demo-readme.mp4"
 HERO="$ROOT/media/promo-hero-direct-rainy-streets.jpg"
-TMP="$(mktemp -t promo-readme-stage.XXXXXX.mp4)"
+TMP="$(mktemp "${TMPDIR:-/tmp}/promo-readme-stage.XXXXXX.mp4")"
 DOWNLOADED_SRC=""
 if [[ -z "$SRC" ]]; then
-  SRC="$(mktemp -t final_v2_cold_open.XXXXXX.mp4)"
+  SRC="$(mktemp "${TMPDIR:-/tmp}/final_v2_cold_open.XXXXXX.mp4")"
   DOWNLOADED_SRC="$SRC"
   curl -fsSL -o "$SRC" \
     "https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4"
