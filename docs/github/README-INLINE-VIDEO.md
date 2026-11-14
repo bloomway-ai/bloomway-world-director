@@ -5,7 +5,7 @@ GitHub **strips `<video>` tags** from repository READMEs (including `src` pointi
 ## What works on the repo homepage
 
 1. **Inline player (live):**  
-   `https://github.com/user-attachments/assets/c9382f04-355c-4c05-ac11-c86aab355fa0`  
+   `https://github.com/user-attachments/assets/b74c4690-3f9a-44ec-8407-5742011b4f23`  
    (standalone line in `README.md` — 63s, ~8MB encode uploaded via web editor)
 2. **Play page (backup):** [watch-full-demo.html](https://bloomway-ai.github.io/bloomway-world-director/watch-full-demo.html)
 3. **Re-upload / replace:** drag `media/promo-full-demo-readme.mp4` in the **GitHub web editor**. GitHub inserts a line like:
