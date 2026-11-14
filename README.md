@@ -1,5 +1,12 @@
 # Bloomway World Director
 
+<p align="center">
+  <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-cold-open.mp4">
+    <img src="media/promo-cold-open.gif" alt="Bloomway World Director — brand intro" width="100%">
+  </a>
+  <br><sub>Brand cold open (preview) · <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-cold-open.mp4">▶ Full video (63s, with audio)</a></sub>
+</p>
+
 **Your words. Your world. Your camera.**
 
 Open-source **3D previsualization** (low-poly blockout): build worlds, block actors, and move the camera—not a general-purpose AI video model. The Studio app UI is **English only** in v0.1; **this README is available in seven languages**.

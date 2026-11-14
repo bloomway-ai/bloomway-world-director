@@ -1,5 +1,12 @@
 # Bloomway World Director
 
+<p align="center">
+  <a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-cold-open.mp4">
+    <img src="media/promo-cold-open.gif" alt="Bloomway World Director — intro" width="100%">
+  </a>
+  <br><sub><a href="https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/promo-cold-open.mp4">▶ Full video (63s)</a></sub>
+</p>
+
 [English](README.en.md) · [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [**모든 언어**](README.md)
 
 **Your words. Your world. Your camera.**

@@ -4,6 +4,8 @@
 
 | Asset | Role |
 | ----- | ---- |
+| `media/promo-cold-open.gif` | **README top** — brand cold open preview |
+| Release `promo-cold-open.mp4` | Full 63s with audio (not committed to git) |
 | `media/demo-city-tour.gif` / `demo-drama.gif` | **Auto-play loops** in README (GitHub always shows GIFs) |
 | Release `demo-*.mp4` | **Full quality** — link “▶ Full MP4” |
 | `media/demo-*.mp4` in git | Source for recording / CI |
