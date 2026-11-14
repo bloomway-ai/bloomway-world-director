@@ -34,7 +34,7 @@ Pull requests are expected to contain DCO sign-offs on **new** commits. Maintain
 ## What we welcome
 
 - New example scenes and camera-move descriptions (screenshots or screen recordings from **this** OSS Studio blockout)
-- Documentation and translations ([README.zh-CN.md](README.zh-CN.md) is maintained alongside [README.md](README.md))
+- Documentation translations: maintain the seven README locales listed in [README.md](README.md) (`README.en.md`, `README.zh-CN.md`, `README.ms.md`, `README.id.md`, `README.ja.md`, `README.ko.md`, `README.es.md`). App UI stays English in v0.1.
 - Bug reports with repro steps
 - Integrations that respect MIT, DCO, and [TRADEMARKS.md](TRADEMARKS.md)
 

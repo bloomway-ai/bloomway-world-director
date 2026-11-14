@@ -12,7 +12,8 @@
     "record:demo": "node scripts/record-demo.mjs",
     "record:demos": "node scripts/record-demos.mjs",
     "verify:studio-e2e": "node scripts/verify-studio-e2e.mjs",
-    "license:audit": "node scripts/license-audit.mjs"
+    "license:audit": "node scripts/license-audit.mjs",
+    "i18n-check": "node scripts/i18n-check-readme.mjs"
   },
   "devDependencies": {
     "playwright": "^1.52.0",

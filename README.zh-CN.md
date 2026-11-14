@@ -1,10 +1,27 @@
 # Bloomway World Director
 
+[English](README.en.md) · [中文](README.zh-CN.md) · [Melayu](README.ms.md) · [Indonesia](README.id.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [**全部语言**](README.md)
+
 **Your words. Your world. Your camera.**
 
-用一句话搭建三维世界、描述动作、调度摄影机——本仓库聚焦**电影预演**（低模白盒），不是通用 AI 视频生成模型。成片生成属于 [Bloomway](https://bloomway.ai) 上的可选工作流。
+用一句话搭建三维世界、调度人物与摄影机，完成电影**预演**（低模白盒）——本项目不是通用 AI 视频生成模型。成片生成属于 [Bloomway](https://bloomway.ai) 上的可选工作流。
 
-[English README](README.md)
+> **Bloomway 开源实验：**用一句话搭建世界，在三维预演中安排人物与摄影机，再把镜头变成画面。面向创作者与研究者的开放工具。  
+> **持续更新：**本仓库在积极维护中，功能与文档会不断更新。
+
+按 **MIT** 可**免费商用**，无需注册、报备或作品分成。联系 **info@bloomway.ai** 仅用于自愿合作，**不是**使用条件。见 [docs/commercial-use.md](docs/commercial-use.md)。
+
+---
+
+## 三条路径
+
+| 路径 | 说明 |
+| ---- | ---- |
+| **路径一 · 本地开源** | 在本地运行示例，理解「文字 → 三维预演」。适合学习、教学与研究。 |
+| **路径二 · Bloomway MCP（可选）** | 用同一套描述连接托管预演与生成能力——**非运行本仓库所必需**。 |
+| **路径三 · 进阶与团队** | 多人协作、商业模板与交付支持 → [Bloomway 平台](https://bloomway.ai)。 |
+
+欢迎把镜头示例分享到 Discussions（上线后）。
 
 ---
 
@@ -13,69 +30,83 @@
 **环境：** Node.js ≥ 20，npm ≥ 10。捆绑示例**无需** Bloomway 账号或 API Key。
 
 ```bash
-git clone <repository-url>   # 公开后填写
+git clone https://github.com/bloomway-ai/bloomway-world-director.git
 cd bloomway-world-director
 npm install
-npm run verify:example       # 校验 plan/世界/摄影机采样
+npm run verify:example
 npm run dev                  # http://localhost:5173/
 ```
 
-默认 Studio 加载 [`examples/edo-rainy-night`](examples/edo-rainy-night/)（仓库内 JSON，非在线自然语言推理）。
+默认加载 [`examples/edo-rainy-night`](examples/edo-rainy-night/)（仓库内 JSON，非云端推理）。
 
-**实现边界：** [docs/implementation-audit.md](docs/implementation-audit.md)  
-**验证记录：** [docs/verification-log.md](docs/verification-log.md)
+**实现边界：** [docs/implementation-audit.md](docs/implementation-audit.md) · [docs/verification-log.md](docs/verification-log.md)
 
-可选：`npm run verify:studio-e2e`、`npm run record:demo`。
+可选：`npm run verify:studio-e2e`、`npm run record:demos`。
 
 ---
 
 ## 观看演示
 
-演示视频来自 **本仓库** 轻量 Studio 录屏（非完整 Bloomway 客户端）。
+录屏来自**本仓库** OSS Studio，非完整商业客户端。
 
-[演示视频](media/demo.mp4) · [封面](media/poster.png) · [说明](media/README.md)
+| 演示 | 一句话 | 文件 |
+| ---- | ------ | ---- |
+| 城市巡游 | `Snowy daytime Tokyo urban city` → WASD 漫游 | [demo-city-tour.mp4](media/demo-city-tour.mp4) |
+| 街头剧情 | `Rainy night — two rivals meet in the street` → 播放时间轴 | [demo-drama.mp4](media/demo-drama.mp4) |
 
-完整产品能力见 [bloomway.ai](https://bloomway.ai)。
+重录：`npm run record:demos`。旧版：[demo.mp4](media/demo.mp4) · [media/README.md](media/README.md)
 
 ---
 
-## 本地能力（摘要）
+## 本地能力
 
 | 状态 | 能力 |
 | ---- | ---- |
 | **已验证** | plan/world JSON、`validatePrevisPlan`、`generatePrevisWorld`、`samplePrevisCamera` |
-| **已验证** | 精简 WebGL Studio 可构建并加载示例 |
-| **实验性** | 无 LLM 的关键词/规则世界提示 |
-| **计划中** | 更多示例、MCP、完整产品导演台 UI 移植 |
+| **已验证** | V2 视口与时间轴；`?legacy=1` 为旧版块 |
+| **实验性** | 无云端 LLM 的规则 Composer |
+| **计划中** | 完整 Composer、MCP、更多示例 |
 
-任意自然语言「一句话生成 Plan」助手仅在 **Bloomway 托管侧**，不在本仓库。
-
----
-
-## 限制
-
-见 [docs/implementation-audit.md](docs/implementation-audit.md) 第 6 节（示例为 JSON、白盒画质、Studio 为英文子集等）。
+「任意一句话 → 分镜」助手仅在 **Bloomway 托管侧**。
 
 ---
 
-## 商业使用
+## 当前限制
 
-可按 **MIT** 商业使用，**无需**注册、报备或单独许可。联系 **info@bloomway.ai** 为自愿合作渠道，非使用条件。详见 [docs/commercial-use.md](docs/commercial-use.md)。
+1. 愿景文案与 OSS 示例（**JSON 驱动**）可能不一致。  
+2. 画面为**白盒**，非 Bloomway 成片画质。  
+3. Studio **界面 v0.1 仅英文**；见 [docs/product-parity.md](docs/product-parity.md)。  
+4. 本地「一句话建城」为**规则与预设**，非完整云端自然语言理解。
 
-### 来源说明
-
-保留 MIT 要求的版权与许可声明；链接仓库或注明 Bloomway AI 为**自愿**。
-
-### 品牌
-
-见 [TRADEMARKS.md](TRADEMARKS.md)。
+详见 [docs/implementation-audit.md](docs/implementation-audit.md) 第 6 节。
 
 ---
 
-## 许可
+## 路线图
 
-MIT，见 [LICENSE](LICENSE)。公开发布前请确认版权主体名称。
+- 更多示例（`modern-city-street`、`mars-base`）
+- MCP 文档与工具
+- Studio 导入/导出
+- 应用界面多语言（README 已七语）
 
 ---
 
-验收清单：[docs/ACCEPTANCE.md](docs/ACCEPTANCE.md)
+## 可选 Bloomway 工作流
+
+*想把预演变成成片？在 [Bloomway](https://bloomway.ai) 了解连接工作流。*
+
+---
+
+## 商业使用与品牌
+
+MIT — [LICENSE](LICENSE)。版权 (c) 2026 Bloomway AI Inc。演示媒体：[CC BY 4.0](media/README.md)。
+
+商标：[TRADEMARKS.md](TRADEMARKS.md)。勿暗示官方背书。
+
+---
+
+## 贡献
+
+[CONTRIBUTING.md](CONTRIBUTING.md) · [docs/ACCEPTANCE.md](docs/ACCEPTANCE.md)
+
+*如果这个仓库帮你探索了一个镜头，或你想关注后续更新，欢迎点 ⭐。*
