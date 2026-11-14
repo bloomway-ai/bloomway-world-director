@@ -27,7 +27,8 @@ Hero loop: `ffmpeg` from `demo-drama.mp4` (see `docs/promo/VIDEO_URLS.md`).
 | File | Description |
 | ---- | ----------- |
 | `promo-full-demo-readme.mp4` | **README inline player** — 1280p H.264 ~8MB (63s, audio); also on [Release v0.1.0](https://github.com/bloomway-ai/bloomway-world-director/releases/tag/v0.1.0) as `promo-full-demo-readme.mp4` |
-| `promo-full-demo-poster.png` | Hero still for README + Pages `watch-full-demo.html` (marketing key art) |
+| `promo-hero-direct-rainy-streets.png` | README / Pages hero (marketing key art; renamed to bust GitHub CDN cache) |
+| `promo-full-demo-poster.png` | **Deprecated** — old video-frame + play icon; do not use in README |
 | `promo-cold-open-poster.png` | Legacy still (optional) |
 | `promo-cold-open.gif` | **Not used in README** (~8MB montage; keep for local use) |
 | Release `final_v2_cold_open.mp4` | Full **63s** vision film (**not in git**, ~33MB) — [Release download](https://github.com/bloomway-ai/bloomway-world-director/releases/download/v0.1.0/final_v2_cold_open.mp4) (filename is **not** `promo-cold-open.mp4`) |

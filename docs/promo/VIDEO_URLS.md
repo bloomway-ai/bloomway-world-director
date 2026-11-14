@@ -6,7 +6,7 @@
 | ----- | ---- |
 | `media/promo-full-demo-readme.mp4` | 63s encode (~8MB) — **Pages player** + optional `user-attachments` inline (see [README-INLINE-VIDEO.md](../github/README-INLINE-VIDEO.md)) |
 | Pages `watch-full-demo.html` | In-browser player on GitHub Pages |
-| `media/promo-full-demo-poster.png` | Video `poster` image |
+| `media/promo-hero-direct-rainy-streets.png` | README hero + watch page `poster` |
 | `media/try-in-browser-cover.png` | **Try in browser** — world + camera/timeline still |
 | `media/hero-previs-loop.gif` | **Studio in action** — street drama / timeline (~10s, ~800KB) |
 | `media/demo-city-tour.gif` / `demo-drama.gif` | City tour + street drama (~1MB each) |
