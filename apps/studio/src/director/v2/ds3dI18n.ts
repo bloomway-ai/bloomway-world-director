@@ -47,6 +47,13 @@ const ZH: Record<string, string> = {
   'directorStudio.v2.presets.tokyo': '东京',
   'directorStudio.v2.presets.edo': '江户',
   'directorStudio.v2.presets.mars': '火星',
+  settingsControls: '视口操作',
+  controlsPan: '左键拖动：平移场景',
+  controlsLook: '右键拖动：环视',
+  controlsMove: 'W/A/S/D 前后左右 · Q/E 下降/上升 · Shift 加速',
+  controlsTouch: '触控：单指平移 · 双指环视与推拉',
+  controlsPlay: '播放时沿时间轴镜头；暂停后可自由漫游',
+  exploreHint: '暂停后可 WASD 移动，Q/E 升降，Shift 加速',
 };
 
 const EN: Record<string, string> = {
@@ -99,6 +106,13 @@ const EN: Record<string, string> = {
   'directorStudio.v2.presets.tokyo': 'Tokyo',
   'directorStudio.v2.presets.edo': 'Edo',
   'directorStudio.v2.presets.mars': 'Mars',
+  settingsControls: 'Viewport controls',
+  controlsPan: 'Left-drag: pan the scene',
+  controlsLook: 'Right-drag: look around',
+  controlsMove: 'W/A/S/D move · Q/E down/up · Shift sprint',
+  controlsTouch: 'Touch: one-finger pan · two-finger look and dolly',
+  controlsPlay: 'Play follows shot keys; pause for free explore',
+  exploreHint: 'Pause: WASD move, Q/E up-down, Shift faster',
 };
 
 export function createDs3dTr(locale: 'zh' | 'en' = 'en') {

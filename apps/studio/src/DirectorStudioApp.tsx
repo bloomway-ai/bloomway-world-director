@@ -180,6 +180,11 @@ export function DirectorStudioApp() {
 
   const freeExplore = !playing || !plan;
   useEffect(() => sceneRef.current?.setCameraMode(freeExplore ? 'free' : 'shot'), [freeExplore]);
+  useEffect(() => {
+    if (!freeExplore || showHome) return;
+    const canvas = viewportRef.current?.querySelector('canvas');
+    canvas?.focus({ preventScroll: true });
+  }, [freeExplore, showHome]);
 
   useEffect(() => {
     let raf = 0;
@@ -558,7 +563,7 @@ export function DirectorStudioApp() {
         {freeExplore && !showHome ? (
           <div className={`pointer-events-none absolute left-3 top-[4.5rem] z-10 max-w-xs rounded-xl px-3 py-2 text-[11px] leading-relaxed text-zinc-300 ${DS3D_GLASS}`}>
             <Ds3dIcon name="explore" className="mr-1 inline text-[16px] text-primary" />
-            Pause to explore with WASD · New world &amp; History on the top bar
+            {tr('exploreHint')} · New world &amp; History on the top bar
           </div>
         ) : (
           <div className={`pointer-events-none absolute left-3 top-[4.5rem] z-10 rounded-xl px-3 py-2 text-[11px] text-zinc-300 ${DS3D_GLASS}`}>

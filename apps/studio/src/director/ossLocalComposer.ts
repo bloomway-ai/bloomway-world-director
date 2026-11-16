@@ -172,7 +172,7 @@ export function runOssComposerCommand(
     const plan = createManualPrevisPlan(ctx.world, 12);
     return {
       ok: true,
-      reply: 'Created blank 12s plan — pause, explore with WASD, add camera keys.',
+      reply: 'Created blank 12s plan — pause, explore with WASD + Q/E, add camera keys.',
       plan,
       world: ctx.world,
       grow: false,

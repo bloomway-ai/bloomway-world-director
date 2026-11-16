@@ -1,7 +1,7 @@
 /**
  * Viewport navigation (no inertia): left-drag grabs the ground and drags the space under the cursor, right-drag
- * turns the view, W/A/S/D move, Q/E go down / up, Shift is faster, the wheel moves forward / back. Keys work while
- * the viewport has focus, also together with a right-drag. Touch: one finger drags the space, two fingers turn the
+ * turns the view, W/A/S/D move, Q/E go down / up, Shift is faster, the wheel moves forward / back. Keys work whenever
+ * you are not typing in an input (no need to click the canvas first), also together with a right-drag. Touch: one finger drags the space, two fingers turn the
  * view and pinch moves forward / back. Trackpad: two-finger swipe turns the view, pinch moves forward / back.
  * The camera never enters solid buildings or goes below the ground.
  */
@@ -36,6 +36,25 @@ const TRACKPAD_PINCH_M_PER_UNIT = 0.08;
 /** Two-finger swipe deltas relative to a right-drag in pixels. */
 const TRACKPAD_TURN_SCALE = 0.6;
 const MOVE_KEYS = new Set(['w', 'a', 's', 'd', 'q', 'e', 'shift']);
+
+/** Prefer physical keys so WASD works on non-US layouts; fall back to `e.key`. */
+const CODE_TO_MOVE: Record<string, string> = {
+  KeyW: 'w',
+  KeyA: 'a',
+  KeyS: 's',
+  KeyD: 'd',
+  KeyQ: 'q',
+  KeyE: 'e',
+  ShiftLeft: 'shift',
+  ShiftRight: 'shift',
+};
+
+const moveKeyFromEvent = (e: KeyboardEvent): string | null => {
+  const fromCode = CODE_TO_MOVE[e.code];
+  if (fromCode) return fromCode;
+  const k = e.key.toLowerCase();
+  return MOVE_KEYS.has(k) ? k : null;
+};
 
 export function createWorld3dNavigator(
   camera: THREE.PerspectiveCamera,
@@ -225,14 +244,18 @@ export function createWorld3dNavigator(
     return !!el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable);
   };
   const onKeyDown = (e: KeyboardEvent) => {
-    if (!enabled || !keysEnabled || typing(e.target) || document.activeElement !== dom) return;
-    const k = e.key.toLowerCase();
-    if (!MOVE_KEYS.has(k)) return;
+    if (!enabled || !keysEnabled || typing(document.activeElement)) return;
+    const k = moveKeyFromEvent(e);
+    if (!k) return;
     keys.add(k);
     e.preventDefault();
     e.stopPropagation();
   };
-  const onKeyUp = (e: KeyboardEvent) => keys.delete(e.key.toLowerCase());
+  const onKeyUp = (e: KeyboardEvent) => {
+    const k = moveKeyFromEvent(e);
+    if (k) keys.delete(k);
+    else keys.delete(e.key.toLowerCase());
+  };
   const onBlur = () => keys.clear();
 
   dom.addEventListener('pointerdown', onPointerDown);
