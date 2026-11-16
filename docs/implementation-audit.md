@@ -1,7 +1,7 @@
 # Implementation audit (Bloomway World Director)
 
 **Audit date:** 2026-11-14 (README/homepage pass)  
-**Applies to:** `v0.1.0` · public repo `bloomway-ai/bloomway-world-director`  
+**Applies to:** `v0.1.1` · public repo `bloomway-ai/bloomway-world-director`  
 **Purpose:** Single source of truth for what is **verified**, **experimental**, or **planned**. Root `README.md` must match this file.
 
 > This document contains **no** API keys, internal hostnames, or production credentials.
