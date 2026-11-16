@@ -2,10 +2,15 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { normalizePrevisPlan, type PrevisPlan } from '@core/previsPlanCore.ts';
 import {
   PREVIS_V2_KEY_SNAP_SEC,
+  addPrevisCharacter,
+  createManualPrevisPlan,
+  nextPrevisCharacterColor,
+  previsCharacterPoseAt,
   previsHasMotion,
   removePrevisCameraKey,
   resetPrevisMotion,
   setPrevisCameraKey,
+  setPrevisCharacterKey,
 } from '@edit/previsV2Edit.ts';
 import { removePrevisKeys, shiftPrevisKeys, type PrevisKeyRef } from '@edit/previsKeyTimes.ts';
 import { ProjectAttribution } from './components/ProjectAttribution';
@@ -29,10 +34,14 @@ import { OssDs3dTopBar, type OssTool } from './director/v2/OssDs3dTopBar';
 import { Ds3dHomeBackdrop } from './director/v2/Ds3dHomeBackdrop';
 import { createWorld3dScene, type World3dScene, type World3dSource } from './director/v2/world3dScene';
 import type { World3dPickInfo } from './director/v2/world3dContent';
-import type { PrevisWorldRef } from '@core/previsWorldGen.ts';
-import { normalizePrevisWorldRef } from '@core/previsWorldGen.ts';
+import type { PrevisWorldOverride, PrevisWorldRef } from '@core/previsWorldGen.ts';
+import { generatePrevisWorld, normalizePrevisWorldRef, previsWorldToStage } from '@core/previsWorldGen.ts';
+import { ds3dFigureHex } from './director/v2/v2Palette';
+import { pilotKeyFromEvent, pilotStageStep, typingTarget } from './director/v2/ossViewportPilot';
 
 type SessionSnap = { plan: PrevisPlan | null; world: PrevisWorldRef | null };
+
+const DEFAULT_PLAN_SEC = 12;
 
 function cloneSnap(s: SessionSnap): SessionSnap {
   return {
@@ -82,8 +91,13 @@ export function DirectorStudioApp() {
   const [tool, setTool] = useState<OssTool>('select');
   const [undoDepth, setUndoDepth] = useState(0);
   const [redoDepth, setRedoDepth] = useState(0);
+  const pickedRef = useRef<World3dPickInfo | null>(null);
+  const pilotKeysRef = useRef(new Set<string>());
+  const pilotUndoPushedRef = useRef(false);
+  const buildingPilotPosRef = useRef<{ id: string; x: number; y: number } | null>(null);
 
   playingRef.current = playing;
+  pickedRef.current = picked;
   const duration = plan?.durationSec ?? 12;
   const sessionWorld = world ?? plan?.set?.world ?? null;
   const hasSession = !!(plan || sessionWorld);
@@ -94,6 +108,8 @@ export function DirectorStudioApp() {
     if (world) return { world };
     return null;
   }, [plan, world]);
+
+  const showHome = !source && !webglFailed;
 
   const sourceKey = useMemo(() => JSON.stringify(source), [source]);
 
@@ -179,12 +195,29 @@ export function DirectorStudioApp() {
   useEffect(() => sceneRef.current?.setSmoothMotion(smoothMotion), [smoothMotion]);
 
   const freeExplore = !playing || !plan;
+  const pilotSelection =
+    freeExplore && picked && (picked.kind === 'character' || picked.kind === 'building') ? picked : null;
+
   useEffect(() => sceneRef.current?.setCameraMode(freeExplore ? 'free' : 'shot'), [freeExplore]);
+  useEffect(() => sceneRef.current?.setNavKeysEnabled(!pilotSelection), [pilotSelection]);
   useEffect(() => {
     if (!freeExplore || showHome) return;
     const canvas = viewportRef.current?.querySelector('canvas');
     canvas?.focus({ preventScroll: true });
   }, [freeExplore, showHome]);
+
+  const ghostHex =
+    tool === 'actor'
+      ? ds3dFigureHex(nextPrevisCharacterColor(plan))
+      : tool === 'camera'
+        ? ds3dFigureHex('gray')
+        : tool === 'prop'
+          ? ds3dFigureHex('warm')
+          : null;
+  useEffect(() => {
+    sceneRef.current?.setGhost(ghostHex);
+    return () => sceneRef.current?.setGhost(null);
+  }, [ghostHex]);
 
   useEffect(() => {
     let raf = 0;
@@ -252,6 +285,97 @@ export function DirectorStudioApp() {
     },
     [pushUndo],
   );
+
+  useEffect(() => {
+    if (!pilotSelection || pilotSelection.kind !== 'building' || !sessionWorld) {
+      buildingPilotPosRef.current = null;
+      return;
+    }
+    const b = generatePrevisWorld(sessionWorld).buildings.find((x) => x.id === pilotSelection.id);
+    if (b) buildingPilotPosRef.current = { id: b.id, x: b.x, y: b.y };
+  }, [pilotSelection, sessionWorld]);
+
+  useEffect(() => {
+    if (!pilotSelection) {
+      pilotKeysRef.current.clear();
+      pilotUndoPushedRef.current = false;
+      sceneRef.current?.setLive(null);
+      return;
+    }
+    const keys = pilotKeysRef.current;
+    const down = (e: KeyboardEvent) => {
+      if (!freeExplore || typingTarget(document.activeElement)) return;
+      const k = pilotKeyFromEvent(e);
+      if (!k || k === 'q' || k === 'e') return;
+      keys.add(k);
+      if (!pilotUndoPushedRef.current) {
+        pilotUndoPushedRef.current = true;
+        pushUndo();
+      }
+      e.preventDefault();
+      e.stopPropagation();
+    };
+    const up = (e: KeyboardEvent) => {
+      const k = pilotKeyFromEvent(e);
+      if (k) keys.delete(k);
+      else keys.delete(e.key.toLowerCase());
+    };
+    window.addEventListener('keydown', down, true);
+    window.addEventListener('keyup', up, true);
+    return () => {
+      window.removeEventListener('keydown', down, true);
+      window.removeEventListener('keyup', up, true);
+      keys.clear();
+      sceneRef.current?.setLive(null);
+    };
+  }, [freeExplore, pilotSelection, pushUndo]);
+
+  useEffect(() => {
+    if (!pilotSelection || !freeExplore) return;
+    let raf = 0;
+    let last = performance.now();
+    const tick = (now: number) => {
+      raf = requestAnimationFrame(tick);
+      const keys = pilotKeysRef.current;
+      if (!keys.size) {
+        last = now;
+        return;
+      }
+      const dt = Math.min(0.1, (now - last) / 1000);
+      last = now;
+      const sc = sceneRef.current;
+      const yaw = sc?.freeCameraPose()?.yaw ?? 0;
+      const { dx, dy } = pilotStageStep(keys, yaw, moveSpeed, dt);
+      if (!dx && !dy) return;
+      if (pilotSelection.kind === 'character' && plan) {
+        const ch = plan.characters.find((c) => c.id === pilotSelection.id);
+        if (!ch) return;
+        const t = timeRef.current;
+        const pose = previsCharacterPoseAt(ch, t);
+        const nx = pose.x + dx;
+        const ny = pose.y + dy;
+        const facing = ((Math.atan2(dx, dy) * 180) / Math.PI + 360) % 360;
+        sceneRef.current?.setLive({ kind: 'character', id: ch.id, x: nx, y: ny, facing });
+        const next = setPrevisCharacterKey(plan, ch.id, t, { x: nx, y: ny, facing });
+        if (next !== plan) commitPlan(next, false);
+      } else if (pilotSelection.kind === 'building' && sessionWorld) {
+        const pos = buildingPilotPosRef.current;
+        if (!pos || pos.id !== pilotSelection.id) return;
+        pos.x += dx;
+        pos.y += dy;
+        const st = sessionWorld.stageAnchor
+          ? previsWorldToStage(sessionWorld.stageAnchor, pos.x, pos.y)
+          : { x: pos.x, y: pos.y };
+        const ov: PrevisWorldOverride = { op: 'move', id: pos.id, x: pos.x, y: pos.y };
+        const overrides = [...(sessionWorld.overrides ?? []).filter((o) => !(o.op === 'move' && o.id === pos.id)), ov];
+        const next = normalizePrevisWorldRef({ ...sessionWorld, overrides });
+        applyWorld(next, false);
+        setPicked({ kind: 'building', id: pos.id, sub: 'building', x: st.x, y: st.y });
+      }
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [freeExplore, pilotSelection, plan, sessionWorld, moveSpeed, commitPlan, applyWorld]);
 
   const saveSessionToHistory = useCallback(
     (note: string) => {
@@ -387,6 +511,106 @@ export function DirectorStudioApp() {
 
   const dragStartRef = useRef<{ x: number; y: number } | null>(null);
 
+  const placeAt = useCallback(
+    (worldPt: { x: number; y: number }) => {
+      if (!sessionWorld) return;
+      let base = plan;
+      if (!base) base = createManualPrevisPlan(sessionWorld, duration || DEFAULT_PLAN_SEC, worldPt.x);
+      const anchor = base.set?.world?.stageAnchor;
+      const st = anchor ? previsWorldToStage(anchor, worldPt.x, worldPt.y) : worldPt;
+      const t = timeRef.current;
+      setPlaying(false);
+      pushUndo();
+      if (tool === 'actor') {
+        const added = addPrevisCharacter(base, st, t, tr('newCharacter', { n: base.characters.length + 1 }));
+        commitPlan(added.plan, false);
+        setPicked({ kind: 'character', id: added.id, sub: 'character', x: worldPt.x, y: worldPt.y });
+        setComposerReply(tr('hintPilot'));
+      } else {
+        const yaw = (Math.atan2(-st.x, -st.y) * 180) / Math.PI;
+        commitPlan(setPrevisCameraKey(base, t, { x: st.x, y: st.y, h: 1.6, yaw, pitch: -3 }), false);
+        setPicked({ kind: 'camera', id: 'camera', sub: 'camera', x: worldPt.x, y: worldPt.y });
+        setComposerReply(tr('hintCamera'));
+      }
+      setTool('select');
+    },
+    [sessionWorld, plan, duration, tool, pushUndo, commitPlan, tr],
+  );
+
+  const placePropAt = useCallback(
+    (worldPt: { x: number; y: number }) => {
+      if (!sessionWorld) return;
+      let n = 1;
+      const existing = new Set(generatePrevisWorld(sessionWorld).buildings.map((b) => b.id));
+      while (existing.has(`obj${n}`)) n++;
+      const id = `obj${n}`;
+      const ov: PrevisWorldOverride = {
+        op: 'add',
+        id,
+        kind: 'building',
+        x: worldPt.x,
+        y: worldPt.y,
+        w: 2,
+        d: 2,
+        h: 2.2,
+      };
+      pushUndo();
+      const next = normalizePrevisWorldRef({
+        ...sessionWorld,
+        overrides: [...(sessionWorld.overrides ?? []), ov],
+      });
+      applyWorld(next, false);
+      const st = sessionWorld.stageAnchor ? previsWorldToStage(sessionWorld.stageAnchor, worldPt.x, worldPt.y) : worldPt;
+      setPicked({ kind: 'building', id, sub: 'building', x: st.x, y: st.y });
+      setComposerReply(tr('hintPilot'));
+      setTool('select');
+    },
+    [sessionWorld, pushUndo, applyWorld, tr],
+  );
+
+  const turnBuilding = useCallback(
+    (id: string) => {
+      if (!sessionWorld) return;
+      const b = generatePrevisWorld(sessionWorld).buildings.find((x) => x.id === id);
+      if (!b) return;
+      pushUndo();
+      const next = normalizePrevisWorldRef({
+        ...sessionWorld,
+        overrides: [...(sessionWorld.overrides ?? []), { op: 'move', id, x: b.x, y: b.y, rotDeg: 90 }],
+      });
+      applyWorld(next, false);
+    },
+    [sessionWorld, pushUndo, applyWorld],
+  );
+
+  const onViewportPointerDownCapture = (e: React.PointerEvent) => {
+    const sc = sceneRef.current;
+    if (!sc || showHome || e.button !== 0 || !e.isPrimary) return;
+    if (tool === 'actor' || tool === 'camera' || tool === 'prop') {
+      const g = sc.groundPoint(e.clientX, e.clientY);
+      if (!g || !sessionWorld) return;
+      e.stopPropagation();
+      e.preventDefault();
+      if (tool === 'prop') placePropAt(g.world);
+      else placeAt(g.world);
+      return;
+    }
+    const hit = sc.pick(e.clientX, e.clientY);
+    const cur = pickedRef.current;
+    if (tool === 'rotate' && cur?.kind === 'building' && hit?.kind === 'building' && hit.id === cur.id) {
+      e.stopPropagation();
+      turnBuilding(cur.id);
+    }
+  };
+
+  const onViewportPointerMove = (e: React.PointerEvent) => {
+    if (showHome || (tool !== 'actor' && tool !== 'camera' && tool !== 'prop')) {
+      sceneRef.current?.moveGhost(null);
+      return;
+    }
+    sceneRef.current?.moveGhost(e.clientX, e.clientY);
+  };
+
   const onViewportPointerDown = (e: React.PointerEvent) => {
     if (e.button === 0) dragStartRef.current = { x: e.clientX, y: e.clientY };
   };
@@ -400,7 +624,9 @@ export function DirectorStudioApp() {
     setPicked(info);
     setComposerReply(
       info
-        ? `Selected ${info.kind} ${info.id}. Try "remove building" or "taller" after picking, or change weather in Settings.`
+        ? info.kind === 'character' || info.kind === 'building'
+          ? tr('hintPilot')
+          : `Selected ${info.kind} ${info.id}. Try "remove building" or "taller" after picking, or change weather in Settings.`
         : null,
     );
   };
@@ -460,8 +686,6 @@ export function DirectorStudioApp() {
     }
   };
 
-  const showHome = !source && !webglFailed;
-
   const homeSelection = useMemo(
     () => (showHome ? resolveHomeSelection(homePick, homeHistoryItems) : null),
     [showHome, homePick, homeHistoryItems],
@@ -518,8 +742,10 @@ export function DirectorStudioApp() {
         tool={tool}
         onTool={(t) => {
           setTool(t);
-          if (t !== 'select')
-            setComposerReply('Actor, camera, and rotate tools are not wired in OSS yet — use Select to pick buildings.');
+          if (t === 'actor') setComposerReply(tr('hintActor'));
+          else if (t === 'camera') setComposerReply(tr('hintCamera'));
+          else if (t === 'prop') setComposerReply(tr('hintProp'));
+          else if (t === 'rotate') setComposerReply('Click a selected building again to rotate 90°.');
         }}
         canUseTools={hasSession}
         undoDepth={undoDepth}
@@ -551,7 +777,9 @@ export function DirectorStudioApp() {
         data-testid="previs-canvas-host"
         className={`relative min-h-0 flex-1 ${showHome ? 'bg-zinc-100' : 'bg-black'}`}
         style={{ touchAction: 'none' }}
+        onPointerDownCapture={onViewportPointerDownCapture}
         onPointerDown={onViewportPointerDown}
+        onPointerMove={onViewportPointerMove}
         onPointerUp={onViewportPointerUp}
       >
         {showHome ? <Ds3dHomeBackdrop /> : null}
@@ -563,7 +791,7 @@ export function DirectorStudioApp() {
         {freeExplore && !showHome ? (
           <div className={`pointer-events-none absolute left-3 top-[4.5rem] z-10 max-w-xs rounded-xl px-3 py-2 text-[11px] leading-relaxed text-zinc-300 ${DS3D_GLASS}`}>
             <Ds3dIcon name="explore" className="mr-1 inline text-[16px] text-primary" />
-            {tr('exploreHint')} · New world &amp; History on the top bar
+            {pilotSelection ? tr('hintPilot') : `${tr('exploreHint')} · ${tr('hintActor')} · ${tr('hintProp')}`}
           </div>
         ) : (
           <div className={`pointer-events-none absolute left-3 top-[4.5rem] z-10 rounded-xl px-3 py-2 text-[11px] text-zinc-300 ${DS3D_GLASS}`}>

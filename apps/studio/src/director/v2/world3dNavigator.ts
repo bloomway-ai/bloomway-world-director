@@ -35,26 +35,10 @@ const WHEEL_M_PER_UNIT = 0.012;
 const TRACKPAD_PINCH_M_PER_UNIT = 0.08;
 /** Two-finger swipe deltas relative to a right-drag in pixels. */
 const TRACKPAD_TURN_SCALE = 0.6;
-const MOVE_KEYS = new Set(['w', 'a', 's', 'd', 'q', 'e', 'shift']);
+import { PILOT_MOVE_KEYS, pilotKeyFromEvent } from './ossViewportPilot';
 
-/** Prefer physical keys so WASD works on non-US layouts; fall back to `e.key`. */
-const CODE_TO_MOVE: Record<string, string> = {
-  KeyW: 'w',
-  KeyA: 'a',
-  KeyS: 's',
-  KeyD: 'd',
-  KeyQ: 'q',
-  KeyE: 'e',
-  ShiftLeft: 'shift',
-  ShiftRight: 'shift',
-};
-
-const moveKeyFromEvent = (e: KeyboardEvent): string | null => {
-  const fromCode = CODE_TO_MOVE[e.code];
-  if (fromCode) return fromCode;
-  const k = e.key.toLowerCase();
-  return MOVE_KEYS.has(k) ? k : null;
-};
+const MOVE_KEYS = PILOT_MOVE_KEYS;
+const moveKeyFromEvent = pilotKeyFromEvent;
 
 export function createWorld3dNavigator(
   camera: THREE.PerspectiveCamera,

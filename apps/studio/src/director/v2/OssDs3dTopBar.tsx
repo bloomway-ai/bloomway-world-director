@@ -5,12 +5,13 @@ import { DS3D_GLASS, DS3D_PRESSABLE, Ds3dBar, Ds3dBarSeparator, Ds3dIcon, Ds3dIc
 import { Ds3dSettingsPanel, type Ds3dLookSensitivity, type Ds3dWorldPatch } from './Ds3dSettingsPanel';
 import type { StudioHistoryEntry } from '../ossStudioHistory';
 
-export type OssTool = 'select' | 'rotate' | 'actor' | 'camera';
+export type OssTool = 'select' | 'rotate' | 'actor' | 'prop' | 'camera';
 
 const TOOLS: Array<{ id: OssTool; icon: string; key: string }> = [
   { id: 'select', icon: 'arrow_selector_tool', key: 'V' },
   { id: 'rotate', icon: 'rotate_right', key: 'R' },
   { id: 'actor', icon: 'person_add', key: 'H' },
+  { id: 'prop', icon: 'deployed_code', key: 'B' },
   { id: 'camera', icon: 'videocam', key: 'C' },
 ];
 

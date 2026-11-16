@@ -54,6 +54,11 @@ const ZH: Record<string, string> = {
   controlsTouch: '触控：单指平移 · 双指环视与推拉',
   controlsPlay: '播放时沿时间轴镜头；暂停后可自由漫游',
   exploreHint: '暂停后可 WASD 移动，Q/E 升降，Shift 加速',
+  hintActor: '点击地面放置演员；选中后 WASD 移动',
+  hintCamera: '点击地面放置预演摄影机',
+  hintProp: '点击地面放置物体（白盒块）；选中后 WASD 平移',
+  hintPilot: '选中演员或物体：WASD 移动（相对视角）· 未选中时漫游相机（Q/E 升降）',
+  newCharacter: '演员 {n}',
 };
 
 const EN: Record<string, string> = {
@@ -113,6 +118,11 @@ const EN: Record<string, string> = {
   controlsTouch: 'Touch: one-finger pan · two-finger look and dolly',
   controlsPlay: 'Play follows shot keys; pause for free explore',
   exploreHint: 'Pause: WASD move, Q/E up-down, Shift faster',
+  hintActor: 'Click ground to place an actor; WASD moves when selected',
+  hintCamera: 'Click ground to place the previs camera',
+  hintProp: 'Click ground to place a blockout object; WASD moves when selected',
+  hintPilot: 'Actor / object selected: WASD move (view-relative) · otherwise free camera (Q/E up-down)',
+  newCharacter: 'Actor {n}',
 };
 
 export function createDs3dTr(locale: 'zh' | 'en' = 'en') {
